@@ -1,9 +1,15 @@
 {
   "name": "@dkshs/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "description": "ESLint configuration.",
   "main": "index.js",
+  "files": [
+    "node.js",
+    "react.js",
+    "LICENSE",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ShadowsS01/eslint-config.git"
