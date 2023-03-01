@@ -4,7 +4,7 @@
 
 ESLint configuration.
 
-[![Version](https://img.shields.io/npm/v/@dkshs/eslint-config)](https://www.npmjs.com/package/@dkshs/eslint-config) [![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/ShadowsS01/eslint-config/LICENSE)
+[![Version](https://img.shields.io/npm/v/@dkshs/eslint-config)](https://www.npmjs.com/package/@dkshs/eslint-config) [![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/ShadowsS01/eslint-config/blob/master/LICENSE)
 
 </div>
 
