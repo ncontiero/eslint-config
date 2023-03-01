@@ -1,9 +1,9 @@
 {
   "name": "@dkshs/eslint-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "description": "ESLint configuration.",
-  "main": "index.js",
+  "main": "react.js",
   "files": [
     "node.js",
     "react.js",
@@ -23,7 +23,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
-    "eslint": "^7.23.0 || ^8.0.0",
+    "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
@@ -36,7 +36,6 @@
     "prettier": "^2.8.4"
   },
   "peerDependencies": {
-    "eslint": "^7.23.0 || ^8.0.0",
     "typescript": ">=3.3.1"
   },
   "peerDependenciesMeta": {
