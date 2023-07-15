@@ -5,14 +5,12 @@ module.exports = {
     jest: true,
   },
   extends: [
-    "prettier",
     "standard",
     "eslint:recommended",
-    "plugin:jsx-a11y/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "plugin:react/jsx-runtime",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
