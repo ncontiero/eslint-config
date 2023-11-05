@@ -1,22 +1,22 @@
 {
   "name": "@dkshs/eslint-config",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "ESLint configuration.",
-  "main": "index.js",
-  "author": "DKSHS",
-  "license": "MIT",
+  "homepage": "https://github.com/dkshs/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/dkshs/eslint-config/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ShadowsS01/eslint-config.git"
+    "url": "git+https://github.com/dkshs/eslint-config.git"
   },
-  "bugs": {
-    "url": "https://github.com/ShadowsS01/eslint-config/issues"
-  },
-  "homepage": "https://github.com/ShadowsS01/eslint-config#readme",
+  "license": "MIT",
+  "author": "DKSHS",
+  "main": "index.js",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^7.23.0 || ^8.0.0",
+    "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.27.5",
@@ -29,8 +29,8 @@
     "prettier": "^3.0.0"
   },
   "peerDependencies": {
-    "eslint": "^7.23.0 || ^8.0.0",
-    "typescript": ">=3.3.1"
+    "eslint": "^8.0.0",
+    "typescript": ">=4"
   },
   "peerDependenciesMeta": {
     "typescript": {
