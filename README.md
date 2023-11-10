@@ -44,7 +44,7 @@ npm i -D eslint @dkshs/eslint-config
 
 3. You can add/override any ESLint config by changing your own `.eslintrc.json` file. The example below will only add the self-closing tag rule and leave all the default rules untouched.
 
-```
+```json
 {
   "extends": "@dkshs/eslint-config/react",
   "rules": {
