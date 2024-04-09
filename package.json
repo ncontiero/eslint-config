@@ -1,6 +1,6 @@
 {
   "name": "@dkshs/eslint-config",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "ESLint configuration.",
   "homepage": "https://github.com/dkshs/eslint-config#readme",
   "bugs": {
@@ -14,8 +14,8 @@
   "author": "DKSHS",
   "main": "index.js",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6",
-    "@typescript-eslint/parser": "^6",
+    "@typescript-eslint/eslint-plugin": "^7",
+    "@typescript-eslint/parser": "^7",
     "eslint-config-prettier": "^9",
     "eslint-config-standard": "^17",
     "eslint-plugin-import": "^2",
