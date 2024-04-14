@@ -1,0 +1,65 @@
+import type { FlatESLintConfigItem } from "eslint-define-config";
+
+import { pluginAntfu, pluginImport } from "../plugins";
+import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from "../globs";
+
+export const imports: FlatESLintConfigItem[] = [
+  {
+    plugins: {
+      antfu: pluginAntfu,
+      import: pluginImport,
+    },
+    rules: {
+      "antfu/import-dedupe": "error",
+      "import/first": "error",
+      "import/newline-after-import": ["error", { count: 1 }],
+      "import/no-default-export": "error",
+      "import/no-duplicates": "error",
+      "import/no-mutable-exports": "error",
+      "import/no-named-default": "error",
+      "import/no-self-import": "error",
+      "import/no-webpack-loader-syntax": "error",
+      "import/order": [
+        "error",
+        {
+          groups: [
+            "type",
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index",
+            "object",
+          ],
+          pathGroups: [
+            { group: "internal", pattern: "{{@,~}/,#}**" },
+            {
+              group: "builtin",
+              pattern: "*.css",
+              patternOptions: { matchBase: true },
+            },
+          ],
+          pathGroupsExcludedImportTypes: ["type"],
+          warnOnUnassignedImports: true,
+        },
+      ],
+    },
+  },
+  {
+    files: [
+      `**/*config*.${GLOB_SRC_EXT}`,
+      `**/{views,pages,routes,middleware,plugins,api,app}/${GLOB_SRC}`,
+      `**/{index,vite,esbuild,rollup,rolldown,webpack,rspack}.ts`,
+      "**/*.d.ts",
+      `${GLOB_MARKDOWN}/**`,
+      "**/.prettierrc*",
+    ],
+    plugins: {
+      import: pluginImport,
+    },
+    rules: {
+      "import/no-default-export": "off",
+    },
+  },
+];

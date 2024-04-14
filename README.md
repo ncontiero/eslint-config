@@ -8,49 +8,74 @@ ESLint configuration.
 
 </div>
 
-## Whats included?
+## Features
 
-- Standard config base;
-- React plugin;
-- React Hooks plugin;
-- JSX a11y plugin;
-- Prettier;
+- Double quotes, with semi
+- Format with Prettier
+- Sort imports, `package.json`, `tsconfig.json`...
+- Reasonable defaults, best practices, only one line of config
+- Designed to work with TypeScript, JSX out-of-box
+- Lints also for json, yaml, toml, markdown
+- [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
+- Optional [React](https://react.dev/), [NextJs](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/) support
 
-## Setup
+> [!IMPORTANT]
+> Since v2.0.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check the [release note](https://github.com/dkshs/eslint-config/releases/tag/v2.0.0) for more details.
 
-1. Install the dependencies
+## Install
 
 ```bash
-npm i -D eslint @dkshs/eslint-config
+npm i -D @dkshs/eslint-config
 ```
 
-2. Create a `.eslintrc.json` file extending the config:
+Require Node.js >= 18.18, and ESLint >= 8.56.0.
 
-- For React projects:
+## Usage
 
-```json
-{
-  "extends": "@dkshs/eslint-config/react"
-}
+```mjs
+// eslint.config.js
+import { dkshs } from "@dkshs/eslint-config"
+
+export default dkshs(
+  [
+    /* your custom config */
+  ],
+  // Features: it'll detect installed dependency and enable necessary features automatically
+  {
+    prettier: true,
+    markdown: true,
+    react: true, // auto detection
+    nextjs: false, // auto detection
+    tailwindcss: false, // auto detection
+  },
+)
 ```
 
-- For Node.js projects:
+### Presets
 
-```json
-{
-  "extends": "@dkshs/eslint-config/node"
-}
+```js
+// eslint.config.js
+import {
+  presetJavaScript, // Ignore common files and include javascript support
+  presetJsonc, // Includes basic json(c) file support and sorting json keys
+  presetLangsExtensions, // Includes markdown, yaml, toml + `presetJsonc` support
+  presetBasic, // Includes `presetJavaScript` and typescript support
+
+  // Includes
+  // - `presetBasic` (JS+TS) support
+  // - `presetLangsExtensions` (markdown, yaml, toml, jsonc) support
+  // - React support
+  // - NextJs support
+  // - TailwindCSS support
+  // - Prettier support
+  presetAll,
+} from "@dkshs/eslint-config"
+
+export default presetAll
 ```
 
-3. You can add/override any ESLint config by changing your own `.eslintrc.json` file. The example below will only add the self-closing tag rule and leave all the default rules untouched.
+See [presets.ts](./src/presets.ts) for more details.
 
-```json
-{
-  "extends": "@dkshs/eslint-config/react",
-  "rules": {
-    "react/self-closing-comp": "error"
-  }
-}
-```
+## License
 
-> You can also use a `.eslintrc.js` or `.eslintrc` instead of JSON if you prefer.
+This project is licensed under the **MIT** License - see the [LICENSE](./LICENSE) file for details
