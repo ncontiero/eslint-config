@@ -1,22 +1,7 @@
-import { createRequire } from "node:module";
-// import { dkshs } from './dist/index.js'
+// @ts-check
+import { bundleRequire } from "bundle-require";
 
-const require = createRequire(import.meta.url);
-require("sucrase/register");
-/** @type {typeof import('./src/index.ts')} */
-const { dkshs } = require("./src/index.ts");
-
-export default dkshs([
-  {
-    files: ["src/**/*.ts"],
-    rules: {
-      "perfectionist/sort-objects": "error",
-    },
-  },
-  {
-    files: ["**/*.md/*"],
-    rules: {
-      "sort-imports": "off",
-    },
-  },
-]);
+export default bundleRequire({
+  filepath: "./eslint.config.ts",
+  // eslint-disable-next-line unicorn/prefer-top-level-await
+}).then((result) => result.mod.default);

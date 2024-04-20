@@ -1,30 +1,42 @@
-import type { FlatESLintConfigItem } from "eslint-define-config";
-
+import type { FlatConfigItem, OptionsFiles, OptionsOverrides } from "../types";
 import { GLOB_TOML } from "../globs";
-import { parserToml, pluginToml } from "../plugins";
+import { interopDefault } from "../utils";
 
-export const toml: FlatESLintConfigItem[] = [
-  {
-    plugins: {
-      toml: pluginToml,
-    },
-  },
-  {
-    files: [GLOB_TOML],
-    languageOptions: {
-      parser: parserToml,
-    },
-    rules: {
-      "toml/comma-style": "error",
-      "toml/keys-order": "error",
-      "toml/no-space-dots": "error",
-      "toml/no-unreadable-number-separator": "error",
-      "toml/precision-of-fractional-seconds": "error",
-      "toml/precision-of-integer": "error",
-      "toml/tables-order": "error",
-      "toml/vue-custom-block/no-parsing-error": "error",
+export async function toml(
+  options: OptionsOverrides & OptionsFiles = {},
+): Promise<FlatConfigItem[]> {
+  const { files = [GLOB_TOML], overrides = {} } = options;
 
-      "unicorn/filename-case": "off",
+  const [pluginToml, parserToml] = await Promise.all([
+    interopDefault(import("eslint-plugin-toml")),
+    interopDefault(import("toml-eslint-parser")),
+  ] as const);
+
+  return [
+    {
+      plugins: {
+        toml: pluginToml,
+      },
     },
-  },
-];
+    {
+      files,
+      languageOptions: {
+        parser: parserToml,
+      },
+      rules: {
+        "toml/comma-style": "error",
+        "toml/keys-order": "error",
+        "toml/no-space-dots": "error",
+        "toml/no-unreadable-number-separator": "error",
+        "toml/precision-of-fractional-seconds": "error",
+        "toml/precision-of-integer": "error",
+        "toml/tables-order": "error",
+        "toml/vue-custom-block/no-parsing-error": "error",
+
+        "unicorn/filename-case": "off",
+
+        ...overrides,
+      },
+    },
+  ];
+}

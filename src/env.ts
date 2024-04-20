@@ -1,6 +1,6 @@
 import { isPackageExists } from "local-pkg";
 
-export const isInEditor = !!(
+export const isInEditorEnv = !!(
   (process.env.VSCODE_PID ||
     process.env.VSCODE_CWD ||
     process.env.JETBRAINS_IDE ||

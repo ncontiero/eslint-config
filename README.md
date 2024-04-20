@@ -22,24 +22,23 @@ ESLint configuration.
 > [!IMPORTANT]
 > Since v2.0.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check the [release note](https://github.com/dkshs/eslint-config/releases/tag/v2.0.0) for more details.
 
-## Install
+## Usage
+
+1. Install the dependencies:
 
 ```bash
 npm i -D @dkshs/eslint-config
 ```
 
-Require Node.js >= 18.18, and ESLint >= 8.56.0.
+> Require Node.js >= 18.18, and ESLint >= 8.40.0.
 
-## Usage
+2. Create `eslint.config.mjs` in your project root:
 
 ```mjs
-// eslint.config.js
+// eslint.config.mjs
 import { dkshs } from "@dkshs/eslint-config"
 
 export default dkshs(
-  [
-    /* your custom config */
-  ],
   // Features: it'll detect installed dependency and enable necessary features automatically
   {
     prettier: true,
@@ -48,33 +47,145 @@ export default dkshs(
     nextjs: false, // auto detection
     tailwindcss: false, // auto detection
   },
+  {
+    /* your custom config */
+  },
 )
 ```
 
-### Presets
+3. Add script for package.json:
+
+```json
+{
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  }
+}
+```
+
+## VS Code support (auto fix on save)
+
+Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+Add the following settings to your `.vscode/settings.json`:
+
+```json
+{
+  // Enable the ESlint flat config support
+  "eslint.experimental.useFlatConfig": true,
+
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml",
+    "gql",
+    "graphql"
+  ]
+}
+```
+
+## Customization
+
+Since v2.0, we migrated to [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new). It provides much better organization and composition.
+
+Normally you only need to import the `dkshs` preset:
 
 ```js
 // eslint.config.js
-import {
-  presetJavaScript, // Ignore common files and include javascript support
-  presetJsonc, // Includes basic json(c) file support and sorting json keys
-  presetLangsExtensions, // Includes markdown, yaml, toml + `presetJsonc` support
-  presetBasic, // Includes `presetJavaScript` and typescript support
+import { dkshs } from "@dkshs/eslint-config"
 
-  // Includes
-  // - `presetBasic` (JS+TS) support
-  // - `presetLangsExtensions` (markdown, yaml, toml, jsonc) support
-  // - React support
-  // - NextJs support
-  // - TailwindCSS support
-  // - Prettier support
-  presetAll,
-} from "@dkshs/eslint-config"
-
-export default presetAll
+export default dkshs()
 ```
 
-See [presets.ts](./src/presets.ts) for more details.
+And that's it! Or you can configure each integration individually, for example:
+
+```js
+// eslint.config.js
+import { dkshs } from "@dkshs/eslint-config"
+
+export default dkshs({
+  // TypeScript, React, NextJs and TailwindCSS are auto-detected,
+  // you can also explicitly enable them:
+  typescript: true,
+  react: true,
+  nextjs: true,
+  tailwindcss: true,
+
+  // Disable jsonc, yaml and toml support
+  jsonc: false,
+  yaml: false,
+  toml: false,
+
+  // `.eslintignore` is no longer supported in Flat config, use `ignores` instead
+  ignores: [
+    "**/fixtures",
+    // ...globs
+  ]
+})
+```
+
+The `dkshs` factory function also accepts any number of arbitrary custom config overrides:
+
+```js
+// eslint.config.js
+import { dkshs } from "@dkshs/eslint-config"
+
+export default dkshs(
+  {
+    // Configures for dkshs's config
+  },
+  // From the second arguments they are ESLint Flat Configs
+  // you can have multiple configs
+  {
+    files: ["**/*.ts"],
+    rules: {},
+  },
+  {
+    rules: {},
+  },
+)
+```
+
+### Rules Overrides
+
+Certain rules would only be enabled in specific files, for example, `ts/*` rules would only be enabled in `.ts`. We also provided the overrides options in each integration to make it easier:
+
+```js
+// eslint.config.js
+import { dkshs } from "@dkshs/eslint-config"
+
+export default dkshs({
+  typescript: {
+    overrides: {
+      "ts/consistent-type-definitions": ["error", "interface"],
+    },
+  },
+  yaml: {
+    overrides: {
+      // ...
+    },
+  },
+})
+```
 
 ## License
 
