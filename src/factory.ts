@@ -135,11 +135,21 @@ export function dkshs(
   }
 
   if (options.yaml ?? true) {
-    configs.push(yml({ overrides: getOverrides(options, "yaml") }));
+    configs.push(
+      yml({
+        overrides: getOverrides(options, "yaml"),
+        style: styleOptions,
+      }),
+    );
   }
 
   if (options.toml ?? true) {
-    configs.push(toml({ overrides: getOverrides(options, "toml") }));
+    configs.push(
+      toml({
+        overrides: getOverrides(options, "toml"),
+        style: styleOptions,
+      }),
+    );
   }
 
   if (options.markdown ?? true) {
