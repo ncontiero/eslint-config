@@ -67,7 +67,7 @@ function getStyleOptions(options: PrettierOptions): StyleConfig | false {
   if ("tabWidth" in options || "singleQuote" in options || "semi" in options) {
     return {
       indent: options.tabWidth || 2,
-      quote: options.singleQuote ? "single" : "double",
+      quotes: options.singleQuote ? "single" : "double",
       semi: options.semi ?? true,
     };
   }

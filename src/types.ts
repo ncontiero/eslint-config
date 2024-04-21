@@ -38,7 +38,7 @@ export interface OptionsIsInEditor {
 export interface StyleConfig {
   indent?: number;
   semi?: boolean;
-  quote?: "single" | "double";
+  quotes?: "single" | "double";
 }
 export interface StyleOptions {
   style?: boolean | StyleConfig;
