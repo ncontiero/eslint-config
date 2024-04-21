@@ -1,11 +1,18 @@
-import type { FlatConfigItem, OptionsFiles, OptionsOverrides } from "../types";
+import type {
+  FlatConfigItem,
+  OptionsFiles,
+  OptionsOverrides,
+  StyleOptions,
+} from "../types";
 import { GLOB_TOML } from "../globs";
 import { interopDefault } from "../utils";
 
 export async function toml(
-  options: OptionsOverrides & OptionsFiles = {},
+  options: OptionsOverrides & OptionsFiles & StyleOptions = {},
 ): Promise<FlatConfigItem[]> {
-  const { files = [GLOB_TOML], overrides = {} } = options;
+  const { files = [GLOB_TOML], overrides = {}, style = true } = options;
+
+  const { indent = 2 } = typeof style === "boolean" ? {} : style;
 
   const [pluginToml, parserToml] = await Promise.all([
     interopDefault(import("eslint-plugin-toml")),
@@ -26,9 +33,9 @@ export async function toml(
       rules: {
         "toml/array-bracket-newline": "error",
         "toml/array-bracket-spacing": "error",
-        "toml/array-element-newline": "error",
+        "toml/array-element-newline": "off",
         "toml/comma-style": "error",
-        "toml/indent": ["error", 2],
+        "toml/indent": ["error", indent],
         "toml/inline-table-curly-spacing": "error",
         "toml/key-spacing": "error",
         "toml/keys-order": "error",
@@ -43,6 +50,7 @@ export async function toml(
         "toml/table-bracket-spacing": "error",
         "toml/tables-order": "error",
         "toml/vue-custom-block/no-parsing-error": "error",
+
         "unicorn/filename-case": "off",
 
         ...overrides,
