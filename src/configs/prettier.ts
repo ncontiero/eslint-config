@@ -5,13 +5,7 @@ import { interopDefault } from "../utils";
 export async function prettier(
   options: PrettierOptions = {},
 ): Promise<FlatConfigItem[]> {
-  const [pluginPrettier, configPrettier] = await Promise.all([
-    interopDefault(import("eslint-plugin-prettier")),
-    interopDefault(import("eslint-config-prettier")),
-  ]);
-
-  const prettierConflictRules = { ...configPrettier.rules };
-  delete prettierConflictRules["vue/html-self-closing"];
+  const pluginPrettier = await interopDefault(import("eslint-plugin-prettier"));
 
   return [
     {
@@ -36,8 +30,6 @@ export async function prettier(
     {
       files: [GLOB_SRC],
       rules: {
-        //   ...prettierConflictRules,
-        //   ...pluginPrettier.configs.recommended.rules,
         "prettier/prettier": ["warn", options],
       },
     },
