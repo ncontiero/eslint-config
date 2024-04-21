@@ -2,15 +2,18 @@ import type {
   FlatConfigItem,
   OptionsFiles,
   OptionsOverrides,
-  Rules,
+  StyleOptions,
 } from "../types";
 import { GLOB_YAML } from "../globs";
 import { interopDefault } from "../utils";
 
 export async function yml(
-  options: OptionsOverrides & OptionsFiles = {},
+  options: OptionsOverrides & OptionsFiles & StyleOptions = {},
 ): Promise<FlatConfigItem[]> {
-  const { files = [GLOB_YAML], overrides = {} } = options;
+  const { files = [GLOB_YAML], overrides = {}, style = true } = options;
+
+  const { indent = 2, quotes = "double" } =
+    typeof style === "boolean" ? {} : style;
 
   const [pluginYml, parserYml] = await Promise.all([
     interopDefault(import("eslint-plugin-yml")),
@@ -29,8 +32,6 @@ export async function yml(
         parser: parserYml,
       },
       rules: {
-        ...(pluginYml.configs.standard.rules as Rules),
-        ...(pluginYml.configs.prettier.rules as Rules),
         "yml/block-mapping": "error",
         "yml/block-mapping-question-indicator-newline": "error",
         "yml/block-sequence": "error",
@@ -39,16 +40,16 @@ export async function yml(
         "yml/flow-mapping-curly-spacing": "error",
         "yml/flow-sequence-bracket-newline": "error",
         "yml/flow-sequence-bracket-spacing": "error",
-
-        "yml/indent": ["error", 2],
+        "yml/indent": ["error", indent],
         "yml/key-spacing": "error",
+        "yml/no-empty-document": "error",
         "yml/no-empty-key": "error",
-        "yml/no-empty-mapping-value": "off",
+        "yml/no-empty-mapping-value": "error",
         "yml/no-empty-sequence-entry": "error",
         "yml/no-irregular-whitespace": "error",
         "yml/no-tab-indent": "error",
         "yml/plain-scalar": "error",
-        "yml/quotes": ["error", { avoidEscape: false, prefer: "double" }],
+        "yml/quotes": ["error", { avoidEscape: false, prefer: quotes }],
         "yml/spaced-comment": "error",
         "yml/vue-custom-block/no-parsing-error": "error",
 
