@@ -36,7 +36,7 @@ npm i -D @dkshs/eslint-config
 
 ```mjs
 // eslint.config.mjs
-import { dkshs } from "@dkshs/eslint-config"
+import { dkshs } from "@dkshs/eslint-config";
 
 export default dkshs(
   // Features: it'll detect installed dependency and enable necessary features automatically
@@ -50,7 +50,7 @@ export default dkshs(
   {
     /* your custom config */
   },
-)
+);
 ```
 
 3. Add script for package.json:
@@ -111,16 +111,16 @@ Normally you only need to import the `dkshs` preset:
 
 ```js
 // eslint.config.js
-import { dkshs } from "@dkshs/eslint-config"
+import { dkshs } from "@dkshs/eslint-config";
 
-export default dkshs()
+export default dkshs();
 ```
 
 And that's it! Or you can configure each integration individually, for example:
 
 ```js
 // eslint.config.js
-import { dkshs } from "@dkshs/eslint-config"
+import { dkshs } from "@dkshs/eslint-config";
 
 export default dkshs({
   // TypeScript, React, NextJs and TailwindCSS are auto-detected,
@@ -139,15 +139,15 @@ export default dkshs({
   ignores: [
     "**/fixtures",
     // ...globs
-  ]
-})
+  ],
+});
 ```
 
 The `dkshs` factory function also accepts any number of arbitrary custom config overrides:
 
 ```js
 // eslint.config.js
-import { dkshs } from "@dkshs/eslint-config"
+import { dkshs } from "@dkshs/eslint-config";
 
 export default dkshs(
   {
@@ -162,7 +162,7 @@ export default dkshs(
   {
     rules: {},
   },
-)
+);
 ```
 
 ### Rules Overrides
@@ -171,7 +171,7 @@ Certain rules would only be enabled in specific files, for example, `ts/*` rules
 
 ```js
 // eslint.config.js
-import { dkshs } from "@dkshs/eslint-config"
+import { dkshs } from "@dkshs/eslint-config";
 
 export default dkshs({
   typescript: {
@@ -184,7 +184,7 @@ export default dkshs({
       // ...
     },
   },
-})
+});
 ```
 
 ## License

@@ -1,6 +1,13 @@
 # @dkshs/eslint-config
 
-## 2.1.0
+## 2.2.0
+
+### Major Changes
+
+- [#1](https://github.com/dkshs/eslint-config/pull/1) [`5b197e8`](https://github.com/dkshs/eslint-config/commit/5b197e8df4e1f3064f622884fe44667e1ce1eba7) - feat: migrate to eslint flat configuration
+
+  - Use [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), users need to [migrate to the new config style as well](/README.md#usage)
+  - Requires ESLint v8
 
 ### Minor Changes
 
@@ -19,12 +26,3 @@
 - [`537cba6`](https://github.com/dkshs/eslint-config/commit/537cba61903e28e20ff769c0223056ab6c962133) - chore(deps): remove eslint-config-prettier
 
 - [`5d72d0e`](https://github.com/dkshs/eslint-config/commit/5d72d0eae6b1e113323103538c9caa2fdfee718b) - chore: update config name `sortKeys` to `perfectionist`
-
-## 2.0.0
-
-### Major Changes
-
-- [#1](https://github.com/dkshs/eslint-config/pull/1) [`5b197e8`](https://github.com/dkshs/eslint-config/commit/5b197e8df4e1f3064f622884fe44667e1ce1eba7) - feat: migrate to eslint flat configuration
-
-  - Use [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), users need to [migrate to the new config style as well](/README.md#usage)
-  - Requires ESLint v8
