@@ -7,6 +7,9 @@ export default dkshs(
     tailwindcss: true,
   },
   {
+    ignores: ["fixtures", "_fixtures"],
+  },
+  {
     files: ["src/**/*.ts"],
     rules: {
       "perfectionist/sort-objects": "error",

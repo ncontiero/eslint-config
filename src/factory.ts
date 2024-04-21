@@ -28,6 +28,7 @@ import {
   yml,
 } from "./configs";
 import { composer } from "./utils";
+import { GLOB_TS, GLOB_TSX } from "./globs";
 
 const flatConfigProps: (keyof FlatConfigItem)[] = [
   "files",
@@ -99,7 +100,8 @@ export function dkshs(
         overrides: getOverrides(options, "typescript"),
       }),
     );
-  }
+  } else if (options.ignores) options.ignores.push(GLOB_TS, GLOB_TSX);
+  else options.ignores = [GLOB_TS, GLOB_TSX];
 
   if (options.jsonc ?? true) {
     configs.push(

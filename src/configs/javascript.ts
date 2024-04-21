@@ -4,7 +4,7 @@ import type {
   OptionsOverrides,
 } from "../types";
 import globals from "globals";
-import { pluginUnusedImports } from "../plugins";
+import { pluginAntfu, pluginUnusedImports } from "../plugins";
 import { GLOB_SRC, GLOB_SRC_EXT } from "../globs";
 
 export const restrictedSyntaxJs = [
@@ -21,17 +21,20 @@ export function javascript(
   return [
     {
       languageOptions: {
-        ecmaVersion: "latest",
+        ecmaVersion: 2022,
         globals: {
           ...globals.browser,
           ...globals.es2021,
           ...globals.node,
+          document: "readonly",
+          navigator: "readonly",
+          window: "readonly",
         },
         parserOptions: {
           ecmaFeatures: {
             jsx: true,
           },
-          ecmaVersion: "latest",
+          ecmaVersion: 2022,
           sourceType: "module",
         },
         sourceType: "module",
@@ -40,6 +43,7 @@ export function javascript(
         reportUnusedDisableDirectives: true,
       },
       plugins: {
+        antfu: pluginAntfu,
         "unused-imports": pluginUnusedImports,
       },
       rules: {
@@ -102,7 +106,6 @@ export function javascript(
         "no-unexpected-multiline": "error",
         "no-unreachable": "error",
         "no-unsafe-finally": "error",
-
         "no-unsafe-negation": "error",
         "no-unsafe-optional-chaining": "error",
         "no-unused-expressions": [
@@ -118,6 +121,7 @@ export function javascript(
         "no-useless-backreference": "error",
         "no-useless-catch": "error",
         "no-useless-escape": "error",
+        "no-var": "error",
         "no-void": "error",
         "no-with": "error",
         "object-shorthand": [

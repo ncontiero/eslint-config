@@ -32,7 +32,8 @@
     "changeset": "changeset",
     "release": "changeset version",
     "pub:release": "pnpm build && changeset publish",
-    "check-code": "pnpm lint && pnpm typecheck",
+    "check-code": "pnpm lint && pnpm typecheck && pnpm test",
+    "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "husky"
   },
@@ -42,6 +43,7 @@
   "dependencies": {
     "@next/eslint-plugin-next": "^14.2.1",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-merge-processors": "^0.1.0",
     "eslint-plugin-antfu": "^2.1.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import-x": "^0.5.0",
@@ -74,14 +76,19 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@dkshs/changelog-github": "^1.0.5",
     "@dkshs/prettier-config": "^1.0.0",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.12.5",
     "bundle-require": "^4.0.2",
     "eslint": "^9.1.0",
     "eslint-define-config": "^1.24.1",
+    "execa": "^8.0.1",
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "tsup": "^8.0.2",
-    "typescript": "^5.4.4"
+    "typescript": "^5.4.4",
+    "vitest": "^1.5.0"
   },
   "lint-staged": {
     "*": "pnpm lint:fix"
