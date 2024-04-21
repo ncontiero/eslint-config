@@ -20,7 +20,7 @@ ESLint configuration.
 - Optional [React](https://react.dev/), [NextJs](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/) support
 
 > [!IMPORTANT]
-> Since v2.1.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check the [release note](https://github.com/dkshs/eslint-config/releases/tag/v2.1.0) for more details.
+> Since v2.2.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check the [release note](https://github.com/dkshs/eslint-config/releases/tag/v2.2.0) for more details.
 
 ## Usage
 
@@ -105,7 +105,7 @@ Add the following settings to your `.vscode/settings.json`:
 
 ## Customization
 
-Since v2.1, we migrated to [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new). It provides much better organization and composition.
+Since v2.2, we migrated to [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new). It provides much better organization and composition.
 
 Normally you only need to import the `dkshs` preset:
 
