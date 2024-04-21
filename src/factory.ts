@@ -21,10 +21,10 @@ import {
   markdown,
   nextJs,
   node,
+  perfectionist,
   prettier,
   promise,
   react,
-  sortKeys,
   sortPackageJson,
   sortTsconfig,
   tailwindcss,
@@ -108,7 +108,9 @@ export function dkshs(
     unicorn(),
     node(),
     promise(),
-    sortKeys(),
+
+    // Optional plugins (installed but not enabled by default)
+    perfectionist(),
   );
 
   if (enableTypescript) {
