@@ -7,8 +7,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  check-code:
-    name: Check Code - CI
+  lint:
+    name: Check Code
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -28,8 +28,46 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Check code
-        run: pnpm check-code
+      - name: Build
+        run: pnpm build
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+      fail-fast: false
+    name: Test
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          cache: pnpm
+          node-version: "18"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build
+
+      - name: Test
+        run: pnpm test
 
   lint-commits:
     name: Lint Commits

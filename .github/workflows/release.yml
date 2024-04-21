@@ -30,17 +30,22 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Check code
-        run: pnpm check-code
+      - name: Build
+        run: pnpm build
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
-          version: pnpm release
           commit: "feat(release): version packages"
           title: "feat(release): version packages"
-          publish: pnpm pub:release
+          publish: pnpm changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

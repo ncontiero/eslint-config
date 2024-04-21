@@ -26,6 +26,7 @@
     "json",
     "jsonc",
     "yaml",
+    "yml",
     "toml",
     "gql",
     "graphql"
