@@ -1,4 +1,10 @@
-import type { Awaitable, FlatConfigItem, OptionsConfig } from "./types";
+import type {
+  Awaitable,
+  FlatConfigItem,
+  OptionsConfig,
+  PrettierOptions,
+  StyleConfig,
+} from "./types";
 import {
   hasNextJs,
   hasReact,
@@ -57,6 +63,17 @@ export function getOverrides<K extends keyof OptionsConfig>(
   return resolveSubOptions(options, key).overrides || {};
 }
 
+function getStyleOptions(options: PrettierOptions): StyleConfig | false {
+  if ("tabWidth" in options || "singleQuote" in options || "semi" in options) {
+    return {
+      indent: options.tabWidth || 2,
+      quote: options.singleQuote ? "single" : "double",
+      semi: options.semi ?? true,
+    };
+  }
+  return false;
+}
+
 /**
  * Merges ESLint configurations with optional support for Markdown, React, Next.js, TailwindCSS, and Prettier.
  *
@@ -78,6 +95,7 @@ export function dkshs(
 
   const prettierOptions =
     typeof options.prettier === "object" ? options.prettier : {};
+  const styleOptions = getStyleOptions(prettierOptions);
 
   const configs: Awaitable<FlatConfigItem[]>[] = [];
 
@@ -105,7 +123,10 @@ export function dkshs(
 
   if (options.jsonc ?? true) {
     configs.push(
-      jsonc({ overrides: getOverrides(options, "jsonc") }),
+      jsonc({
+        overrides: getOverrides(options, "jsonc"),
+        style: styleOptions,
+      }),
       sortPackageJson(),
       sortTsconfig(),
     );

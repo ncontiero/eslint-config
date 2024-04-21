@@ -35,6 +35,15 @@ export interface OptionsIsInEditor {
   isInEditor?: boolean;
 }
 
+export interface StyleConfig {
+  indent?: number;
+  semi?: boolean;
+  quote?: "single" | "double";
+}
+export interface StyleOptions {
+  style?: boolean | StyleConfig;
+}
+
 export interface OptionsConfig {
   /** Core rules. Can't be disabled. */
   javascript?: OptionsOverrides;
