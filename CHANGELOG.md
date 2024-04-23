@@ -1,5 +1,19 @@
 # @dkshs/eslint-config
 
+## 2.3.0
+
+### Minor Changes
+
+- [`aa68385`](https://github.com/dkshs/eslint-config/commit/aa6838573c9614caeaf9e44a171489286ed76469) - feat: disable `import/no-default-export` rule for middleware file in next.js
+
+### Patch Changes
+
+- [`3903be1`](https://github.com/dkshs/eslint-config/commit/3903be184db38d4178460d23a41b7006c83a4091) - fix: remove deprecated rule `jsx-a11y/no-onchange`
+
+- [`29c4ee6`](https://github.com/dkshs/eslint-config/commit/29c4ee6a349ed987ab2059880e5008248229c5ee) - fix: remove deprecated rule `jsx-a11y/label-has-for`
+
+- [`0faafcb`](https://github.com/dkshs/eslint-config/commit/0faafcbcd30c891e3c1d6c57d92f1000725d24b6) - fix: rule name `react/prop-types`
+
 ## 2.2.0
 
 ### Major Changes
