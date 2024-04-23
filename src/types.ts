@@ -28,6 +28,10 @@ export interface OptionsHasTypeScript {
   typescript?: boolean;
 }
 
+export interface OptionsHasNextJs {
+  nextJs?: boolean;
+}
+
 export type OptionsTypescript = OptionsTypeScriptParserOptions &
   OptionsOverrides;
 

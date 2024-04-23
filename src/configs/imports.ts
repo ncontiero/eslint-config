@@ -1,8 +1,10 @@
-import type { FlatConfigItem } from "../types";
+import type { FlatConfigItem, OptionsHasNextJs } from "../types";
 import { pluginAntfu, pluginImport } from "../plugins";
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from "../globs";
 
-export function imports(): FlatConfigItem[] {
+export function imports(options: OptionsHasNextJs = {}): FlatConfigItem[] {
+  const { nextJs = false } = options;
+
   return [
     {
       plugins: {
@@ -50,6 +52,7 @@ export function imports(): FlatConfigItem[] {
       files: [
         `**/*config*.${GLOB_SRC_EXT}`,
         `**/{views,pages,routes,middleware,plugins,api,app}/${GLOB_SRC}`,
+        nextJs ? "{,src/}middleware.{ts,js}" : "",
         `**/{index,vite,esbuild,rollup,rolldown,webpack,rspack}.ts`,
         "**/*.d.ts",
         `${GLOB_MARKDOWN}/**`,

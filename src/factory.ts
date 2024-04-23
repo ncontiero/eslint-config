@@ -104,7 +104,7 @@ export function dkshs(
     ignores(),
     javascript({ isInEditor, overrides: getOverrides(options, "javascript") }),
     comments(),
-    imports(),
+    imports({ nextJs: enableNextJs === true }),
     unicorn(),
     node(),
     promise(),
