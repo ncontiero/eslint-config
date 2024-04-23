@@ -334,7 +334,6 @@ export async function react(
           "warn",
           { roles: ["tabpanel"], tags: [] },
         ],
-        "jsx-a11y/no-onchange": ["off"],
         "jsx-a11y/no-redundant-roles": ["warn"],
         "jsx-a11y/no-static-element-interactions": [
           "off",
