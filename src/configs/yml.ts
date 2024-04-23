@@ -44,7 +44,6 @@ export async function yml(
         "yml/key-spacing": "error",
         "yml/no-empty-document": "error",
         "yml/no-empty-key": "error",
-        "yml/no-empty-mapping-value": "error",
         "yml/no-empty-sequence-entry": "error",
         "yml/no-irregular-whitespace": "error",
         "yml/no-tab-indent": "error",
