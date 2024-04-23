@@ -271,16 +271,6 @@ export async function react(
             labelComponents: [],
           },
         ],
-        "jsx-a11y/label-has-for": [
-          "off",
-          {
-            allowChildren: false,
-            components: [],
-            required: {
-              every: ["nesting", "id"],
-            },
-          },
-        ],
         "jsx-a11y/lang": ["warn"],
         "jsx-a11y/media-has-caption": [
           "warn",
