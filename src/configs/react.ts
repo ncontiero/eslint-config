@@ -261,16 +261,7 @@ export async function react(
         "jsx-a11y/iframe-has-title": ["warn"],
         "jsx-a11y/img-redundant-alt": ["warn"],
         "jsx-a11y/interactive-supports-focus": ["warn"],
-        "jsx-a11y/label-has-associated-control": [
-          "warn",
-          {
-            assert: "both",
-            controlComponents: [],
-            depth: 25,
-            labelAttributes: [],
-            labelComponents: [],
-          },
-        ],
+        "jsx-a11y/label-has-associated-control": "warn",
         "jsx-a11y/lang": ["warn"],
         "jsx-a11y/media-has-caption": [
           "warn",
