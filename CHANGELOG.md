@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 2.3.2
+
+### Patch Changes
+
+- [`6186afe`](https://github.com/dkshs/eslint-config/commit/6186afe4f12b78f4efd7da33904f8fba18867cf1) - fix: improve `import/order` rule options
+
 ## 2.3.1
 
 ### Patch Changes
