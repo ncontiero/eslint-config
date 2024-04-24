@@ -35,11 +35,14 @@ export function imports(options: OptionsHasNextJs = {}): FlatConfigItem[] {
               "object",
             ],
             pathGroups: [
-              { group: "internal", pattern: "{{@,~}/,#}**" },
+              { group: "internal", pattern: "^(?!(?:{{@,~}/|#}).*.css$).*" },
               {
-                group: "builtin",
+                group: "type",
                 pattern: "*.css",
-                patternOptions: { matchBase: true },
+                patternOptions: {
+                  matchBase: true,
+                },
+                position: "before",
               },
             ],
             pathGroupsExcludedImportTypes: ["type"],
