@@ -65,7 +65,7 @@ export async function react(
 
         // recommended rules react
         "react/boolean-prop-naming": [
-          "warn",
+          "off",
           {
             rule: "^(is|has|are|can|should|did|will)[A-Z]([A-Za-z0-9])+",
             validateNested: true,
