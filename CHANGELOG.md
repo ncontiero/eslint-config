@@ -1,5 +1,15 @@
 # @dkshs/eslint-config
 
+## 2.3.1
+
+### Patch Changes
+
+- [`4a34641`](https://github.com/dkshs/eslint-config/commit/4a34641ac48b5ffff3f4783830c300fbd343cbfc) - fix: disable `react/boolean-prop-naming` rule
+
+- [`98331a9`](https://github.com/dkshs/eslint-config/commit/98331a9a33f8183f2496f7ebcbafeadcc788a69e) - fix: disable rule `yml/no-empty-mapping-value`
+
+- [`e865872`](https://github.com/dkshs/eslint-config/commit/e865872361a65914c58877211547c5ff3403d253) - fix: remove options from rule `jsx-a11y/label-has-associated-control`
+
 ## 2.3.0
 
 ### Minor Changes
