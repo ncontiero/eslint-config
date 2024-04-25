@@ -64,6 +64,7 @@ export async function react(
         ],
 
         // recommended rules react
+        // https://github.com/jsx-eslint/eslint-plugin-react/issues/3717
         "react/boolean-prop-naming": [
           "off",
           {
