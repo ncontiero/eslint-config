@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 2.3.3
+
+### Patch Changes
+
+- [`fc6d412`](https://github.com/dkshs/eslint-config/commit/fc6d412c4de0bf3c76b9eedc724505ae37bbedb8) - fix: order of options in the `ìmport/order` rule
+
 ## 2.3.2
 
 ### Patch Changes
