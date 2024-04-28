@@ -39,7 +39,7 @@
     "eslint": ">=8.40.0"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^14.2.2",
+    "@next/eslint-plugin-next": "^14.2.3",
     "eslint-merge-processors": "^0.1.0",
     "eslint-plugin-antfu": "^2.1.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
