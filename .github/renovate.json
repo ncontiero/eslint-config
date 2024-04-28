@@ -11,5 +11,13 @@
   "commitMessageTopic": "{{depName}}",
   "rebaseWhen": "conflicted",
   "rangeStrategy": "bump",
-  "configMigration": true
+  "configMigration": true,
+  "packageRules": [
+    {
+      "groupName": "all non-major dependencies",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": ["dependencies"],
+      "matchPackagePatterns": ["*"]
+    }
+  ]
 }
