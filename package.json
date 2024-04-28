@@ -36,7 +36,7 @@
     "prepare": "husky"
   },
   "peerDependencies": {
-    "eslint": ">=8.40.0"
+    "eslint": ">=8.57.0"
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^14.2.2",
