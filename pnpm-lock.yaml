@@ -100,8 +100,8 @@ importers:
         specifier: ^19.2.2
         version: 19.2.2
       '@dkshs/changelog-github':
-        specifier: ^1.0.5
-        version: 1.0.5
+        specifier: ^1.0.6
+        version: 1.0.6
       '@dkshs/prettier-config':
         specifier: ^1.0.0
         version: 1.0.0
@@ -295,8 +295,8 @@ packages:
     resolution: {integrity: sha512-tpyc+7i6bPG9mvaBbtKUeghfyZSDgWquIDfMgqYtTbmZ9Y9VzEm2je9EYcQ0aoz5o7NvGS+rcDec93yO08MHYA==}
     engines: {node: '>=v18'}
 
-  '@dkshs/changelog-github@1.0.5':
-    resolution: {integrity: sha512-7os07Z9IZc/4zhqADxCNZ8KQtwGLNTBqMhcHxaVkree7QG7Dgyx+UnOfbeiIVOe22SikhbHzWMo9nwOz4hZbNQ==}
+  '@dkshs/changelog-github@1.0.6':
+    resolution: {integrity: sha512-Poym7L83xt67wLaRTdB7BgbxDjIHVW9Kcxw72g0QszQTk45Sn0OFjdvC5dMWeYTVje/5RzRtDf7DxBN0bgpQXQ==}
 
   '@dkshs/prettier-config@1.0.0':
     resolution: {integrity: sha512-A+Ac5UZ6/u1aOVmEU3Rvq+8grnLpvKzpP3pFP57VV2H/oIvMImJES/9fdhIogQiAPVWml1y6KSTUeyo1jJihOg==}
@@ -3637,7 +3637,7 @@ snapshots:
       '@types/conventional-commits-parser': 5.0.0
       chalk: 5.3.0
 
-  '@dkshs/changelog-github@1.0.5':
+  '@dkshs/changelog-github@1.0.6':
     dependencies:
       '@changesets/get-github-info': 0.6.0
       dotenv: 16.4.5
