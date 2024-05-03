@@ -13,6 +13,7 @@ import {
   isInEditorEnv,
 } from "./env";
 import {
+  command,
   comments,
   ignores,
   imports,
@@ -108,6 +109,7 @@ export function dkshs(
     unicorn(),
     node(),
     promise(),
+    command(),
 
     // Optional plugins (installed but not enabled by default)
     perfectionist(),
