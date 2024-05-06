@@ -18,8 +18,8 @@ importers:
         specifier: ^2.1.2
         version: 2.1.2(eslint@9.1.1)
       eslint-plugin-command:
-        specifier: ^0.1.6
-        version: 0.1.6(eslint@9.1.1)
+        specifier: ^0.1.8
+        version: 0.1.8(eslint@9.1.1)
       eslint-plugin-eslint-comments:
         specifier: ^3.2.0
         version: 3.2.0(eslint@9.1.1)
@@ -1462,8 +1462,8 @@ packages:
     peerDependencies:
       eslint: '*'
 
-  eslint-plugin-command@0.1.6:
-    resolution: {integrity: sha512-VSuVwTEL7HMvV96oZ6R/kU8IiC+gziKyht8/+fLe1UI39NRGqR2LOuBEIcQCfLOViE/A+n4/kc5gJEg7oPbWTg==}
+  eslint-plugin-command@0.1.8:
+    resolution: {integrity: sha512-QNkBKbkImGdwwcyTwF9ZoLoOrT3oBFLiJHoLF9ugsCAItRBURpZXLm/n6LrJWLWeHBqD42LdEYjbUmuMdRxRoA==}
     peerDependencies:
       eslint: '*'
 
@@ -4819,7 +4819,7 @@ snapshots:
     dependencies:
       eslint: 9.1.1
 
-  eslint-plugin-command@0.1.6(eslint@9.1.1):
+  eslint-plugin-command@0.1.8(eslint@9.1.1):
     dependencies:
       eslint: 9.1.1
 
