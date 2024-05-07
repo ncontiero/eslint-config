@@ -18,6 +18,7 @@ ESLint configuration.
 - Lints also for json, yaml, toml, markdown
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
 - Optional [React](https://react.dev/), [NextJs](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/) support
+- Supports ESLint v9 or v8.50.0+
 
 > [!IMPORTANT]
 > Since v2.2.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check the [release note](https://github.com/dkshs/eslint-config/releases/tag/v2.2.0) for more details.
@@ -73,6 +74,7 @@ Add the following settings to your `.vscode/settings.json`:
 ```json
 {
   // Enable the ESlint flat config support
+  // (remove this if your ESLint extension above v3.0.5)
   "eslint.experimental.useFlatConfig": true,
 
   // Disable the default formatter, use eslint instead
