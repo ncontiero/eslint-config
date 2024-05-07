@@ -1,5 +1,15 @@
 # @dkshs/eslint-config
 
+## 2.4.0
+
+### Minor Changes
+
+- [`673b2e5`](https://github.com/dkshs/eslint-config/commit/673b2e5a73026ef2d41feada1beb7149b22c6c74) - feat: add `eslint-plugin-command`
+
+### Patch Changes
+
+- [#24](https://github.com/dkshs/eslint-config/pull/24) [`c3d66d4`](https://github.com/dkshs/eslint-config/commit/c3d66d45c6459e1b7dea9b65002e4ef1b9bf52e4) - chore(deps): update eslint-plugin-markdown to v5
+
 ## 2.3.3
 
 ### Patch Changes
