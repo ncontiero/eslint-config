@@ -1,21 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended",":disableRateLimiting"],
-  "schedule": ["before 5am every weekday"],
-  "dependencyDashboard": false,
-  "semanticCommits": "enabled",
-  "commitMessageTopic": "{{depName}}",
-  "rebaseWhen": "conflicted",
-  "rangeStrategy": "bump",
-  "configMigration": true,
+  "extends": ["github>dkshs/renovate-config"],
   "packageRules": [
     {
       "matchDepTypes": ["peerDependencies"],
       "enabled": false
-    },
-    {
-      "matchPackagePatterns": ["*"],
-      "semanticCommitType": "chore"
     },
     {
       "groupName": "all non-major dependencies",
