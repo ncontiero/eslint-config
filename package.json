@@ -75,7 +75,7 @@
     "@dkshs/changelog-github": "^1.0.6",
     "@dkshs/prettier-config": "^1.0.0",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.12.11",
+    "@types/node": "^20.12.12",
     "bundle-require": "^4.1.0",
     "eslint": "^9.2.0",
     "eslint-define-config": "^1.24.1",
