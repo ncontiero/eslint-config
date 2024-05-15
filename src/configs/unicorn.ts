@@ -10,6 +10,7 @@ export function unicorn(): FlatConfigItem[] {
       rules: {
         "unicorn/better-regex": "error",
         "unicorn/catch-error-name": "error",
+        "unicorn/consistent-empty-array-spread": "error",
         "unicorn/custom-error-definition": "error",
         "unicorn/error-message": "error",
         "unicorn/escape-case": "error",
