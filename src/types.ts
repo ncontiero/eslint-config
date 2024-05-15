@@ -1,10 +1,13 @@
-import type { FlatESLintConfigItem, Rules } from "eslint-define-config";
+import type {
+  FlatESLintConfig,
+  CustomRuleOptions as Rules,
+} from "eslint-define-config";
 import type { Options as PrettierOptions } from "prettier";
 import type { ParserOptions } from "@typescript-eslint/parser";
 
 export type Awaitable<T> = T | Promise<T>;
 
-export type FlatConfigItem = FlatESLintConfigItem;
+export type FlatConfigItem = FlatESLintConfig;
 
 export interface OptionsFiles {
   /**
