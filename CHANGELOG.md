@@ -1,5 +1,15 @@
 # @dkshs/eslint-config
 
+## 2.5.0
+
+### Minor Changes
+
+- [`c9646f8`](https://github.com/dkshs/eslint-config/commit/c9646f88b3e5f2ea0e032499939768ee242b56c4) - feat: enable `unicorn/consistent-empty-array-spread` rule
+
+### Patch Changes
+
+- [`705c189`](https://github.com/dkshs/eslint-config/commit/705c189b9ba3437300c2e000c77a2e21dad12b73) - chore: update plugin imports
+
 ## 2.4.0
 
 ### Minor Changes
