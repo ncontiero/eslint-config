@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 2.5.1
+
+### Patch Changes
+
+- [#54](https://github.com/dkshs/eslint-config/pull/54) [`ab3b7a1`](https://github.com/dkshs/eslint-config/commit/ab3b7a13217932e7b314087e56c248d4267971ab) - chore(deps): update eslint-plugin-unused-imports to v4
+
 ## 2.5.0
 
 ### Minor Changes
