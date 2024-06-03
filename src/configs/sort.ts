@@ -176,6 +176,7 @@ export function sortTsconfig(): FlatConfigItem[] {
               "importsNotUsedAsValues",
               "inlineSourceMap",
               "inlineSources",
+              "isolatedDeclarations",
               "mapRoot",
               "newLine",
               "noEmit",
