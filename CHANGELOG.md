@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 2.6.0
+
+### Minor Changes
+
+- [`935cfc5`](https://github.com/dkshs/eslint-config/commit/935cfc5fc4985ed9b761839fefbd120d2e7ceed6) - feat: sort `isolatedDeclarations`
+
 ## 2.5.1
 
 ### Patch Changes
