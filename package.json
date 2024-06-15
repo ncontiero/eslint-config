@@ -78,7 +78,7 @@
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.14.2",
     "bundle-require": "^5.0.0",
-    "eslint": "^9.4.0",
+    "eslint": "^9.5.0",
     "execa": "^9.2.0",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
