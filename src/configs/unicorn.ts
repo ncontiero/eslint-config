@@ -61,7 +61,8 @@ export function unicorn(): FlatConfigItem[] {
         "unicorn/prefer-string-slice": "error",
         "unicorn/prefer-string-starts-ends-with": "error",
         "unicorn/prefer-string-trim-start-end": "error",
-        "unicorn/prefer-top-level-await": "error",
+        // top level await is not supported in all environments
+        // "unicorn/prefer-top-level-await": "error",
         "unicorn/prefer-type-error": "error",
         "unicorn/throw-new-error": "error",
       },
