@@ -1,5 +1,13 @@
 # @dkshs/eslint-config
 
+## 2.6.1
+
+### Patch Changes
+
+- [#83](https://github.com/dkshs/eslint-config/pull/83) [`d9f2bd8`](https://github.com/dkshs/eslint-config/commit/d9f2bd8554f49941e43ed4681fd900f3f9030ee8) - chore(deps): update eslint-plugin-unicorn to v54
+
+- [`09c1c2a`](https://github.com/dkshs/eslint-config/commit/09c1c2a2780d3dd3b5b8c375db1f95288f1d08f9) - fix(rule): disable `unicorn/prefer-top-level-await`
+
 ## 2.6.0
 
 ### Minor Changes
