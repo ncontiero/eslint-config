@@ -1,5 +1,15 @@
 # @dkshs/eslint-config
 
+## 2.7.0
+
+### Minor Changes
+
+- [`1c9ea59`](https://github.com/dkshs/eslint-config/commit/1c9ea59944aa06222f832231192fd77cc652ce98) - feat: add nvim support for `isInEditor`
+
+### Patch Changes
+
+- [`5fa54c8`](https://github.com/dkshs/eslint-config/commit/5fa54c89a8e9680bfee6ab94a59ab9fcf23a359b) - chore: remove module declaration `eslint-plugin-prettier`
+
 ## 2.6.1
 
 ### Patch Changes
