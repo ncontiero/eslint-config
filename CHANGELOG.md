@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 2.7.1
+
+### Patch Changes
+
+- [#111](https://github.com/dkshs/eslint-config/pull/111) [`3575d65`](https://github.com/dkshs/eslint-config/commit/3575d658e32b39745aa8cd603680cfcf00622dd6) - chore(deps): update eslint-plugin-import-x to v3
+
 ## 2.7.0
 
 ### Minor Changes
