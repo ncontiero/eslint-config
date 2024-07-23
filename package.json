@@ -76,7 +76,7 @@
     "@dkshs/prettier-config": "^1.0.0",
     "@types/eslint": "^9.6.0",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.14.11",
+    "@types/node": "^20.14.12",
     "bundle-require": "^5.0.0",
     "eslint": "^9.7.0",
     "execa": "^9.3.0",
