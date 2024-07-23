@@ -1,5 +1,13 @@
 # @dkshs/eslint-config
 
+## 2.7.2
+
+### Patch Changes
+
+- [#127](https://github.com/dkshs/eslint-config/pull/127) [`539fe0f`](https://github.com/dkshs/eslint-config/commit/539fe0f449e6b34a58c46e8cadc2b4e5b2d1fd46) - chore(deps): update eslint-plugin-perfectionist to v3
+
+- [`efb2b59`](https://github.com/dkshs/eslint-config/commit/efb2b59ed48f3ce6d8c2df8c373308696d335b1a) - chore(deps): update eslint types to v9
+
 ## 2.7.1
 
 ### Patch Changes
