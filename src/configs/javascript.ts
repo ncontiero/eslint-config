@@ -144,16 +144,7 @@ export function javascript(
         "prefer-template": "error",
         "require-await": "error",
         "require-yield": "error",
-        "sort-imports": [
-          "error",
-          {
-            allowSeparatedGroups: false,
-            ignoreCase: false,
-            ignoreDeclarationSort: true,
-            ignoreMemberSort: false,
-            memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
-          },
-        ],
+        "sort-imports": "off",
         "unicode-bom": ["error", "never"],
         "unused-imports/no-unused-imports": isInEditor ? "off" : "error",
         "unused-imports/no-unused-vars": [

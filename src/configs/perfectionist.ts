@@ -12,6 +12,16 @@ export function perfectionist(): FlatConfigItem[] {
       plugins: {
         perfectionist: pluginPerfectionist,
       },
+      rules: {
+        "perfectionist/sort-named-exports": [
+          "warn",
+          { groupKind: "types-first" },
+        ],
+        "perfectionist/sort-named-imports": [
+          "warn",
+          { groupKind: "types-first" },
+        ],
+      },
     },
   ];
 }
