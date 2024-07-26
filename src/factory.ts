@@ -18,6 +18,7 @@ import {
   ignores,
   imports,
   javascript,
+  jsdoc,
   jsonc,
   markdown,
   nextJs,
@@ -79,7 +80,7 @@ function getStyleOptions(options: PrettierOptions): StyleConfig | false {
  * Merges ESLint configurations with optional support for Markdown, React, Next.js, TailwindCSS, and Prettier.
  *
  * @param options - Optional settings for Markdown, React, Next.js, TailwindCSS and Prettier.
- * @param config - The user configurations to be merged with the generated configurations.
+ * @param userConfigs - The user configurations to be merged with the generated configurations.
  * @returns Merged ESLint configurations based on provided options.
  */
 export function dkshs(
@@ -105,6 +106,7 @@ export function dkshs(
     ignores(),
     javascript({ isInEditor, overrides: getOverrides(options, "javascript") }),
     comments(),
+    jsdoc(),
     imports({ nextJs: enableNextJs === true }),
     unicorn(),
     node(),
