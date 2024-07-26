@@ -100,6 +100,14 @@ export interface OptionsConfig {
   markdown?: boolean | OptionsOverrides;
 
   /**
+   * Enable regexp rules.
+   *
+   * @see https://ota-meshi.github.io/eslint-plugin-regexp/
+   * @default true
+   */
+  regexp?: boolean | OptionsOverrides;
+
+  /**
    * Enable Prettier support.
    *
    * Pass an object to enable Prettier support with custom options.

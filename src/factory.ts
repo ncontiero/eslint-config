@@ -27,6 +27,7 @@ import {
   prettier,
   promise,
   react,
+  regexp,
   sortPackageJson,
   sortTsconfig,
   tailwindcss,
@@ -91,6 +92,7 @@ export function dkshs(
     isInEditor = isInEditorEnv,
     nextjs: enableNextJs = hasNextJs,
     react: enableReact = hasReact,
+    regexp: enableRegexp = true,
     tailwindcss: enableTailwindCSS = hasTailwind,
     typescript: enableTypescript = hasTypeScript,
   } = options;
@@ -158,6 +160,10 @@ export function dkshs(
 
   if (options.markdown ?? true) {
     configs.push(markdown({ overrides: getOverrides(options, "markdown") }));
+  }
+
+  if (enableRegexp) {
+    configs.push(regexp(typeof enableRegexp === "boolean" ? {} : enableRegexp));
   }
 
   if (enableReact) {

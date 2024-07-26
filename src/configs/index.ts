@@ -12,6 +12,7 @@ export * from "./perfectionist";
 export * from "./prettier";
 export * from "./promise";
 export * from "./react";
+export * from "./regexp";
 export * from "./sort";
 export * from "./tailwindcss";
 export * from "./toml";
