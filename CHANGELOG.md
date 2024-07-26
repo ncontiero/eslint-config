@@ -1,5 +1,25 @@
 # @dkshs/eslint-config
 
+## 2.8.0
+
+### Minor Changes
+
+- [`8aff096`](https://github.com/dkshs/eslint-config/commit/8aff0963563847e7782f7eb79ae06ee9971963d1) - feat(deps): update @next/eslint-plugin-next to 14.3.0-canary
+
+  - In version 14.2 of @next/eslint-plugin-next, it’s not possible to use ESLint v9. Therefore, it was updated to version 14.3-canary to allow for ESLint v9.
+
+- [`8db8acc`](https://github.com/dkshs/eslint-config/commit/8db8acce95fc98c0503b5171e045378a080105f9) - feat: add jsdoc plugin
+
+- [`30fe2e0`](https://github.com/dkshs/eslint-config/commit/30fe2e00ea4efad09567cfece8b1cb8b656a1a73) - feat: improve sort imports & exports
+
+- [`dbaa012`](https://github.com/dkshs/eslint-config/commit/dbaa012a69df68e645e2c9aed5fefa2486b32e21) - feat: add `eslint-plugin-regexp`
+
+### Patch Changes
+
+- [#132](https://github.com/dkshs/eslint-config/pull/132) [`0d44b80`](https://github.com/dkshs/eslint-config/commit/0d44b804e9a749a19a99e5edc2b9e1b08e2a22a1) - chore(deps): update eslint-plugin-promise to v7
+
+- [#135](https://github.com/dkshs/eslint-config/pull/135) [`78706da`](https://github.com/dkshs/eslint-config/commit/78706dada96a2338277a934bb89c7e789a36f5dc) - chore(deps): update eslint-plugin-unicorn to v55
+
 ## 2.7.2
 
 ### Patch Changes
