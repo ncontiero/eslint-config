@@ -18,6 +18,7 @@ export default dkshs(
   {
     files: ["**/*.md/*"],
     rules: {
+      "sort-imports": "off",
       "perfectionist/sort-named-imports": "off",
     },
   },

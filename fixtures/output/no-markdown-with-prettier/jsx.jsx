@@ -11,7 +11,7 @@ export function HelloWorld({
   // TODO: Don't use random in render
   const num = Math.floor(Math.random() * 1e7)
     .toString()
-    .replaceAll(/\.\d+/gi, "");
+    .replaceAll(/\.\d+/g, "");
 
   return (
     <div
