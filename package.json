@@ -39,7 +39,7 @@
     "eslint": ">=8.40.0"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^14.2.5",
+    "@next/eslint-plugin-next": "14.3.0-canary.87",
     "eslint-merge-processors": "^0.1.0",
     "eslint-plugin-antfu": "^2.3.4",
     "eslint-plugin-command": "^0.2.3",
