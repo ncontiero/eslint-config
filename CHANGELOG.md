@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 2.8.1
+
+### Patch Changes
+
+- [`0b7e7dd`](https://github.com/dkshs/eslint-config/commit/0b7e7dd00c340df3478e16ed69b1114c08f75a7f) - fix: disable the `unicorn/better-regex` rule if using `eslint-plugin-regexp`
+
 ## 2.8.0
 
 ### Minor Changes
