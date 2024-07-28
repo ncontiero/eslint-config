@@ -110,7 +110,7 @@ export function dkshs(
     comments(),
     jsdoc(),
     imports({ nextJs: enableNextJs === true }),
-    unicorn(),
+    unicorn({ regexp: !!enableRegexp }),
     node(),
     promise(),
     command(),

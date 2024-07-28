@@ -1,14 +1,17 @@
-import type { FlatConfigItem } from "../types";
+import type { FlatConfigItem, OptionsHasRegexp } from "../types";
 import { pluginUnicorn } from "../plugins";
 
-export function unicorn(): FlatConfigItem[] {
+export function unicorn(options: OptionsHasRegexp = {}): FlatConfigItem[] {
+  const { regexp = false } = options;
+
   return [
     {
       plugins: {
         unicorn: pluginUnicorn,
       },
       rules: {
-        "unicorn/better-regex": "error",
+        // disable if using `eslint-plugin-regexp`
+        "unicorn/better-regex": regexp ? "off" : "error",
         "unicorn/catch-error-name": "error",
         "unicorn/consistent-empty-array-spread": "error",
         "unicorn/custom-error-definition": "error",

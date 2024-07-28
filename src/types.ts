@@ -42,6 +42,10 @@ export interface OptionsHasNextJs {
   nextJs?: boolean;
 }
 
+export interface OptionsHasRegexp {
+  regexp?: boolean;
+}
+
 export type OptionsTypescript = OptionsTypeScriptParserOptions &
   OptionsOverrides;
 
