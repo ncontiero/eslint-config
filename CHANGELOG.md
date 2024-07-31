@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 2.8.2
+
+### Patch Changes
+
+- [#144](https://github.com/dkshs/eslint-config/pull/144) [`bb7483e`](https://github.com/dkshs/eslint-config/commit/bb7483e3124c7ded4c48f8ca9c512823b2bee963) - chore(deps): update typescript-eslint to v8
+
 ## 2.8.1
 
 ### Patch Changes
