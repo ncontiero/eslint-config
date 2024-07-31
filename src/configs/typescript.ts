@@ -36,7 +36,6 @@ export async function typescriptCore(options: TsOptions = {}) {
         "error",
         { "ts-ignore": "allow-with-description" },
       ],
-      "@typescript-eslint/ban-types": ["error", { types: { Function: false } }],
       "@typescript-eslint/consistent-type-assertions": [
         "error",
         {
@@ -49,6 +48,10 @@ export async function typescriptCore(options: TsOptions = {}) {
         { disallowTypeAnnotations: false, fixStyle: "inline-type-imports" },
       ],
       "@typescript-eslint/method-signature-style": ["error", "property"], // https://www.totaltypescript.com/method-shorthand-syntax-considered-harmful
+      "@typescript-eslint/no-empty-object-type": [
+        "error",
+        { allowInterfaces: "always" },
+      ],
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-import-type-side-effects": "error",
       "@typescript-eslint/no-non-null-assertion": "off",
@@ -57,6 +60,7 @@ export async function typescriptCore(options: TsOptions = {}) {
       // handled by unused-imports/no-unused-imports
       "@typescript-eslint/no-unused-vars": "off",
 
+      "@typescript-eslint/no-wrapper-object-types": "error",
       "@typescript-eslint/prefer-as-const": "warn",
       "@typescript-eslint/prefer-literal-enum-member": [
         "error",
@@ -100,7 +104,6 @@ export async function typescript(
       files: [GLOB_JS, "**/*.cjs"],
       rules: {
         "@typescript-eslint/no-require-imports": "off",
-        "@typescript-eslint/no-var-requires": "off",
       },
     },
     {
