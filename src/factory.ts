@@ -117,8 +117,6 @@ export function dkshs(
     node(),
     promise(),
     command(),
-
-    // Optional plugins (installed but not enabled by default)
     perfectionist(),
   );
 

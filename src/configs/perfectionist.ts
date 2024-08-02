@@ -2,7 +2,7 @@ import type { FlatConfigItem } from "../types";
 import { pluginPerfectionist } from "../plugins";
 
 /**
- * Optional perfectionist plugin for props and items sorting.
+ * Generates a configuration object for the Perfectionist plugin with specific sorting rules.
  *
  * @see https://github.com/azat-io/eslint-plugin-perfectionist
  */
