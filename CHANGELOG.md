@@ -1,5 +1,17 @@
 # @dkshs/eslint-config
 
+## 2.8.3
+
+### Patch Changes
+
+- [`7d49c04`](https://github.com/dkshs/eslint-config/commit/7d49c04aa312f5a05ce71c1e35902386f9f26aed) - chore: change perfectionist config docstring
+
+- [`3339a6b`](https://github.com/dkshs/eslint-config/commit/3339a6b51fd6a0841a56a42b7d5a749aae408e9e) - chore: add `Linter.Config[]` type in factory function
+
+- [`b22cb87`](https://github.com/dkshs/eslint-config/commit/b22cb8726893713fc2f9ab7f169f2cc83d82bbc3) - chore(deps): update @types/node to v22
+
+- [`af838f6`](https://github.com/dkshs/eslint-config/commit/af838f6990df15b661eb80a111b42f88264d198f) - fix: update options for `@typescript-eslint/no-unused-expressions` rule
+
 ## 2.8.2
 
 ### Patch Changes
