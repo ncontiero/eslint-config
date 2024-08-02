@@ -56,6 +56,15 @@ export async function typescriptCore(options: TsOptions = {}) {
       "@typescript-eslint/no-import-type-side-effects": "error",
       "@typescript-eslint/no-non-null-assertion": "off",
       "@typescript-eslint/no-redeclare": "error",
+      "@typescript-eslint/no-unused-expressions": [
+        "error",
+        {
+          allowShortCircuit: true,
+          allowTaggedTemplates: false,
+          allowTernary: true,
+          enforceForJSX: true,
+        },
+      ],
 
       // handled by unused-imports/no-unused-imports
       "@typescript-eslint/no-unused-vars": "off",
