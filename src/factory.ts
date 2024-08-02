@@ -5,6 +5,7 @@ import type {
   PrettierOptions,
   StyleConfig,
 } from "./types";
+import type { Linter } from "eslint";
 import {
   hasNextJs,
   hasReact,
@@ -86,7 +87,9 @@ function getStyleOptions(options: PrettierOptions): StyleConfig | false {
  */
 export function dkshs(
   options: OptionsConfig & FlatConfigItem = {},
-  ...userConfigs: Awaitable<FlatConfigItem | FlatConfigItem[]>[]
+  ...userConfigs: Awaitable<
+    FlatConfigItem | FlatConfigItem[] | Linter.Config[]
+  >[]
 ) {
   const {
     isInEditor = isInEditorEnv,
