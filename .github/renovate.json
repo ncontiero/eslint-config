@@ -10,7 +10,7 @@
       "groupName": "all non-major dependencies",
       "matchUpdateTypes": ["minor", "patch"],
       "matchDepTypes": ["dependencies"],
-      "matchPackagePatterns": ["*"]
+      "matchPackageNames": ["*"]
     }
   ]
 }
