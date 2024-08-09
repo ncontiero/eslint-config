@@ -56,7 +56,6 @@ export async function markdown(
         "@typescript-eslint/no-require-imports": "off",
         "@typescript-eslint/no-unused-vars": "off",
         "@typescript-eslint/no-use-before-define": "off",
-        "@typescript-eslint/no-var-requires": "off",
 
         "import/newline-after-import": "off",
 
