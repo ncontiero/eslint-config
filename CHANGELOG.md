@@ -1,5 +1,21 @@
 # @dkshs/eslint-config
 
+## 2.9.0
+
+### Minor Changes
+
+- [`cea6c02`](https://github.com/dkshs/eslint-config/commit/cea6c02ed5127fe8cdfe7a4560158855b26e486a) - feat: update promise config
+
+### Patch Changes
+
+- [`767fd2b`](https://github.com/dkshs/eslint-config/commit/767fd2b79879106bc9e3aef38270b9c0fa909e7a) - chore: add name to configs
+
+- [`ad2ea5a`](https://github.com/dkshs/eslint-config/commit/ad2ea5af09bbdc82abf4063b2bb1036196052915) - refactor: remove deprecated TS rules
+
+- [#157](https://github.com/dkshs/eslint-config/pull/157) [`7456374`](https://github.com/dkshs/eslint-config/commit/7456374b3ff54023af3cbbcc0cb72e23e07320da) - chore(deps): update eslint-plugin-jsdoc to v50
+
+- [`326a0b8`](https://github.com/dkshs/eslint-config/commit/326a0b8bb67e25d5905273706637e09c653ad82d) - chore: remove deprecated rule `jsx-a11y/accessible-emoji`
+
 ## 2.8.3
 
 ### Patch Changes
