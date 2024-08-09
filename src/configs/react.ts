@@ -203,7 +203,6 @@ export async function react(
           : {}),
 
         // a11y rules
-        "jsx-a11y/accessible-emoji": ["warn"],
         "jsx-a11y/alt-text": [
           "warn",
           {
