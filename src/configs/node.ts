@@ -4,6 +4,7 @@ import { pluginNode } from "../plugins";
 export function node(): FlatConfigItem[] {
   return [
     {
+      name: "dkshs/node",
       plugins: {
         node: pluginNode,
       },

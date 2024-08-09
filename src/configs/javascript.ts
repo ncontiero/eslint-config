@@ -42,6 +42,7 @@ export function javascript(
       linterOptions: {
         reportUnusedDisableDirectives: true,
       },
+      name: "dkshs/javascript",
       plugins: {
         antfu: pluginAntfu,
         "unused-imports": pluginUnusedImports,
@@ -164,12 +165,14 @@ export function javascript(
     },
     {
       files: [`scripts/${GLOB_SRC}`, `cli.${GLOB_SRC_EXT}`],
+      name: "dkshs/cli-rules",
       rules: {
         "no-console": "off",
       },
     },
     {
       files: [`**/*.{test,spec}.${GLOB_SRC_EXT}`],
+      name: "dkshs/test-rules",
       rules: {
         "no-unused-expressions": "off",
       },

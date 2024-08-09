@@ -21,6 +21,7 @@ export async function toml(
 
   return [
     {
+      name: "dkshs/toml/setup",
       plugins: {
         toml: pluginToml,
       },
@@ -30,6 +31,7 @@ export async function toml(
       languageOptions: {
         parser: parserToml,
       },
+      name: "antfu/toml",
       rules: {
         "toml/array-bracket-newline": "error",
         "toml/array-bracket-spacing": "error",

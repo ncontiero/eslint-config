@@ -6,6 +6,7 @@ export function promise(): FlatConfigItem[] {
   return [
     {
       files: [GLOB_SRC],
+      name: "dkshs/promise",
       plugins: {
         promise: pluginPromise,
       },

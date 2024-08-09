@@ -6,6 +6,7 @@ export function unicorn(options: OptionsHasRegexp = {}): FlatConfigItem[] {
 
   return [
     {
+      name: "dkshs/unicorn",
       plugins: {
         unicorn: pluginUnicorn,
       },

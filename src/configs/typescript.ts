@@ -31,6 +31,7 @@ export async function typescriptCore(options: TsOptions = {}) {
         ...parserOptions,
       },
     },
+    name: "dkshs/typescript",
     rules: {
       "@typescript-eslint/ban-ts-comment": [
         "error",
@@ -97,28 +98,19 @@ export async function typescript(
 
     {
       files: ["**/*.d.ts"],
+      name: "dkshs/typescript/dts-rules",
       rules: {
         "eslint-comments/no-unlimited-disable": "off",
         "import/no-duplicates": "off",
+        "no-restricted-syntax": ["error", ...restrictedSyntaxJs],
         "unused-imports/no-unused-vars": "off",
       },
     },
     {
-      files: ["**/*.{test,spec}.ts?(x)"],
-      rules: {
-        "no-unused-expressions": "off",
-      },
-    },
-    {
       files: [GLOB_JS, "**/*.cjs"],
+      name: "dkshs/typescript/cjs-rules",
       rules: {
         "@typescript-eslint/no-require-imports": "off",
-      },
-    },
-    {
-      files: ["**/*.d.ts"],
-      rules: {
-        "no-restricted-syntax": ["error", ...restrictedSyntaxJs],
       },
     },
   ];

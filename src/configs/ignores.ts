@@ -5,6 +5,7 @@ export function ignores(): FlatConfigItem[] {
   return [
     {
       ignores: GLOB_EXCLUDE,
+      name: "dkshs/global-ignores",
     },
   ];
 }

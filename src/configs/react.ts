@@ -31,6 +31,7 @@ export async function react(
   return [
     {
       files,
+      name: "dkshs/react/setup",
       plugins: {
         "jsx-a11y": pluginA11y,
         react: pluginReact,
@@ -52,6 +53,7 @@ export async function react(
           },
         },
       },
+      name: "dkshs/react",
       rules: {
         // react-hooks
         "react-hooks/exhaustive-deps": "warn",

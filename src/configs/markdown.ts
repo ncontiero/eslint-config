@@ -15,8 +15,8 @@ export async function markdown(
   const pluginMarkdown = await interopDefault(import("eslint-plugin-markdown"));
 
   return [
-    // ...pluginMarkdown.configs.recommended,
     {
+      name: "dkshs/markdown/setup",
       plugins: {
         markdown: pluginMarkdown,
       },
@@ -24,6 +24,7 @@ export async function markdown(
     {
       files,
       ignores: [GLOB_MARKDOWN_IN_MARKDOWN],
+      name: "dkshs/markdown/processor",
       // `eslint-plugin-markdown` only creates virtual files for code blocks,
       // but not the markdown file itself. We use `eslint-merge-processors` to
       // add a pass-through processor for the markdown file itself.
@@ -37,6 +38,7 @@ export async function markdown(
       languageOptions: {
         parser: parserPlain,
       },
+      name: "dkshs/markdown/parser",
     },
     {
       files: [GLOB_MARKDOWN_CODE],
@@ -47,6 +49,7 @@ export async function markdown(
           },
         },
       },
+      name: "dkshs/markdown/disables",
       rules: {
         "@typescript-eslint/comma-dangle": "off",
         "@typescript-eslint/consistent-type-imports": "off",

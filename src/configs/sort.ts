@@ -4,6 +4,7 @@ export function sortPackageJson(): FlatConfigItem[] {
   return [
     {
       files: ["**/package.json"],
+      name: "dkshs/sort/package-json",
       rules: {
         "jsonc/sort-array-values": [
           "error",
@@ -87,6 +88,7 @@ export function sortTsconfig(): FlatConfigItem[] {
   return [
     {
       files: ["**/tsconfig.json", "**/tsconfig.*.json"],
+      name: "dkshs/sort/tsconfig",
       rules: {
         "jsonc/sort-keys": [
           "error",

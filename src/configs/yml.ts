@@ -22,6 +22,7 @@ export async function yml(
 
   return [
     {
+      name: "dkshs/yml/setup",
       plugins: {
         yml: pluginYml,
       },
@@ -31,6 +32,7 @@ export async function yml(
       languageOptions: {
         parser: parserYml,
       },
+      name: "dkshs/yml",
       rules: {
         "yml/block-mapping": "error",
         "yml/block-mapping-question-indicator-newline": "error",

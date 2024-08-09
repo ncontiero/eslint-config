@@ -26,6 +26,7 @@ export async function jsonc(
 
   return [
     {
+      name: "dkshs/jsonc/setup",
       plugins: {
         jsonc: pluginJsonc,
       },
@@ -35,6 +36,7 @@ export async function jsonc(
       languageOptions: {
         parser: parserJsonc,
       },
+      name: "dkshs/jsonc",
       rules: {
         ...(pluginJsonc.configs["recommended-with-jsonc"].rules as Rules),
         "jsonc/array-bracket-spacing": ["error", "never"],

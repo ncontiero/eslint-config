@@ -12,6 +12,7 @@ export async function nextJs(
   return [
     {
       files,
+      name: "dkshs/nextjs",
       plugins: {
         nextjs: pluginNextJs,
       },

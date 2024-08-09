@@ -4,6 +4,7 @@ import { interopDefault } from "../utils";
 export async function jsdoc(): Promise<FlatConfigItem[]> {
   return [
     {
+      name: "dkshs/jsdoc",
       plugins: {
         jsdoc: await interopDefault(import("eslint-plugin-jsdoc")),
       },

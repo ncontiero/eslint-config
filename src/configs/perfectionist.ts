@@ -9,6 +9,7 @@ import { pluginPerfectionist } from "../plugins";
 export function perfectionist(): FlatConfigItem[] {
   return [
     {
+      name: "dkshs/perfectionist",
       plugins: {
         perfectionist: pluginPerfectionist,
       },
