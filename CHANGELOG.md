@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 2.9.1
+
+### Patch Changes
+
+- [`fd79145`](https://github.com/dkshs/eslint-config/commit/fd791457a89a6a12ee255a6ea76f1384b81cf0b2) - fix: remove name from `ignores` configuration
+
 ## 2.9.0
 
 ### Minor Changes
