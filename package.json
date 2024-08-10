@@ -28,8 +28,8 @@
   },
   "scripts": {
     "build": "tsup",
-    "dev": "pnpm dlx @eslint/config-inspector",
-    "build:inspector": "pnpm build && pnpm dlx @eslint/config-inspector build",
+    "dev": "pnpm dlx @eslint/config-inspector --config eslint-inspector.config.ts",
+    "build:inspector": "pnpm build && pnpm dlx @eslint/config-inspector build --config eslint-inspector.config.ts",
     "lint": "eslint .",
     "lint:fix": "pnpm lint --fix",
     "changeset": "changeset",
