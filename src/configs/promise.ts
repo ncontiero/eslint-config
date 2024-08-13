@@ -9,5 +9,12 @@ export async function promise(): Promise<FlatConfigItem[]> {
       ...pluginPromise.configs["flat/recommended"],
       name: "dkshs/promise/setup",
     },
+    {
+      name: "dkshs/promise/rules",
+      rules: {
+        "promise/always-return": ["error", { ignoreLastCallback: true }],
+        "promise/no-multiple-resolved": "warn",
+      },
+    },
   ];
 }
