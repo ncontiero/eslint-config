@@ -1,5 +1,13 @@
 # @dkshs/eslint-config
 
+## 2.9.2
+
+### Patch Changes
+
+- [`11c0c3b`](https://github.com/dkshs/eslint-config/commit/11c0c3bfb35ebbf412976a0276320378913d7d22) - fix: migrate plugin eslint-comments
+
+- [`f80900e`](https://github.com/dkshs/eslint-config/commit/f80900e6b1a2c9f7734104442336e0289072d76b) - chore: update promise rules
+
 ## 2.9.1
 
 ### Patch Changes
