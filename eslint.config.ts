@@ -7,7 +7,12 @@ export default dkshs(
     tailwindcss: true,
   },
   {
-    ignores: ["fixtures", "_fixtures", ".eslint-config-inspector"],
+    ignores: [
+      "fixtures",
+      "_fixtures",
+      ".eslint-config-inspector",
+      "src/typegen.d.ts",
+    ],
   },
   {
     files: ["src/**/*.ts"],

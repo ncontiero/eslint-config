@@ -1,9 +1,10 @@
 import type { Linter } from "eslint";
 import type { Options as PrettierOptions } from "prettier";
 import type { ParserOptions } from "@typescript-eslint/parser";
+import type { RuleOptions } from "./typegen";
 
 export type Awaitable<T> = T | Promise<T>;
-export interface Rules {}
+export interface Rules extends RuleOptions {}
 
 export interface FlatConfigItem
   extends Omit<Linter.Config<Linter.RulesRecord & Rules>, "plugins"> {
