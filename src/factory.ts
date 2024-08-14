@@ -3,6 +3,7 @@ import type {
   FlatConfigItem,
   OptionsConfig,
   PrettierOptions,
+  Rules,
   StyleConfig,
 } from "./types";
 import type { Linter } from "eslint";
@@ -37,7 +38,7 @@ import {
   unicorn,
   yml,
 } from "./configs";
-import { composer } from "./utils";
+import { composer, interopDefault } from "./utils";
 import { GLOB_TS, GLOB_TSX } from "./globs";
 
 const flatConfigProps: (keyof FlatConfigItem)[] = [
@@ -63,8 +64,12 @@ export function resolveSubOptions<K extends keyof OptionsConfig>(
 export function getOverrides<K extends keyof OptionsConfig>(
   options: OptionsConfig,
   key: K,
-) {
-  return resolveSubOptions(options, key).overrides || {};
+): Partial<Linter.RulesRecord & Rules> {
+  const sub = resolveSubOptions(options, key);
+  return {
+    ...("overrides" in options ? (options.overrides as any) : {})?.[key],
+    ...("overrides" in sub ? sub.overrides : ({} as any)),
+  };
 }
 
 function getStyleOptions(options: PrettierOptions): StyleConfig | false {
@@ -92,6 +97,7 @@ export function dkshs(
   >[]
 ) {
   const {
+    gitignore: enableGitignore = true,
     isInEditor = isInEditorEnv,
     nextjs: enableNextJs = hasNextJs,
     react: enableReact = hasReact,
@@ -105,6 +111,22 @@ export function dkshs(
   const styleOptions = getStyleOptions(prettierOptions);
 
   const configs: Awaitable<FlatConfigItem[]>[] = [];
+
+  if (enableGitignore) {
+    if (typeof enableGitignore !== "boolean") {
+      configs.push(
+        interopDefault(import("eslint-config-flat-gitignore")).then((r) => [
+          r(enableGitignore),
+        ]),
+      );
+    } else {
+      configs.push(
+        interopDefault(import("eslint-config-flat-gitignore")).then((r) => [
+          r({ strict: false }),
+        ]),
+      );
+    }
+  }
 
   // Base configs
   configs.push(

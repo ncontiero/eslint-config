@@ -1,6 +1,7 @@
 import type { Linter } from "eslint";
 import type { Options as PrettierOptions } from "prettier";
 import type { ParserOptions } from "@typescript-eslint/parser";
+import type { FlatGitignoreOptions } from "eslint-config-flat-gitignore";
 import type { RuleOptions } from "./typegen";
 
 export type Awaitable<T> = T | Promise<T>;
@@ -64,6 +65,16 @@ export interface StyleOptions {
 }
 
 export interface OptionsConfig {
+  /**
+   * Enable gitignore support.
+   *
+   * Passing an object to configure the options.
+   *
+   * @see https://github.com/antfu/eslint-config-flat-gitignore
+   * @default true
+   */
+  gitignore?: boolean | FlatGitignoreOptions;
+
   /** Core rules. Can't be disabled. */
   javascript?: OptionsOverrides;
 
