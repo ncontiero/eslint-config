@@ -1,5 +1,17 @@
 # @dkshs/eslint-config
 
+## 2.10.0
+
+### Minor Changes
+
+- [`b9544a8`](https://github.com/dkshs/eslint-config/commit/b9544a8427b1d9e03304f5074f8ce30fb61c27a8) - feat: ignore files from gitignore
+
+- [`219249a`](https://github.com/dkshs/eslint-config/commit/219249aad23c793ebec0aacafcc1721808d7a287) - feat: add rules type
+
+### Patch Changes
+
+- [`fd8c3da`](https://github.com/dkshs/eslint-config/commit/fd8c3da847db847e0997b61b19789ac91d610ebf) - chore: update configs name
+
 ## 2.9.2
 
 ### Patch Changes
