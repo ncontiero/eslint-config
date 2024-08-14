@@ -31,7 +31,7 @@ export async function typescriptCore(options: TsOptions = {}) {
         ...parserOptions,
       },
     },
-    name: "dkshs/typescript",
+    name: "dkshs/typescript/rules",
     rules: {
       "@typescript-eslint/ban-ts-comment": [
         "error",

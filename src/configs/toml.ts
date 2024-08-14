@@ -31,7 +31,7 @@ export async function toml(
       languageOptions: {
         parser: parserToml,
       },
-      name: "antfu/toml",
+      name: "antfu/toml/rules",
       rules: {
         "toml/array-bracket-newline": "error",
         "toml/array-bracket-spacing": "error",

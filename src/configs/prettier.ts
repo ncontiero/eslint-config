@@ -31,7 +31,7 @@ export async function prettier(
     },
     {
       files: [GLOB_SRC],
-      name: "dkshs/prettier",
+      name: "dkshs/prettier/rules",
       rules: {
         "prettier/prettier": ["warn", options],
       },

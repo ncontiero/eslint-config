@@ -49,7 +49,7 @@ export async function markdown(
           },
         },
       },
-      name: "dkshs/markdown/disables",
+      name: "dkshs/markdown/rules",
       rules: {
         "@typescript-eslint/comma-dangle": "off",
         "@typescript-eslint/consistent-type-imports": "off",

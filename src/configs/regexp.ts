@@ -12,7 +12,7 @@ export function regexp(options: OptionsOverrides = {}): FlatConfigItem[] {
   return [
     {
       ...config,
-      name: "dkshs/regexp",
+      name: "dkshs/regexp/rules",
       rules,
     },
   ];

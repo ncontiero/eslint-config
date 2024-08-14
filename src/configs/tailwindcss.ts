@@ -37,7 +37,7 @@ export async function tailwindcss(
     },
     {
       files: [GLOB_REACT, GLOB_HTML],
-      name: "dkshs/tailwindcss",
+      name: "dkshs/tailwindcss/rules",
       rules: {
         "tailwindcss/classnames-order": isInEditor ? "off" : "warn",
         "tailwindcss/enforces-negative-arbitrary-values": ["warn"],

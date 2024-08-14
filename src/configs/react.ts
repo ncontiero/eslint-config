@@ -53,7 +53,7 @@ export async function react(
           },
         },
       },
-      name: "dkshs/react",
+      name: "dkshs/react/rules",
       rules: {
         // react-hooks
         "react-hooks/exhaustive-deps": "warn",

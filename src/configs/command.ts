@@ -5,7 +5,7 @@ export function command(): FlatConfigItem[] {
   return [
     {
       ...createCommand(),
-      name: "dkshs/command",
+      name: "dkshs/command/rules",
     },
   ];
 }
