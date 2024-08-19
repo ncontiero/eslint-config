@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 2.10.1
+
+### Patch Changes
+
+- [`36da2cd`](https://github.com/dkshs/eslint-config/commit/36da2cd81d7df444483781b8f8b9e3696f11a069) - fix: disable `@typescript-eslint/no-unused-expressions` rule in markdown
+
 ## 2.10.0
 
 ### Minor Changes
