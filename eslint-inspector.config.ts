@@ -4,4 +4,5 @@ export default dkshs({
   react: true,
   nextjs: true,
   tailwindcss: true,
+  gitignore: false,
 });
