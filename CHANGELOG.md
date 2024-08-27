@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 2.10.2
+
+### Patch Changes
+
+- [#187](https://github.com/dkshs/eslint-config/pull/187) [`ef76970`](https://github.com/dkshs/eslint-config/commit/ef76970f7bfebe3afa483bdb275a8c6a93b0ab6e) - chore(deps): update eslint-plugin-import-x to v4
+
 ## 2.10.1
 
 ### Patch Changes
