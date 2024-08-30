@@ -69,6 +69,8 @@ export default dkshs(
 
 Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
+[Eslint]()
+
 Add the following settings to your `.vscode/settings.json`:
 
 ```json

@@ -12,7 +12,7 @@ export async function markdown(
 ): Promise<FlatConfigItem[]> {
   const { files = [GLOB_MARKDOWN], overrides = {} } = options;
 
-  const pluginMarkdown = await interopDefault(import("eslint-plugin-markdown"));
+  const pluginMarkdown = await interopDefault(import("@eslint/markdown"));
 
   return [
     {
