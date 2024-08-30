@@ -41,16 +41,15 @@ import {
 import { composer, interopDefault } from "./utils";
 import { GLOB_TS, GLOB_TSX } from "./globs";
 
-const flatConfigProps: (keyof FlatConfigItem)[] = [
-  "files",
-  "ignores",
+const flatConfigProps = [
+  "name",
   "languageOptions",
   "linterOptions",
   "processor",
   "plugins",
   "rules",
   "settings",
-];
+] satisfies (keyof FlatConfigItem)[];
 
 export type ResolvedOptions<T> = T extends boolean ? never : NonNullable<T>;
 
@@ -91,7 +90,7 @@ function getStyleOptions(options: PrettierOptions): StyleConfig | false {
  * @returns Merged ESLint configurations based on provided options.
  */
 export function dkshs(
-  options: OptionsConfig & FlatConfigItem = {},
+  options: OptionsConfig & Omit<FlatConfigItem, "files"> = {},
   ...userConfigs: Awaitable<
     FlatConfigItem | FlatConfigItem[] | Linter.Config[]
   >[]
@@ -131,7 +130,7 @@ export function dkshs(
 
   // Base configs
   configs.push(
-    ignores(),
+    ignores(options.ignores),
     javascript({ isInEditor, overrides: getOverrides(options, "javascript") }),
     comments(),
     jsdoc(),
@@ -220,6 +219,12 @@ export function dkshs(
   }
 
   if (options.prettier ?? true) configs.push(prettier(prettierOptions));
+
+  if ("files" in options) {
+    throw new Error(
+      '[@dkshs/eslint-config] The first argument should not contain the "files" property as the options are supposed to be global. Place it in the second or later config instead.',
+    );
+  }
 
   // User can optionally pass a flat config item to the first argument
   // We pick the known keys as ESLint would do schema validation
