@@ -39,13 +39,13 @@
     "prepare": "husky"
   },
   "peerDependencies": {
-    "eslint": ">=8.40.0"
+    "eslint": ">=9.5.0"
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
     "@eslint/markdown": "^6.0.0",
     "@next/eslint-plugin-next": "14.3.0-canary.87",
-    "eslint-config-flat-gitignore": "^0.1.8",
+    "eslint-config-flat-gitignore": "^0.3.0",
     "eslint-merge-processors": "^0.1.0",
     "eslint-plugin-antfu": "^2.3.6",
     "eslint-plugin-command": "^0.2.3",

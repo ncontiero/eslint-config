@@ -116,13 +116,13 @@ export function dkshs(
     if (typeof enableGitignore !== "boolean") {
       configs.push(
         interopDefault(import("eslint-config-flat-gitignore")).then((r) => [
-          r(enableGitignore),
+          r({ name: "dkshs/gitignore", ...enableGitignore }),
         ]),
       );
     } else {
       configs.push(
         interopDefault(import("eslint-config-flat-gitignore")).then((r) => [
-          r({ strict: false }),
+          r({ name: "dkshs/gitignore", strict: false }),
         ]),
       );
     }

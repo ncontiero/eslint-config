@@ -18,10 +18,12 @@ ESLint configuration.
 - Lints also for json, yaml, toml, markdown
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
 - Optional [React](https://react.dev/), [NextJs](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/) support
-- Supports ESLint v9 or v8.50.0+
+- Requires ESLint v9.5.0+
 
 > [!IMPORTANT]
 > Since v2.2.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check the [release note](https://github.com/dkshs/eslint-config/releases/tag/v2.2.0) for more details.
+>
+> Since v3.0.0, ESLint v9.5.0+ is now required.
 
 ## Usage
 
@@ -31,7 +33,7 @@ ESLint configuration.
 npm i -D @dkshs/eslint-config
 ```
 
-> Require Node.js >= 18.18, and ESLint >= 8.40.0.
+> Require Node.js >= 18.18, and ESLint >= 9.5.0.
 
 2. Create `eslint.config.mjs` in your project root:
 
