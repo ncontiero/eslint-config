@@ -64,6 +64,15 @@ export interface StyleOptions {
   style?: boolean | StyleConfig;
 }
 
+export interface OptionsUnicorn extends OptionsOverrides {
+  /**
+   * Include all rules recommended by `eslint-plugin-unicorn`, instead of just the chosen ones.
+   *
+   * @default false
+   */
+  allRecommended?: boolean;
+}
+
 export interface OptionsConfig {
   /**
    * Enable gitignore support.
@@ -86,6 +95,13 @@ export interface OptionsConfig {
    * @default auto-detect based on the dependencies
    */
   typescript?: boolean | OptionsTypescript;
+
+  /**
+   * Options for eslint-plugin-unicorn.
+   *
+   * @default true
+   */
+  unicorn?: boolean | OptionsUnicorn;
 
   /**
    * Enable JSONC support.

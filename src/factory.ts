@@ -104,6 +104,7 @@ export function dkshs(
     regexp: enableRegexp = true,
     tailwindcss: enableTailwindCSS = hasTailwind,
     typescript: enableTypescript = hasTypeScript,
+    unicorn: enableUnicorn = true,
   } = options;
 
   const prettierOptions =
@@ -135,12 +136,19 @@ export function dkshs(
     comments(),
     jsdoc(),
     imports({ nextJs: enableNextJs === true }),
-    unicorn({ regexp: !!enableRegexp }),
     node(),
     promise(),
     command(),
     perfectionist(),
   );
+
+  if (enableUnicorn) {
+    configs.push(
+      unicorn(
+        enableUnicorn === true ? { regexp: !!enableRegexp } : enableUnicorn,
+      ),
+    );
+  }
 
   if (enableTypescript) {
     configs.push(
