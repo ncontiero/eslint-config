@@ -1,4 +1,7 @@
 import type { Awaitable, FlatConfigItem } from "./types";
+import { isPackageExists } from "local-pkg";
+
+const isCwdInScope = isPackageExists("@dkshs/eslint-config");
 
 export const parserPlain = {
   meta: {
@@ -36,6 +39,17 @@ export async function interopDefault<T>(
 ): Promise<T extends { default: infer U } ? U : T> {
   const resolved = await m;
   return (resolved as any).default || resolved;
+}
+
+export function ensurePackages(packages: (string | undefined)[]) {
+  if (process.env.CI || !process.stdout.isTTY || !isCwdInScope) return;
+
+  const nonExistingPackages = packages.filter((i) => i && !isPackageExists(i));
+  if (nonExistingPackages.length === 0) return;
+
+  throw new Error(
+    `This package(s) are required for this config: ${nonExistingPackages.join(", ")}. Please install them.`,
+  );
 }
 
 export async function composer(...items: Awaitable<FlatConfigItem[]>[]) {

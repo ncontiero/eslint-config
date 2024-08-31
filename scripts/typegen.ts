@@ -12,6 +12,7 @@ const configs = await dkshs({
   react: true,
   nextjs: true,
   tailwindcss: true,
+  reactQuery: true,
 });
 
 const configNames = configs.map((i) => i.name).filter(Boolean) as string[];

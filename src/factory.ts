@@ -11,6 +11,7 @@ import {
   hasNextJs,
   hasReact,
   hasTailwind,
+  hasTanStackReactQuery,
   hasTypeScript,
   isInEditorEnv,
 } from "./env";
@@ -100,6 +101,7 @@ export function dkshs(
     isInEditor = isInEditorEnv,
     nextjs: enableNextJs = hasNextJs,
     react: enableReact = hasReact,
+    reactQuery: enableTanStackReactQuery = hasTanStackReactQuery,
     regexp: enableRegexp = true,
     tailwindcss: enableTailwindCSS = hasTailwind,
     typescript: enableTypescript = hasTypeScript,
@@ -200,6 +202,7 @@ export function dkshs(
     configs.push(
       react({
         overrides: getOverrides(options, "react"),
+        reactQuery: !!enableTanStackReactQuery,
         typescript: !!enableTypescript,
       }),
     );

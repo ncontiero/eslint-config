@@ -1,20 +1,33 @@
 import type {
   FlatConfigItem,
   OptionsFiles,
+  OptionsHasTanStackReactQuery,
   OptionsHasTypeScript,
   OptionsOverrides,
 } from "../types";
 import { isPackageExists } from "local-pkg";
 import { GLOB_REACT } from "../globs";
-import { interopDefault } from "../utils";
+import { ensurePackages, interopDefault } from "../utils";
 
 // react refresh
 const ReactRefreshAllowPackages = ["vite"];
 
 export async function react(
-  options: OptionsHasTypeScript & OptionsOverrides & OptionsFiles = {},
+  options: OptionsHasTypeScript &
+    OptionsOverrides &
+    OptionsFiles &
+    OptionsHasTanStackReactQuery = {},
 ): Promise<FlatConfigItem[]> {
-  const { files = [GLOB_REACT], overrides = {}, typescript } = options;
+  const {
+    files = [GLOB_REACT],
+    overrides = {},
+    reactQuery,
+    typescript,
+  } = options;
+
+  if (reactQuery) {
+    ensurePackages(["@tanstack/eslint-plugin-query"]);
+  }
 
   const [pluginReact, pluginReactHooks, pluginReactRefresh] = await Promise.all(
     [
@@ -43,6 +56,13 @@ export async function react(
         },
       },
     },
+    reactQuery
+      ? {
+          name: "dkshs/tanstack-query",
+          ...(await interopDefault(import("@tanstack/eslint-plugin-query")))
+            .configs["flat/recommended"][0],
+        }
+      : {},
     {
       files,
       languageOptions: {

@@ -48,6 +48,10 @@ export interface OptionsHasRegexp {
   regexp?: boolean;
 }
 
+export interface OptionsHasTanStackReactQuery {
+  reactQuery?: boolean;
+}
+
 export type OptionsTypescript = OptionsTypeScriptParserOptions &
   OptionsOverrides;
 
@@ -168,6 +172,13 @@ export interface OptionsConfig {
    * @default auto-detect based on the dependencies
    */
   tailwindcss?: boolean | OptionsOverrides;
+
+  /**
+   * Enable TanStack React Query support.
+   *
+   * @default auto-detect based on the dependencies
+   */
+  reactQuery?: boolean;
 
   /**
    * Control to disable some rules in editors.

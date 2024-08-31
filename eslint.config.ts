@@ -5,6 +5,7 @@ export default dkshs(
     react: true,
     nextjs: true,
     tailwindcss: true,
+    reactQuery: true,
   },
   {
     ignores: ["fixtures", "_fixtures"],

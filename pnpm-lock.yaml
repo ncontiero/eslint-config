@@ -114,6 +114,9 @@ importers:
       '@dkshs/prettier-config':
         specifier: ^1.0.0
         version: 1.0.0
+      '@tanstack/eslint-plugin-query':
+        specifier: ^5.53.0
+        version: 5.53.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
       '@types/eslint':
         specifier: ^9.6.1
         version: 9.6.1
@@ -806,6 +809,11 @@ packages:
   '@sindresorhus/merge-streams@4.0.0':
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
+
+  '@tanstack/eslint-plugin-query@5.53.0':
+    resolution: {integrity: sha512-Q3WgvK2YTGc3h5EaktDouRkKBPGl3QQFLPZBagpBa6zD70PiNoDY72wWrX9T4yKClMmSulAa0wg5Nj3LVXGkEw==}
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
 
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
@@ -4092,6 +4100,14 @@ snapshots:
   '@sec-ant/readable-stream@0.4.1': {}
 
   '@sindresorhus/merge-streams@4.0.0': {}
+
+  '@tanstack/eslint-plugin-query@5.53.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)':
+    dependencies:
+      '@typescript-eslint/utils': 8.3.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
+      eslint: 9.9.1(jiti@1.21.6)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
 
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
