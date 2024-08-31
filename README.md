@@ -14,7 +14,7 @@ ESLint configuration.
 - Format with Prettier
 - Sort imports, `package.json`, `tsconfig.json`...
 - Reasonable defaults, best practices, only one line of config
-- Designed to work with TypeScript, JSX out-of-box
+- Designed to work with TypeScript
 - Lints also for json, yaml, toml, markdown
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
 - Optional [React](https://react.dev/), [NextJs](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/) support
@@ -70,8 +70,6 @@ export default dkshs(
 ## VS Code support (auto fix on save)
 
 Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-
-[Eslint]()
 
 Add the following settings to your `.vscode/settings.json`:
 
