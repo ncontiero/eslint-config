@@ -1,5 +1,33 @@
 # @dkshs/eslint-config
 
+## 3.0.0
+
+### Major Changes
+
+- [`2c7b855`](https://github.com/dkshs/eslint-config/commit/2c7b8553bcdece8d46318895a8982d9a0affa139) - fix!: make the first `ignores` always global, disallow `files` in the first arg
+
+- [`b3e5e3c`](https://github.com/dkshs/eslint-config/commit/b3e5e3c0b4ec0704b88634bd7f77f976e553b762) - feat!: require ESLint v9.5+
+
+### Minor Changes
+
+- [`de0a45c`](https://github.com/dkshs/eslint-config/commit/de0a45c91b4dbc37db40a7f6dc49e3336b090e34) - feat: add `@tanstack/eslint-plugin-query` to react projects
+
+- [`6320932`](https://github.com/dkshs/eslint-config/commit/63209325da48c7f0836d76bb153e121f51dabccb) - feat: add more unicorn rules, allow to configure using `recommended` rules
+
+### Patch Changes
+
+- [`9133294`](https://github.com/dkshs/eslint-config/commit/9133294d0e501d84d785e69c48a2e4e6dca507e7) - docs: update readme
+
+- [`4adfc05`](https://github.com/dkshs/eslint-config/commit/4adfc05e9893795b72f44ed3d4b9f097664e9912) - fix: ignore typescript files when disabled
+
+- [`f5780ef`](https://github.com/dkshs/eslint-config/commit/f5780effda682b845588b5f5696734a0b7dd27ba) - chore(deps): update eslint-plugin-react-hooks to 5.1.0-rc
+
+- [`f5ff378`](https://github.com/dkshs/eslint-config/commit/f5ff3789d72f54b074246525e02f746facf11548) - chore(deps): move eslint-plugin-markdown to @eslint/markdown
+
+- [`d602411`](https://github.com/dkshs/eslint-config/commit/d602411a210804402c5805d212eb7d5861858d50) - chore(deps): remove eslint-plugin-jsx-a11y
+
+- [`53390d7`](https://github.com/dkshs/eslint-config/commit/53390d7ef08184ece8bd69a85e10dfd5cfeb7115) - fix: remove deprecated rules
+
 ## 2.10.2
 
 ### Patch Changes
