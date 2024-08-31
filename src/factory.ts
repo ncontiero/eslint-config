@@ -130,6 +130,12 @@ export function dkshs(
     }
   }
 
+  if (!enableTypescript) {
+    options.ignores
+      ? options.ignores.push(GLOB_TS, GLOB_TSX)
+      : (options.ignores = [GLOB_TS, GLOB_TSX]);
+  }
+
   // Base configs
   configs.push(
     ignores(options.ignores),
@@ -158,8 +164,7 @@ export function dkshs(
         overrides: getOverrides(options, "typescript"),
       }),
     );
-  } else if (options.ignores) options.ignores.push(GLOB_TS, GLOB_TSX);
-  else options.ignores = [GLOB_TS, GLOB_TSX];
+  }
 
   if (options.jsonc ?? true) {
     configs.push(
