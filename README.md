@@ -1,24 +1,22 @@
-<div align="center">
-
 # @dkshs/eslint-config
 
-ESLint configuration.
+DKSHS's ESLint config preset for JavaScript, TypeScript, and Prettier.
 
-[![Version](https://img.shields.io/npm/v/@dkshs/eslint-config)](https://www.npmjs.com/package/@dkshs/eslint-config) [![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/dkshs/eslint-config/blob/master/LICENSE)
-
-</div>
+[![Version](https://img.shields.io/npm/v/@dkshs/eslint-config)](https://www.npmjs.com/package/@dkshs/eslint-config)
+[![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/dkshs/eslint-config/blob/master/LICENSE)
 
 ## Features
 
-- Double quotes, with semi
-- Format with Prettier
+- Double quotes, with semi.
+- Format with Prettier.
 - Sort imports, `package.json`, `tsconfig.json`...
-- Reasonable defaults, best practices, only one line of config
-- Designed to work with TypeScript
-- Lints also for json, yaml, toml, markdown
+- Reasonable defaults, best practices, only one line of config.
+- Designed to work with TypeScript out-of-box.
+- Support JSON(5), YAML, TOML, Markdown...
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
-- Optional [React](https://react.dev/), [NextJs](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/) support
-- Requires ESLint v9.5.0+
+- Ignores common files like `dist`, `node_modules`, `coverage`, and files in `.gitignore`.
+- Optional [React](https://react.dev/), [NextJs](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/), [TanStack Query](https://tanstack.com/query/) support.
+- Requires ESLint v9.5.0+.
 
 > [!IMPORTANT]
 > Since v2.2.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check the [release note](https://github.com/dkshs/eslint-config/releases/tag/v2.2.0) for more details.
@@ -30,7 +28,7 @@ ESLint configuration.
 1. Install the dependencies:
 
 ```bash
-npm i -D @dkshs/eslint-config
+npm i -D eslint @dkshs/eslint-config
 ```
 
 > Require Node.js >= 18.18, and ESLint >= 9.5.0.
@@ -49,6 +47,7 @@ export default dkshs(
     react: true, // auto detection
     nextjs: false, // auto detection
     tailwindcss: false, // auto detection
+    reactQuery: false,  // auto detection
   },
   {
     /* your custom config */
@@ -75,10 +74,6 @@ Add the following settings to your `.vscode/settings.json`:
 
 ```json
 {
-  // Enable the ESlint flat config support
-  // (remove this if your ESLint extension above v3.0.5)
-  "eslint.experimental.useFlatConfig": true,
-
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
   "editor.formatOnSave": false,
@@ -102,7 +97,12 @@ Add the following settings to your `.vscode/settings.json`:
     "yaml",
     "toml",
     "gql",
-    "graphql"
+    "graphql",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
   ]
 }
 ```
@@ -127,12 +127,13 @@ And that's it! Or you can configure each integration individually, for example:
 import { dkshs } from "@dkshs/eslint-config";
 
 export default dkshs({
-  // TypeScript, React, NextJs and TailwindCSS are auto-detected,
+  // TypeScript, React, NextJs, TailwindCSS and TanStack Query are auto-detected,
   // you can also explicitly enable them:
   typescript: true,
   react: true,
   nextjs: true,
   tailwindcss: true,
+  reactQuery: true,
 
   // Disable jsonc, yaml and toml support
   jsonc: false,
@@ -157,6 +158,7 @@ export default dkshs(
   {
     // Configures for dkshs's config
   },
+
   // From the second arguments they are ESLint Flat Configs
   // you can have multiple configs
   {
@@ -190,6 +192,37 @@ export default dkshs({
   },
 });
 ```
+
+### Optional Configs
+
+We provide some optional configs for specific use cases, that we don't include their dependencies by default.
+> React, Next.js and Tailwind CSS have their dependencies by default.
+
+#### TanStack Query
+
+To enable TanStack Query support, you need to have the package installed or explicitly enable it:
+
+```js
+// eslint.config.js
+import { dkshs } from "@dkshs/eslint-config";
+
+export default dkshs({
+  reactQuery: true,
+});
+```
+
+To work, the [`@tanstack/eslint-plugin-query`](https://tanstack.com/query/latest/docs/eslint/eslint-plugin-query) package must be installed:
+
+```bash
+npm i -D @tanstack/eslint-plugin-query
+```
+
+> Require @tanstack/eslint-plugin-query >= 5.50.0
+
+## References and inspirations
+
+- [@antfu/eslint-config](https://github.com/antfu/eslint-config) - Anthony's ESLint config preset.
+- [@sxzz/eslint-config](https://github.com/sxzz/eslint-config) - A opinionated ESLint config preset.
 
 ## License
 
