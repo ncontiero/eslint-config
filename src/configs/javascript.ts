@@ -173,6 +173,7 @@ export function javascript(
       name: "dkshs/javascript/test-rules",
       rules: {
         "no-unused-expressions": "off",
+        "unicorn/consistent-function-scoping": "off",
       },
     },
   ];
