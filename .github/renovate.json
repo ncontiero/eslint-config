@@ -3,8 +3,12 @@
   "extends": ["github>dkshs/renovate-config"],
   "packageRules": [
     {
-      "matchDepTypes": ["peerDependencies"],
-      "enabled": false
+      "enabled": false,
+      "matchDepTypes": ["peerDependencies"]
+    },
+    {
+      "enabled": false,
+      "matchPackageNames": ["eslint-plugin-react-hooks"]
     },
     {
       "groupName": "all non-major dependencies",
