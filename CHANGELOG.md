@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 3.0.2
+
+### Patch Changes
+
+- [`984a0c6`](https://github.com/dkshs/eslint-config/commit/984a0c6945d535436375fa9491cc149affc2d58d) - fix: update toml config name
+
 ## 3.0.1
 
 ### Patch Changes
