@@ -1,5 +1,13 @@
 # @dkshs/eslint-config
 
+## 3.0.1
+
+### Patch Changes
+
+- [`8afd7f3`](https://github.com/dkshs/eslint-config/commit/8afd7f3df76f93446da24e25d056f84eacb368a6) - fix: disable `unicorn/consistent-function-scoping` for unit test files
+
+- [`01f552e`](https://github.com/dkshs/eslint-config/commit/01f552ed2fabc368130a9ef4831349594a9411f5) - docs: improve readme
+
 ## 3.0.0
 
 ### Major Changes
