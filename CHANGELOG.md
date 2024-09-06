@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 3.1.0
+
+### Minor Changes
+
+- [`03afcbc`](https://github.com/dkshs/eslint-config/commit/03afcbc890b2d411daac676bf98bce5dbd95a9c5) - feat: enable `perfectionist/sort-imports`
+
 ## 3.0.2
 
 ### Patch Changes
