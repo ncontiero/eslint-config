@@ -5,8 +5,8 @@ import type {
   Rules,
   StyleOptions,
 } from "../types";
-import { interopDefault } from "../utils";
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from "../globs";
+import { interopDefault } from "../utils";
 
 export async function jsonc(
   options: OptionsFiles & OptionsOverrides & StyleOptions = {},

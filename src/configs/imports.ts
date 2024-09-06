@@ -1,6 +1,6 @@
 import type { FlatConfigItem, OptionsHasNextJs } from "../types";
-import { pluginAntfu, pluginImport } from "../plugins";
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from "../globs";
+import { pluginAntfu, pluginImport } from "../plugins";
 
 export function imports(options: OptionsHasNextJs = {}): FlatConfigItem[] {
   const { nextJs = false } = options;
@@ -22,34 +22,6 @@ export function imports(options: OptionsHasNextJs = {}): FlatConfigItem[] {
         "import/no-named-default": "error",
         "import/no-self-import": "error",
         "import/no-webpack-loader-syntax": "error",
-        "import/order": [
-          "error",
-          {
-            groups: [
-              "type",
-              "builtin",
-              "external",
-              "internal",
-              "parent",
-              "sibling",
-              "index",
-              "object",
-            ],
-            pathGroups: [
-              {
-                group: "type",
-                pattern: "*.css",
-                patternOptions: {
-                  matchBase: true,
-                },
-                position: "before",
-              },
-              { group: "internal", pattern: "{{@,~}/,#}**" },
-            ],
-            pathGroupsExcludedImportTypes: ["type"],
-            warnOnUnassignedImports: true,
-          },
-        ],
       },
     },
     {

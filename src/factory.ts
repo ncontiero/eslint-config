@@ -1,3 +1,4 @@
+import type { Linter } from "eslint";
 import type {
   Awaitable,
   FlatConfigItem,
@@ -6,15 +7,6 @@ import type {
   Rules,
   StyleConfig,
 } from "./types";
-import type { Linter } from "eslint";
-import {
-  hasNextJs,
-  hasReact,
-  hasTailwind,
-  hasTanStackReactQuery,
-  hasTypeScript,
-  isInEditorEnv,
-} from "./env";
 import {
   command,
   comments,
@@ -39,8 +31,16 @@ import {
   unicorn,
   yml,
 } from "./configs";
-import { composer, interopDefault } from "./utils";
+import {
+  hasNextJs,
+  hasReact,
+  hasTailwind,
+  hasTanStackReactQuery,
+  hasTypeScript,
+  isInEditorEnv,
+} from "./env";
 import { GLOB_TS, GLOB_TSX } from "./globs";
+import { composer, interopDefault } from "./utils";
 
 const flatConfigProps = [
   "name",

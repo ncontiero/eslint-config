@@ -2,7 +2,7 @@ import type { FlatConfigItem } from "../types";
 import { pluginPerfectionist } from "../plugins";
 
 /**
- * Generates a configuration object for the Perfectionist plugin with specific sorting rules.
+ * Perfectionist plugin for props and items sorting.
  *
  * @see https://github.com/azat-io/eslint-plugin-perfectionist
  */
@@ -14,6 +14,36 @@ export function perfectionist(): FlatConfigItem[] {
         perfectionist: pluginPerfectionist,
       },
       rules: {
+        "perfectionist/sort-exports": ["warn", { type: "natural" }],
+        "perfectionist/sort-imports": [
+          "warn",
+          {
+            customGroups: {
+              type: {
+                react: ["react", "react-*"],
+              },
+              value: {
+                react: ["react", "react-*"],
+              },
+            },
+            groups: [
+              ["side-effect-style", "style"],
+              ["type", "internal-type"],
+              ["parent-type", "sibling-type", "index-type"],
+              "builtin",
+              "react",
+              "external",
+              "internal",
+              ["parent", "sibling", "index"],
+              "side-effect",
+              "object",
+              "unknown",
+            ],
+            internalPattern: ["{{@,~}/,#}**"],
+            newlinesBetween: "ignore",
+            type: "natural",
+          },
+        ],
         "perfectionist/sort-named-exports": [
           "warn",
           { groupKind: "types-first" },

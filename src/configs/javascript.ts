@@ -4,8 +4,8 @@ import type {
   OptionsOverrides,
 } from "../types";
 import globals from "globals";
-import { pluginAntfu, pluginUnusedImports } from "../plugins";
 import { GLOB_SRC, GLOB_SRC_EXT } from "../globs";
+import { pluginAntfu, pluginUnusedImports } from "../plugins";
 
 export const restrictedSyntaxJs = [
   "ForInStatement",
@@ -144,7 +144,6 @@ export function javascript(
         "prefer-template": "error",
         "require-await": "error",
         "require-yield": "error",
-        "sort-imports": "off",
         "unicode-bom": ["error", "never"],
         "unused-imports/no-unused-imports": isInEditor ? "off" : "error",
         "unused-imports/no-unused-vars": [

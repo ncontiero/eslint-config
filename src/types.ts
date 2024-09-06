@@ -1,7 +1,7 @@
-import type { Linter } from "eslint";
-import type { Options as PrettierOptions } from "prettier";
 import type { ParserOptions } from "@typescript-eslint/parser";
+import type { Linter } from "eslint";
 import type { FlatGitignoreOptions } from "eslint-config-flat-gitignore";
+import type { Options as PrettierOptions } from "prettier";
 import type { RuleOptions } from "./typegen";
 
 export type Awaitable<T> = T | Promise<T>;

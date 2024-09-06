@@ -1,6 +1,6 @@
 import type { FlatConfigItem, OptionsFiles, OptionsOverrides } from "../types";
-import { interopDefault } from "../utils";
 import { GLOB_REACT } from "../globs";
+import { interopDefault } from "../utils";
 
 export async function nextJs(
   options: OptionsFiles & OptionsOverrides = {},
