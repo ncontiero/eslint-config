@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 3.1.1
+
+### Patch Changes
+
+- [`db5c85d`](https://github.com/dkshs/eslint-config/commit/db5c85dc743e7b90f437a6d261f43b189061d85c) - chore: update import group order in `perfectionist/sort-imports`
+
 ## 3.1.0
 
 ### Minor Changes
