@@ -28,7 +28,8 @@ export function perfectionist(): FlatConfigItem[] {
             },
             groups: [
               ["side-effect-style", "style"],
-              ["type", "internal-type"],
+              "type",
+              "internal-type",
               ["parent-type", "sibling-type", "index-type"],
               "builtin",
               "react",
