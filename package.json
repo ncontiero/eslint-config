@@ -91,7 +91,7 @@
     "@types/node": "^22.5.4",
     "bundle-require": "^5.0.0",
     "eslint": "^9.10.0",
-    "eslint-typegen": "^0.3.1",
+    "eslint-typegen": "^0.3.2",
     "execa": "^9.3.1",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
