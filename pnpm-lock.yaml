@@ -117,9 +117,6 @@ importers:
       '@tanstack/eslint-plugin-query':
         specifier: ^5.53.0
         version: 5.53.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
-      '@types/eslint':
-        specifier: ^9.6.1
-        version: 9.6.1
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
@@ -4099,6 +4096,7 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.5
       '@types/json-schema': 7.0.15
+    optional: true
 
   '@types/estree@1.0.5': {}
 
