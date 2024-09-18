@@ -1,8 +1,8 @@
 import type { FlatConfigItem, OptionsConfig } from "../src/types";
 import { join, resolve } from "node:path";
-import { execa } from "execa";
 import fg from "fast-glob";
 import fs from "fs-extra";
+import spawn from "nano-spawn";
 import { afterAll, beforeAll, it } from "vitest";
 
 beforeAll(async () => {
@@ -42,7 +42,7 @@ function runWithConfig(
         `,
       );
 
-      await execa("npx", ["eslint", ".", "--fix"], {
+      await spawn("npx", ["eslint", ".", "--fix"], {
         cwd: target,
         stdio: "pipe",
       });
