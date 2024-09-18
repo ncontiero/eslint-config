@@ -1,5 +1,13 @@
 # @dkshs/eslint-config
 
+## 3.1.2
+
+### Patch Changes
+
+- [`21cad4b`](https://github.com/dkshs/eslint-config/commit/21cad4bf069d46b2e4ebc55fe3d9b3ad7d458f6d) - chore: improve globs for cli rules
+
+- [`24ba4af`](https://github.com/dkshs/eslint-config/commit/24ba4af9719daaced7d1ac06868847048f7e2f75) - chore(deps): remove `@types/eslint`
+
 ## 3.1.1
 
 ### Patch Changes
