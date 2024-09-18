@@ -161,7 +161,7 @@ export function javascript(
       },
     },
     {
-      files: [`scripts/${GLOB_SRC}`, `cli.${GLOB_SRC_EXT}`],
+      files: [`**/{scripts,cli}/${GLOB_SRC}`, `**/cli.${GLOB_SRC_EXT}`],
       name: "dkshs/javascript/cli-rules",
       rules: {
         "no-console": "off",
