@@ -87,7 +87,7 @@
     "@dkshs/prettier-config": "^1.0.0",
     "@tanstack/eslint-plugin-query": "^5.57.2",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^22.6.1",
+    "@types/node": "^22.7.0",
     "bundle-require": "^5.0.0",
     "eslint": "^9.11.1",
     "eslint-typegen": "^0.3.2",
