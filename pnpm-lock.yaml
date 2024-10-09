@@ -115,8 +115,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       '@tanstack/eslint-plugin-query':
-        specifier: ^5.59.4
-        version: 5.59.4(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
+        specifier: ^5.59.7
+        version: 5.59.7(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
@@ -806,8 +806,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@tanstack/eslint-plugin-query@5.59.4':
-    resolution: {integrity: sha512-arYyy8lryy4GIX28NAYVsut330HJsbWU/GdR1H8gB72zAvh1dQZVKyRUOxWacrWLsS8JumqZBD1CU7QRWKx0YA==}
+  '@tanstack/eslint-plugin-query@5.59.7':
+    resolution: {integrity: sha512-txQGX5yC+4gmbR81EXaum2tOxeDQkRCWnaLmaP/pSrbIVCUkbMbrxxsaoOgN+fBqqqGo9V3LoCVL6ez1tRUF7Q==}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
@@ -4027,7 +4027,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.24.0':
     optional: true
 
-  '@tanstack/eslint-plugin-query@5.59.4(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)':
+  '@tanstack/eslint-plugin-query@5.59.7(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)':
     dependencies:
       '@typescript-eslint/utils': 8.8.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
       eslint: 9.12.0(jiti@1.21.6)
