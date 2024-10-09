@@ -1,5 +1,17 @@
 # @dkshs/eslint-config
 
+## 3.2.0
+
+### Minor Changes
+
+- [`42d9c5e`](https://github.com/dkshs/eslint-config/commit/42d9c5e054af51249d19b3a497d552a4757dffea) - feat: enable unicorn `consistent-existence-index-check` & `prefer-math-min-max`
+
+### Patch Changes
+
+- [#241](https://github.com/dkshs/eslint-config/pull/241) [`53fcbdc`](https://github.com/dkshs/eslint-config/commit/53fcbdcfb432e631f24b1ac5bbe59c0818d9b05d) - chore(deps): update eslint-plugin-unicorn to v56
+
+- [`2e84846`](https://github.com/dkshs/eslint-config/commit/2e848466f07014c4b1e9a605bc359192420e9fd4) - chore: move `unicorn/better-regex` into custom config
+
 ## 3.1.2
 
 ### Patch Changes
