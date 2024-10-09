@@ -20,6 +20,8 @@ export function unicorn(
         ...(allRecommended
           ? pluginUnicorn.configs["flat/recommended"].rules
           : {
+              // disable if using `eslint-plugin-regexp`
+              "unicorn/better-regex": regexp ? "off" : "error",
               "unicorn/catch-error-name": "error",
               "unicorn/consistent-empty-array-spread": "error",
               "unicorn/consistent-function-scoping": "error",
@@ -80,9 +82,6 @@ export function unicorn(
               "unicorn/prefer-type-error": "error",
               "unicorn/throw-new-error": "error",
             }),
-
-        // disable if using `eslint-plugin-regexp`
-        "unicorn/better-regex": regexp ? "off" : "error",
 
         ...overrides,
       },
