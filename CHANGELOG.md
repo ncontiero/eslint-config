@@ -1,5 +1,13 @@
 # @dkshs/eslint-config
 
+## 3.2.1
+
+### Patch Changes
+
+- [#252](https://github.com/dkshs/eslint-config/pull/252) [`264943a`](https://github.com/dkshs/eslint-config/commit/264943a3274137962017900d23bd24df93c9f7bf) - fix: update order of groups from `perfectionist/sort-imports` rule
+
+- [`c949178`](https://github.com/dkshs/eslint-config/commit/c94917828e8a511d934b09074d65acdd0f3c54f5) - chore(deps): update @next/eslint-plugin-next to 15.0.0-rc.1
+
 ## 3.2.0
 
 ### Minor Changes
