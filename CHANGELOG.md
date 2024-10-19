@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 3.2.2
+
+### Patch Changes
+
+- [`ed0a9d9`](https://github.com/dkshs/eslint-config/commit/ed0a9d919a84cfb26211f82ff359a6bb722746dc) - chore(deps): update eslint-plugin-react-hooks to v5 stable
+
 ## 3.2.1
 
 ### Patch Changes
