@@ -1,5 +1,15 @@
 # @dkshs/eslint-config
 
+## 3.3.0
+
+### Minor Changes
+
+- [`02fab59`](https://github.com/dkshs/eslint-config/commit/02fab597215377c7bdda2f653522fb575c143f88) - chore(deps): add eslint-plugin-jsx-a11y
+
+### Patch Changes
+
+- [`df9ace1`](https://github.com/dkshs/eslint-config/commit/df9ace1c0daa954206b04be9c53e198af9a07ccc) - chore(deps): update next to v15 stable
+
 ## 3.2.2
 
 ### Patch Changes
