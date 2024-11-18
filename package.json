@@ -94,7 +94,7 @@
     "eslint-typegen": "^0.3.2",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "nano-spawn": "^0.2.0",
     "tsup": "^8.3.5",
