@@ -20,10 +20,10 @@ export function perfectionist(): FlatConfigItem[] {
           {
             customGroups: {
               type: {
-                react: ["react", "react-*"],
+                react: ["^react$", "^react-(?!.*.css$).+"],
               },
               value: {
-                react: ["react", "react-*"],
+                react: ["^react$", "^react-(?!.*.css$).+"],
               },
             },
             groups: [
@@ -41,7 +41,7 @@ export function perfectionist(): FlatConfigItem[] {
               "object",
               "unknown",
             ],
-            internalPattern: ["{{@,~}/,#}**"],
+            internalPattern: ["^[~,@,#]/.*"],
             newlinesBetween: "ignore",
             type: "natural",
           },
