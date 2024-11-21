@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 3.3.1
+
+### Patch Changes
+
+- [#296](https://github.com/dkshs/eslint-config/pull/296) [`3e1b984`](https://github.com/dkshs/eslint-config/commit/3e1b9846861a336c4314f4f82d22f1c2e99165e9) - chore(deps): update eslint-plugin-perfectionist to v4
+
 ## 3.3.0
 
 ### Minor Changes
