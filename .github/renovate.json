@@ -1,14 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>dkshs/renovate-config"],
+  "dependencyDashboard": true,
   "packageRules": [
     {
       "enabled": false,
       "matchDepTypes": ["peerDependencies"]
-    },
-    {
-      "enabled": false,
-      "matchPackageNames": ["eslint-plugin-react-hooks"]
     },
     {
       "groupName": "all non-major dependencies",
