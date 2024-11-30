@@ -41,7 +41,7 @@ export function perfectionist(): FlatConfigItem[] {
               "object",
               "unknown",
             ],
-            internalPattern: ["^[~,@,#]/.*"],
+            internalPattern: ["^[~@#]/.*"],
             newlinesBetween: "ignore",
             type: "natural",
           },
