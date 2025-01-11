@@ -11,6 +11,12 @@ import { ensurePackages, interopDefault } from "../utils";
 
 // react refresh
 const ReactRefreshAllowPackages = ["vite"];
+const ReactRouterPackages = [
+  "@react-router/node",
+  "@react-router/react",
+  "@react-router/serve",
+  "@react-router/dev",
+];
 
 export async function react(
   options: OptionsHasTypeScript &
@@ -38,6 +44,10 @@ export async function react(
     ] as const);
 
   const isAllowConstantExport = ReactRefreshAllowPackages.some((i) =>
+    isPackageExists(i),
+  );
+
+  const isUsingReactRouter = ReactRouterPackages.some((i) =>
     isPackageExists(i),
   );
 
@@ -82,7 +92,14 @@ export async function react(
         // react refresh
         "react-refresh/only-export-components": [
           "warn",
-          { allowConstantExport: isAllowConstantExport },
+          {
+            allowConstantExport: isAllowConstantExport,
+            allowExportNames: [
+              ...(isUsingReactRouter
+                ? ["meta", "links", "headers", "loader", "action"]
+                : []),
+            ],
+          },
         ],
 
         // recommended rules react
