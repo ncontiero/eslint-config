@@ -27,8 +27,8 @@ importers:
         specifier: ^2.7.0
         version: 2.7.0(eslint@9.18.0(jiti@2.4.1))
       eslint-plugin-command:
-        specifier: ^0.2.7
-        version: 0.2.7(eslint@9.18.0(jiti@2.4.1))
+        specifier: ^2.1.0
+        version: 2.1.0(eslint@9.18.0(jiti@2.4.1))
       eslint-plugin-import-x:
         specifier: ^4.6.1
         version: 4.6.1(eslint@9.18.0(jiti@2.4.1))(typescript@5.7.2)
@@ -324,6 +324,10 @@ packages:
   '@es-joy/jsdoccomment@0.49.0':
     resolution: {integrity: sha512-xjZTSFgECpb9Ohuk5yMX5RhUEbfeQcuOp8IF60e+wyzWEF0M5xeSgqsfLtvPEX8BIyOX9saZqzuGPmZ8oWc+5Q==}
     engines: {node: '>=16'}
+
+  '@es-joy/jsdoccomment@0.50.0':
+    resolution: {integrity: sha512-+zZymuVLH6zVwXPtCAtC+bDymxmEwEqDftdAK+f407IF1bnX49anIxvBhCA1AqUIfD6egj1jM1vUnSuijjNyYg==}
+    engines: {node: '>=18'}
 
   '@esbuild/aix-ppc64@0.21.5':
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
@@ -1712,8 +1716,8 @@ packages:
     peerDependencies:
       eslint: '*'
 
-  eslint-plugin-command@0.2.7:
-    resolution: {integrity: sha512-UXJ/1R6kdKDcHhiRqxHJ9RZ3juMR1IWQuSrnwt56qCjxt/am+5+YDt6GKs1FJPnppe6/geEYsO3CR9jc63i0xw==}
+  eslint-plugin-command@2.1.0:
+    resolution: {integrity: sha512-S3gvDSCRHLdRG7NYaevLvGA0g/txOju7NEB2di7SE80NtbCwsvpi/fft045YuTZpOzqCRUfuye39raldmpXXYQ==}
     peerDependencies:
       eslint: '*'
 
@@ -4120,6 +4124,15 @@ snapshots:
       esquery: 1.6.0
       jsdoc-type-pratt-parser: 4.1.0
 
+  '@es-joy/jsdoccomment@0.50.0':
+    dependencies:
+      '@types/eslint': 9.6.1
+      '@types/estree': 1.0.6
+      '@typescript-eslint/types': 8.19.0
+      comment-parser: 1.4.1
+      esquery: 1.6.0
+      jsdoc-type-pratt-parser: 4.1.0
+
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
 
@@ -4556,7 +4569,6 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.6
       '@types/json-schema': 7.0.15
-    optional: true
 
   '@types/estree@1.0.6': {}
 
@@ -5482,9 +5494,9 @@ snapshots:
       '@antfu/utils': 0.7.10
       eslint: 9.18.0(jiti@2.4.1)
 
-  eslint-plugin-command@0.2.7(eslint@9.18.0(jiti@2.4.1)):
+  eslint-plugin-command@2.1.0(eslint@9.18.0(jiti@2.4.1)):
     dependencies:
-      '@es-joy/jsdoccomment': 0.49.0
+      '@es-joy/jsdoccomment': 0.50.0
       eslint: 9.18.0(jiti@2.4.1)
 
   eslint-plugin-es-x@7.8.0(eslint@9.18.0(jiti@2.4.1)):
