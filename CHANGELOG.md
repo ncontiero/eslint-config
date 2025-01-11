@@ -1,5 +1,13 @@
 # @dkshs/eslint-config
 
+## 3.4.0
+
+### Minor Changes
+
+- [`5bdff58`](https://github.com/dkshs/eslint-config/commit/5bdff58e45c0b5f860bec863845679a313efdb4e) - feat: support React Router 7 in react-refresh rules
+
+- [`16e2bbc`](https://github.com/dkshs/eslint-config/commit/16e2bbc75baea333c637bf4d6f438cc58c46bffe) - chore(deps): update some dependencies to their major version
+
 ## 3.3.1
 
 ### Patch Changes
