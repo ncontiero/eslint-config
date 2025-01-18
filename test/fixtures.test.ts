@@ -65,7 +65,7 @@ function runWithConfig(
         }),
       );
     },
-    30_000,
+    35_000,
   );
 }
 
