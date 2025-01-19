@@ -118,8 +118,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       '@tanstack/eslint-plugin-query':
-        specifier: ^5.62.16
-        version: 5.62.16(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
+        specifier: ^5.64.2
+        version: 5.64.2(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
@@ -987,8 +987,8 @@ packages:
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
 
-  '@tanstack/eslint-plugin-query@5.62.16':
-    resolution: {integrity: sha512-VhnHSQ/hc62olLzGhlLJ4BJGWynwjs3cDMsByasKJ3zjW1YZ+6raxOv0gHHISm+VEnAY42pkMowmSWrXfL4NTw==}
+  '@tanstack/eslint-plugin-query@5.64.2':
+    resolution: {integrity: sha512-Xq7jRYvNtGMHjQEGUZLHgEMNB59hgTlqdmKor6cdJ6CMZ/nwmBGpnlr/dcHden7W7BPCdBVN4PWMZBICWvCNQQ==}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
@@ -4396,9 +4396,9 @@ snapshots:
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
-  '@tanstack/eslint-plugin-query@5.62.16(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)':
+  '@tanstack/eslint-plugin-query@5.64.2(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)':
     dependencies:
-      '@typescript-eslint/utils': 8.19.1(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
+      '@typescript-eslint/utils': 8.20.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
       eslint: 9.18.0(jiti@2.4.2)
     transitivePeerDependencies:
       - supports-color
