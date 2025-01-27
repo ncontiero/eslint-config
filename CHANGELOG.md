@@ -1,5 +1,19 @@
 # @dkshs/eslint-config
 
+## 4.0.0
+
+### Major Changes
+
+- [`dfe32e8`](https://github.com/dkshs/eslint-config/commit/dfe32e87d3b91d5cbb506196c3736ec6d1f3915c) - feat!: drop CJS build
+
+  - If you are still doing `require('@dkshs/eslint-config')`, change your config name to end with `.mjs` and migrate to import.
+
+### Minor Changes
+
+- [`45d61da`](https://github.com/dkshs/eslint-config/commit/45d61dae1cca9e856e3363f1bce69045a6726ab1) - chore(deps): update eslint-plugin-command to v3
+
+- [`27a93de`](https://github.com/dkshs/eslint-config/commit/27a93de1ad42de97144fa59618094433b255de07) - chore(deps): update eslint-plugin-antfu to v3
+
 ## 3.4.0
 
 ### Minor Changes
