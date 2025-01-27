@@ -27,8 +27,8 @@ importers:
         specifier: ^2.7.0
         version: 2.7.0(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-command:
-        specifier: ^2.1.0
-        version: 2.1.0(eslint@9.19.0(jiti@2.4.2))
+        specifier: ^3.0.0
+        version: 3.0.0(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-import-x:
         specifier: ^4.6.1
         version: 4.6.1(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)
@@ -1524,8 +1524,8 @@ packages:
     peerDependencies:
       eslint: '*'
 
-  eslint-plugin-command@2.1.0:
-    resolution: {integrity: sha512-S3gvDSCRHLdRG7NYaevLvGA0g/txOju7NEB2di7SE80NtbCwsvpi/fft045YuTZpOzqCRUfuye39raldmpXXYQ==}
+  eslint-plugin-command@3.0.0:
+    resolution: {integrity: sha512-6EFOKGnBMHr0dN/9uKYmxYz6RbsCmEzPRcKYrl+dfEMvlt6+zf6x5TzXKzOowhh3f/hqSBMZmxcB3HHyfbpwWw==}
     peerDependencies:
       eslint: '*'
 
@@ -4972,7 +4972,7 @@ snapshots:
       '@antfu/utils': 0.7.10
       eslint: 9.19.0(jiti@2.4.2)
 
-  eslint-plugin-command@2.1.0(eslint@9.19.0(jiti@2.4.2)):
+  eslint-plugin-command@3.0.0(eslint@9.19.0(jiti@2.4.2)):
     dependencies:
       '@es-joy/jsdoccomment': 0.50.0
       eslint: 9.19.0(jiti@2.4.2)
