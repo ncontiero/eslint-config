@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 4.0.1
+
+### Patch Changes
+
+- [`251d762`](https://github.com/dkshs/eslint-config/commit/251d762d28a759cfbc0020bcc32e2318ea75a397) - chore(deps): update eslint-config-flat-gitignore to v2
+
 ## 4.0.0
 
 ### Major Changes
