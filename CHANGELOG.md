@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 4.0.2
+
+### Patch Changes
+
+- [#375](https://github.com/dkshs/eslint-config/pull/375) [`3220996`](https://github.com/dkshs/eslint-config/commit/3220996730a6bb7b77c9ac63fc453149ff954f3d) - chore(deps): update eslint-merge-processors to v2
+
 ## 4.0.1
 
 ### Patch Changes
