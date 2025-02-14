@@ -61,7 +61,7 @@ setTimeout(() => {
   log("This code runs after a delay of 2 seconds.");
 }, 2000);
 
-let a, b, c,   d,   foo
+let a, b, c,   d,  e, foo
 
 if (a 
   || b 
@@ -70,3 +70,7 @@ if (a
         ) {
           foo()
         }
+
+if (!(a && !b && c >= 10 && d !== e)) {
+  foo();
+}

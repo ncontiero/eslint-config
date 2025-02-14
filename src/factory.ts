@@ -10,6 +10,7 @@ import type {
 import {
   command,
   comments,
+  deMorgan,
   ignores,
   imports,
   javascript,
@@ -147,6 +148,7 @@ export function dkshs(
     promise(),
     command(),
     perfectionist(),
+    deMorgan(),
   );
 
   if (enableUnicorn) {
