@@ -1,7 +1,7 @@
 {
   "name": "@dkshs/eslint-config",
   "type": "module",
-  "version": "4.0.2",
+  "version": "4.1.0",
   "packageManager": "pnpm@10.4.0",
   "description": "DKSHS's ESLint config.",
   "license": "MIT",
