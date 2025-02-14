@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 4.1.0
+
+### Minor Changes
+
+- [`8889ce7`](https://github.com/dkshs/eslint-config/commit/8889ce7c2c0cf6d84dc0fcfc660baf5b6968b6a2) - feat: add `eslint-plugin-de-morgan`
+
 ## 4.0.2
 
 ### Patch Changes
