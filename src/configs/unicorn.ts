@@ -18,7 +18,7 @@ export function unicorn(
       },
       rules: {
         ...(allRecommended
-          ? pluginUnicorn.configs["flat/recommended"].rules
+          ? pluginUnicorn.configs.recommended.rules
           : {
               // disable if using `eslint-plugin-regexp`
               "unicorn/better-regex": regexp ? "off" : "error",
@@ -38,7 +38,7 @@ export function unicorn(
               "unicorn/no-console-spaces": "error",
               "unicorn/no-for-loop": "error",
               "unicorn/no-hex-escape": "error",
-              "unicorn/no-instanceof-array": "error",
+              "unicorn/no-instanceof-builtins": "error",
               "unicorn/no-invalid-remove-event-listener": "error",
               "unicorn/no-lonely-if": "error",
               "unicorn/no-negation-in-equality-check": "error",
