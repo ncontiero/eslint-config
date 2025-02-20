@@ -16,12 +16,14 @@ DKSHS's ESLint config preset for JavaScript, TypeScript, and Prettier.
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
 - Ignores common files like `dist`, `node_modules`, `coverage`, and files in `.gitignore`.
 - Optional [React](https://react.dev/), [NextJs](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/), [TanStack Query](https://tanstack.com/query/) support.
-- Requires ESLint v9.5.0+.
+- Requires ESLint v9.20.0+.
 
 > [!IMPORTANT]
 > Since v2.2.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check the [release note](https://github.com/dkshs/eslint-config/releases/tag/v2.2.0) for more details.
 >
 > Since v3.0.0, ESLint v9.5.0+ is now required.
+>
+> Since v4.2.0, ESLint v9.20.0+ is now required.
 
 ## Usage
 
@@ -31,7 +33,7 @@ DKSHS's ESLint config preset for JavaScript, TypeScript, and Prettier.
 npm i -D eslint @dkshs/eslint-config
 ```
 
-> Require Node.js >= 18.18, and ESLint >= 9.5.0.
+> Require Node.js >= 18.18, and ESLint >= 9.20.0.
 
 2. Create `eslint.config.mjs` in your project root:
 
