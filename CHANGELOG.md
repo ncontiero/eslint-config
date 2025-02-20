@@ -1,5 +1,19 @@
 # @dkshs/eslint-config
 
+## 4.2.0
+
+### Minor Changes
+
+- [#385](https://github.com/dkshs/eslint-config/pull/385) [`36ac67a`](https://github.com/dkshs/eslint-config/commit/36ac67a0c9cb74bffc73aef5480558f8951c6acc) - chore(deps): update eslint-plugin-unicorn to v57
+
+  - ESLint version ≥9.20.0 will now be required.
+
+### Patch Changes
+
+- [#386](https://github.com/dkshs/eslint-config/pull/386) [`d5a5a68`](https://github.com/dkshs/eslint-config/commit/d5a5a68f7002ebe83a077e417d6fc3ed072005d4) - chore(deps): update eslint-typegen to v2
+
+- [#389](https://github.com/dkshs/eslint-config/pull/389) [`baf2464`](https://github.com/dkshs/eslint-config/commit/baf2464520969cca925cc7626b8d7a872c12aef6) - chore(deps): update globals to v16
+
 ## 4.1.0
 
 ### Minor Changes
