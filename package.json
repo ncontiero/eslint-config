@@ -74,7 +74,7 @@
     "globals": "^16.0.0",
     "jsonc-eslint-parser": "^2.4.0",
     "local-pkg": "^1.0.0",
-    "prettier": "^3.5.1",
+    "prettier": "^3.5.2",
     "toml-eslint-parser": "^0.10.0",
     "typescript-eslint": "^8.24.1",
     "yaml-eslint-parser": "^1.2.3"
