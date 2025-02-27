@@ -48,7 +48,7 @@
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
     "@eslint/markdown": "^6.2.2",
-    "@next/eslint-plugin-next": "^15.1.7",
+    "@next/eslint-plugin-next": "^15.2.0",
     "eslint-config-flat-gitignore": "^2.1.0",
     "eslint-merge-processors": "^2.0.0",
     "eslint-plugin-antfu": "^3.1.0",
@@ -76,7 +76,7 @@
     "local-pkg": "^1.0.0",
     "prettier": "^3.5.2",
     "toml-eslint-parser": "^0.10.0",
-    "typescript-eslint": "^8.24.1",
+    "typescript-eslint": "^8.25.0",
     "yaml-eslint-parser": "^1.2.3"
   },
   "devDependencies": {
