@@ -88,7 +88,7 @@
     "@tanstack/eslint-plugin-query": "^5.66.1",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.13.5",
-    "@typescript-eslint/parser": "^8.24.1",
+    "@typescript-eslint/parser": "^8.25.0",
     "eslint": "^9.21.0",
     "eslint-typegen": "^2.0.0",
     "execa": "^9.5.2",
