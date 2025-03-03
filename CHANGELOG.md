@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 4.3.0
+
+### Minor Changes
+
+- [`d0a6bc2`](https://github.com/dkshs/eslint-config/commit/d0a6bc2f13e583cd6924b2c7bbd4cfe94b4fff38) - feat(rule): enable `unicorn/consistent-date-clone`
+
 ## 4.2.0
 
 ### Minor Changes
