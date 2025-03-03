@@ -23,6 +23,7 @@ export function unicorn(
               // disable if using `eslint-plugin-regexp`
               "unicorn/better-regex": regexp ? "off" : "error",
               "unicorn/catch-error-name": "error",
+              "unicorn/consistent-date-clone": "error",
               "unicorn/consistent-empty-array-spread": "error",
               "unicorn/consistent-existence-index-check": "error",
               "unicorn/consistent-function-scoping": "error",
