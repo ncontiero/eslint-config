@@ -57,5 +57,37 @@ export async function yml(
         ...overrides,
       },
     },
+    {
+      files: ["pnpm-workspace.yaml"],
+      name: "dkshs/yml/pnpm-workspace",
+      rules: {
+        "yml/sort-keys": [
+          "error",
+          {
+            order: [
+              "packages",
+              "overrides",
+              "patchedDependencies",
+              "hoistPattern",
+              "catalog",
+              "catalogs",
+
+              "allowedDeprecatedVersions",
+              "allowNonAppliedPatches",
+              "configDependencies",
+              "ignoredBuiltDependencies",
+              "ignoredOptionalDependencies",
+              "neverBuiltDependencies",
+              "onlyBuiltDependencies",
+              "onlyBuiltDependenciesFile",
+              "packageExtensions",
+              "peerDependencyRules",
+              "supportedArchitectures",
+            ],
+            pathPattern: "^$",
+          },
+        ],
+      },
+    },
   ];
 }
