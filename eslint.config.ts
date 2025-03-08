@@ -6,6 +6,14 @@ export default dkshs(
     nextjs: true,
     tailwindcss: true,
     reactQuery: true,
+    javascript: {
+      overrides: {
+        "node/no-unsupported-features/node-builtins": [
+          "error",
+          { allowExperimental: true },
+        ],
+      },
+    },
   },
   {
     ignores: ["fixtures", "_fixtures"],

@@ -1,8 +1,8 @@
 import type { FlatConfigItem, OptionsConfig } from "../src/types";
+import fs from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { execa } from "execa";
-import fg from "fast-glob";
-import fs from "fs-extra";
+import { glob } from "tinyglobby";
 import { afterAll, beforeAll, it } from "vitest";
 
 beforeAll(async () => {
@@ -24,8 +24,9 @@ function runWithConfig(
       const output = resolve("fixtures/output", name);
       const target = resolve("_fixtures", name);
 
-      await fs.copy(from, target, {
-        filter: (src) => {
+      await fs.cp(from, target, {
+        recursive: true,
+        filter: (src: string) => {
           return !src.includes("node_modules");
         },
       });
@@ -47,7 +48,7 @@ function runWithConfig(
         stdio: "pipe",
       });
 
-      const files = await fg("**/*", {
+      const files = await glob("**/*", {
         ignore: ["node_modules", "eslint.config.js"],
         cwd: target,
       });
@@ -58,7 +59,7 @@ function runWithConfig(
           const source = await fs.readFile(join(from, file), "utf-8");
           const outputPath = join(output, file);
           if (content === source) {
-            if (fs.existsSync(outputPath)) fs.remove(outputPath);
+            fs.rm(outputPath, { force: true });
             return;
           }
           await expect.soft(content).toMatchFileSnapshot(join(output, file));
