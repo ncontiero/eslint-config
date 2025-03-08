@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 4.4.0
+
+### Minor Changes
+
+- [`22e9d88`](https://github.com/dkshs/eslint-config/commit/22e9d88ff6b375b8e845db227ce87c7e7e15473b) - feat(yml): sort keys for pnpm workspace
+
 ## 4.3.0
 
 ### Minor Changes
