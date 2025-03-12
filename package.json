@@ -92,7 +92,7 @@
     "eslint-typegen": "^2.0.0",
     "execa": "^9.5.2",
     "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
+    "lint-staged": "^15.5.0",
     "tinyglobby": "^0.2.12",
     "tsup": "^8.4.0",
     "tsx": "^4.19.3",
