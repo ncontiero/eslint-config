@@ -1,5 +1,17 @@
 # @dkshs/eslint-config
 
+## 4.5.0
+
+### Minor Changes
+
+- [`3f594df`](https://github.com/dkshs/eslint-config/commit/3f594df63b405e47e708b449b50eaaa1d6ef887d) - feat: sort all pnpm-workspace keys
+
+### Patch Changes
+
+- [`e91cce3`](https://github.com/dkshs/eslint-config/commit/e91cce350cd70450babff4c285abe04118bc3596) - chore: add missing metadata
+
+- [`2f5dbf0`](https://github.com/dkshs/eslint-config/commit/2f5dbf064efdba55fd60934c34e9d78433a1719b) - chore: sort more fields in package.json
+
 ## 4.4.0
 
 ### Minor Changes
