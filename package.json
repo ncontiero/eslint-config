@@ -4,6 +4,10 @@
   "version": "4.4.0",
   "packageManager": "pnpm@10.6.3",
   "description": "DKSHS's ESLint config.",
+  "author": {
+    "name": "Nicolas Contiero",
+    "url": "https://github.com/dkshs"
+  },
   "license": "MIT",
   "homepage": "https://github.com/dkshs/eslint-config#readme",
   "repository": {
