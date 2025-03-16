@@ -86,6 +86,10 @@ export async function yml(
             ],
             pathPattern: "^$",
           },
+          {
+            order: { type: "asc" },
+            pathPattern: ".*",
+          },
         ],
       },
     },
