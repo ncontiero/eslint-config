@@ -12,7 +12,7 @@ export async function tailwindcss(
 ): Promise<FlatConfigItem[]> {
   const { isInEditor = false, overrides = {} } = options;
 
-  if (!getPackageInfoSync("tailwindcss")?.version?.startsWith("3")) {
+  if (getPackageInfoSync("tailwindcss")?.version?.startsWith("4")) {
     console.warn("[eslint-config-dkshs] TailwindCSS v4 is not supported yet.");
     return [];
   }
