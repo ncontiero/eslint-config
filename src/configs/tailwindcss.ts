@@ -3,6 +3,7 @@ import type {
   OptionsIsInEditor,
   OptionsOverrides,
 } from "../types";
+import { getPackageInfoSync } from "local-pkg";
 import { GLOB_HTML, GLOB_REACT } from "../globs";
 import { interopDefault } from "../utils";
 
@@ -10,6 +11,11 @@ export async function tailwindcss(
   options: OptionsIsInEditor & OptionsOverrides = {},
 ): Promise<FlatConfigItem[]> {
   const { isInEditor = false, overrides = {} } = options;
+
+  if (!getPackageInfoSync("tailwindcss")?.version?.startsWith("3")) {
+    console.warn("[eslint-config-dkshs] TailwindCSS v4 is not supported yet.");
+    return [];
+  }
 
   const pluginTailwindCss = await interopDefault(
     import("eslint-plugin-tailwindcss"),
