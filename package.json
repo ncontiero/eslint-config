@@ -2,7 +2,7 @@
   "name": "@dkshs/eslint-config",
   "type": "module",
   "version": "4.5.0",
-  "packageManager": "pnpm@10.6.3",
+  "packageManager": "pnpm@10.6.5",
   "description": "DKSHS's ESLint config.",
   "author": {
     "name": "Nicolas Contiero",
