@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 4.5.2
+
+### Patch Changes
+
+- [`718d749`](https://github.com/dkshs/eslint-config/commit/718d749400b5583d3a97115a97f1e1b5a072bd01) - fix: update validation in tailwindcss config to capture version 4
+
 ## 4.5.1
 
 ### Patch Changes
