@@ -1,5 +1,11 @@
 # @dkshs/eslint-config
 
+## 4.5.1
+
+### Patch Changes
+
+- [`bae3ce9`](https://github.com/dkshs/eslint-config/commit/bae3ce9138925082a18afda7c9e3a4b84710fd6e) - chore: disable `eslint-plugin-tailwindcss` if `tailwindcss` v4 is found
+
 ## 4.5.0
 
 ### Minor Changes
