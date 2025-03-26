@@ -74,9 +74,11 @@ export async function yml(
 
               "allowedDeprecatedVersions",
               "allowNonAppliedPatches",
+              "allowUnusedPatches",
               "configDependencies",
               "ignoredBuiltDependencies",
               "ignoredOptionalDependencies",
+              "ignorePatchFailures",
               "neverBuiltDependencies",
               "onlyBuiltDependencies",
               "onlyBuiltDependenciesFile",
