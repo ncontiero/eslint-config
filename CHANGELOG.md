@@ -1,5 +1,15 @@
 # @dkshs/eslint-config
 
+## 4.6.0
+
+### Minor Changes
+
+- [`fbe368d`](https://github.com/dkshs/eslint-config/commit/fbe368dab6695c3151f81d5412e6b4cc8f9a91ca) - feat: add `allowUnusedPatches` and `ignorePatchFailures` keys to sort pnpm workspace
+
+### Patch Changes
+
+- [`3427e0e`](https://github.com/dkshs/eslint-config/commit/3427e0e49b9f33031ab8543bb6a30252a54989a6) - chore: remove `side-effect` from `perfectionist/sort-imports` for more control
+
 ## 4.5.2
 
 ### Patch Changes
