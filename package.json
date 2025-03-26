@@ -1,7 +1,7 @@
 {
   "name": "@dkshs/eslint-config",
   "type": "module",
-  "version": "4.5.2",
+  "version": "4.6.0",
   "packageManager": "pnpm@10.7.0",
   "description": "DKSHS's ESLint config.",
   "author": {
