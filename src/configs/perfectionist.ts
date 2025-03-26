@@ -37,7 +37,6 @@ export function perfectionist(): FlatConfigItem[] {
               "external",
               "internal",
               ["parent", "sibling", "index"],
-              "side-effect",
               "object",
               "unknown",
             ],
