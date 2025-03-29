@@ -90,7 +90,7 @@
     "@dkshs/changelog-github": "^1.0.6",
     "@dkshs/prettier-config": "^1.0.0",
     "@tanstack/eslint-plugin-query": "^5.68.0",
-    "@types/node": "^22.13.13",
+    "@types/node": "^22.13.14",
     "@typescript-eslint/parser": "^8.28.0",
     "eslint": "^9.23.0",
     "eslint-typegen": "^2.1.0",
