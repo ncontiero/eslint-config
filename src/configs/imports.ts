@@ -7,7 +7,7 @@ export function imports(options: OptionsHasNextJs = {}): FlatConfigItem[] {
 
   return [
     {
-      name: "dkshs/imports/rules",
+      name: "ncontiero/imports/rules",
       plugins: {
         antfu: pluginAntfu,
         import: pluginImport,
@@ -34,7 +34,7 @@ export function imports(options: OptionsHasNextJs = {}): FlatConfigItem[] {
         `${GLOB_MARKDOWN}/**`,
         "**/.prettierrc*",
       ],
-      name: "dkshs/imports/allow-default-export",
+      name: "ncontiero/imports/allow-default-export",
       rules: {
         "import/no-default-export": "off",
       },

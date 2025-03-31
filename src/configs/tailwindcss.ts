@@ -13,7 +13,7 @@ export async function tailwindcss(
   const { isInEditor = false, overrides = {} } = options;
 
   if (getPackageInfoSync("tailwindcss")?.version?.startsWith("4")) {
-    console.warn("[eslint-config-dkshs] TailwindCSS v4 is not supported yet.");
+    console.warn("[@dkshs/eslint-config] TailwindCSS v4 is not supported yet.");
     return [];
   }
 
@@ -23,7 +23,7 @@ export async function tailwindcss(
 
   return [
     {
-      name: "dkshs/tailwindcss/setup",
+      name: "ncontiero/tailwindcss/setup",
       plugins: {
         tailwindcss: pluginTailwindCss,
       },
@@ -43,7 +43,7 @@ export async function tailwindcss(
     },
     {
       files: [GLOB_REACT, GLOB_HTML],
-      name: "dkshs/tailwindcss/rules",
+      name: "ncontiero/tailwindcss/rules",
       rules: {
         "tailwindcss/classnames-order": isInEditor ? "off" : "warn",
         "tailwindcss/enforces-negative-arbitrary-values": ["warn"],

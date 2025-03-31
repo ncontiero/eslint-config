@@ -7,10 +7,10 @@ export async function promise(): Promise<FlatConfigItem[]> {
   return [
     {
       ...pluginPromise.configs["flat/recommended"],
-      name: "dkshs/promise/setup",
+      name: "ncontiero/promise/setup",
     },
     {
-      name: "dkshs/promise/rules",
+      name: "ncontiero/promise/rules",
       rules: {
         "promise/always-return": ["error", { ignoreLastCallback: true }],
         "promise/no-multiple-resolved": "warn",

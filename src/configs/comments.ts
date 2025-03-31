@@ -4,7 +4,7 @@ import { pluginComments } from "../plugins";
 export function comments(): FlatConfigItem[] {
   return [
     {
-      name: "dkshs/comments/rules",
+      name: "ncontiero/comments/rules",
       plugins: {
         "eslint-comments": pluginComments,
       },

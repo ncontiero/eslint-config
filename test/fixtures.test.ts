@@ -34,9 +34,9 @@ function runWithConfig(
         join(target, "eslint.config.js"),
         `
           // @eslint-disable
-          import { dkshs } from "@dkshs/eslint-config"
+          import { ncontiero } from "@dkshs/eslint-config"
           
-          export default dkshs(
+          export default ncontiero(
             ${JSON.stringify(configs)},
             ...${JSON.stringify(items) ?? []},
           )

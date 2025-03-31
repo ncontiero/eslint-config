@@ -5,7 +5,7 @@ export function deMorgan(): FlatConfigItem[] {
   return [
     {
       ...pluginDeMorgan.configs.recommended,
-      name: "dkshs/de-morgan",
+      name: "ncontiero/de-morgan",
     },
   ];
 }

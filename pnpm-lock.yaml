@@ -117,7 +117,7 @@ importers:
       '@dkshs/changelog-github':
         specifier: ^1.0.6
         version: 1.0.6
-      '@dkshs/prettier-config':
+      '@ncontiero/prettier-config':
         specifier: ^1.0.0
         version: 1.0.0
       '@tanstack/eslint-plugin-query':
@@ -311,9 +311,6 @@ packages:
 
   '@dkshs/changelog-github@1.0.6':
     resolution: {integrity: sha512-Poym7L83xt67wLaRTdB7BgbxDjIHVW9Kcxw72g0QszQTk45Sn0OFjdvC5dMWeYTVje/5RzRtDf7DxBN0bgpQXQ==}
-
-  '@dkshs/prettier-config@1.0.0':
-    resolution: {integrity: sha512-A+Ac5UZ6/u1aOVmEU3Rvq+8grnLpvKzpP3pFP57VV2H/oIvMImJES/9fdhIogQiAPVWml1y6KSTUeyo1jJihOg==}
 
   '@emnapi/core@1.4.0':
     resolution: {integrity: sha512-H+N/FqT07NmLmt6OFFtDfwe8PNygprzBikrEMyQfgqSmT0vzE515Pz7R8izwB9q/zsH/MA64AKoul3sA6/CzVg==}
@@ -596,6 +593,9 @@ packages:
 
   '@napi-rs/wasm-runtime@0.2.7':
     resolution: {integrity: sha512-5yximcFK5FNompXfJFoWanu5l8v1hNGqNHh9du1xETp9HWk/B/PzvchX55WYOPaIeNglG8++68AAiauBAtbnzw==}
+
+  '@ncontiero/prettier-config@1.0.0':
+    resolution: {integrity: sha512-i+dkvx9H8NBTkYmEje9ut0VHglw87DTJ92JzsviJnGe2LvmPF5M2M+FsV86G7VTZ27a3XN53MD64MpXIN4MsMw==}
 
   '@next/eslint-plugin-next@15.2.4':
     resolution: {integrity: sha512-O8ScvKtnxkp8kL9TpJTTKnMqlkZnS+QxwoQnJwPGBxjBbzd6OVVPEJ5/pMNrktSyXQD/chEfzfFzYLM6JANOOQ==}
@@ -3770,8 +3770,6 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@dkshs/prettier-config@1.0.0': {}
-
   '@emnapi/core@1.4.0':
     dependencies:
       '@emnapi/wasi-threads': 1.0.1
@@ -4009,6 +4007,8 @@ snapshots:
       '@emnapi/runtime': 1.4.0
       '@tybys/wasm-util': 0.9.0
     optional: true
+
+  '@ncontiero/prettier-config@1.0.0': {}
 
   '@next/eslint-plugin-next@15.2.4':
     dependencies:

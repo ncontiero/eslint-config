@@ -9,14 +9,14 @@ export async function prettier(
 
   return [
     {
-      name: "dkshs/prettier/setup",
+      name: "ncontiero/prettier/setup",
       plugins: {
         prettier: pluginPrettier,
       },
     },
     {
       files: [GLOB_SRC],
-      name: "dkshs/prettier/disables",
+      name: "ncontiero/prettier/disables",
       rules: {
         "antfu/consistent-list-newline": "off",
         "arrow-body-style": "off",
@@ -31,7 +31,7 @@ export async function prettier(
     },
     {
       files: [GLOB_SRC],
-      name: "dkshs/prettier/rules",
+      name: "ncontiero/prettier/rules",
       rules: {
         "prettier/prettier": ["warn", options],
       },

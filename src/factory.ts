@@ -93,7 +93,7 @@ function getStyleOptions(options: PrettierOptions): StyleConfig | false {
  * @param userConfigs - The user configurations to be merged with the generated configurations.
  * @returns Merged ESLint configurations based on provided options.
  */
-export function dkshs(
+export function ncontiero(
   options: OptionsConfig & Omit<FlatConfigItem, "files"> = {},
   ...userConfigs: Awaitable<
     FlatConfigItem | FlatConfigItem[] | Linter.Config[]
@@ -121,13 +121,13 @@ export function dkshs(
     if (typeof enableGitignore !== "boolean") {
       configs.push(
         interopDefault(import("eslint-config-flat-gitignore")).then((r) => [
-          r({ name: "dkshs/gitignore", ...enableGitignore }),
+          r({ name: "ncontiero/gitignore", ...enableGitignore }),
         ]),
       );
     } else {
       configs.push(
         interopDefault(import("eslint-config-flat-gitignore")).then((r) => [
-          r({ name: "dkshs/gitignore", strict: false }),
+          r({ name: "ncontiero/gitignore", strict: false }),
         ]),
       );
     }

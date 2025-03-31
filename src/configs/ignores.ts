@@ -5,7 +5,7 @@ export function ignores(userIgnores: string[] = []): FlatConfigItem[] {
   return [
     {
       ignores: [...GLOB_EXCLUDE, ...userIgnores],
-      name: "dkshs/global-ignores",
+      name: "ncontiero/global-ignores",
     },
   ];
 }

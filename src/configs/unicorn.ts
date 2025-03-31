@@ -12,7 +12,7 @@ export function unicorn(
 
   return [
     {
-      name: "dkshs/unicorn/rules",
+      name: "ncontiero/unicorn/rules",
       plugins: {
         unicorn: pluginUnicorn,
       },

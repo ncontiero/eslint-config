@@ -31,7 +31,7 @@ export async function typescriptCore(options: TsOptions = {}) {
         ...parserOptions,
       },
     },
-    name: "dkshs/typescript/rules",
+    name: "ncontiero/typescript/rules",
     rules: {
       "@typescript-eslint/ban-ts-comment": [
         "error",
@@ -98,7 +98,7 @@ export async function typescript(
 
     {
       files: ["**/*.d.ts"],
-      name: "dkshs/typescript/dts-rules",
+      name: "ncontiero/typescript/dts-rules",
       rules: {
         "eslint-comments/no-unlimited-disable": "off",
         "import/no-duplicates": "off",
@@ -108,7 +108,7 @@ export async function typescript(
     },
     {
       files: [GLOB_JS, "**/*.cjs"],
-      name: "dkshs/typescript/cjs-rules",
+      name: "ncontiero/typescript/cjs-rules",
       rules: {
         "@typescript-eslint/no-require-imports": "off",
       },

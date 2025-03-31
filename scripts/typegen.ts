@@ -1,9 +1,9 @@
 import fs from "node:fs/promises";
 import { flatConfigsToRulesDTS } from "eslint-typegen/core";
 import { builtinRules } from "eslint/use-at-your-own-risk";
-import { dkshs } from "../src";
+import { ncontiero } from "../src";
 
-const configs = await dkshs({
+const configs = await ncontiero({
   plugins: {
     "": {
       rules: Object.fromEntries(builtinRules.entries()),

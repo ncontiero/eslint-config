@@ -1,6 +1,6 @@
-import { dkshs } from "./src";
+import { ncontiero } from "./src";
 
-export default dkshs(
+export default ncontiero(
   {
     react: true,
     nextjs: true,

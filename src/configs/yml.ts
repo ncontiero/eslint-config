@@ -22,7 +22,7 @@ export async function yml(
 
   return [
     {
-      name: "dkshs/yml/setup",
+      name: "ncontiero/yml/setup",
       plugins: {
         yml: pluginYml,
       },
@@ -32,7 +32,7 @@ export async function yml(
       languageOptions: {
         parser: parserYml,
       },
-      name: "dkshs/yml/rules",
+      name: "ncontiero/yml/rules",
       rules: {
         "yml/block-mapping": "error",
         "yml/block-mapping-question-indicator-newline": "error",
@@ -59,7 +59,7 @@ export async function yml(
     },
     {
       files: ["pnpm-workspace.yaml"],
-      name: "dkshs/yml/pnpm-workspace",
+      name: "ncontiero/yml/pnpm-workspace",
       rules: {
         "yml/sort-keys": [
           "error",

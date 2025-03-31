@@ -3,19 +3,19 @@
   "type": "module",
   "version": "4.6.0",
   "packageManager": "pnpm@10.7.0",
-  "description": "DKSHS's ESLint config.",
+  "description": "Nicolas's ESLint config.",
   "author": {
     "name": "Nicolas Contiero",
-    "url": "https://github.com/dkshs"
+    "url": "https://github.com/ncontiero"
   },
   "license": "MIT",
-  "homepage": "https://github.com/dkshs/eslint-config#readme",
+  "homepage": "https://github.com/ncontiero/eslint-config#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dkshs/eslint-config.git"
+    "url": "git+https://github.com/ncontiero/eslint-config.git"
   },
   "bugs": {
-    "url": "https://github.com/dkshs/eslint-config/issues"
+    "url": "https://github.com/ncontiero/eslint-config/issues"
   },
   "exports": {
     ".": "./dist/index.js"
@@ -88,7 +88,7 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@dkshs/changelog-github": "^1.0.6",
-    "@dkshs/prettier-config": "^1.0.0",
+    "@ncontiero/prettier-config": "^1.0.0",
     "@tanstack/eslint-plugin-query": "^5.68.0",
     "@types/node": "^22.13.14",
     "@typescript-eslint/parser": "^8.28.0",
@@ -109,5 +109,5 @@
   "lint-staged": {
     "*": "pnpm lint:fix"
   },
-  "prettier": "@dkshs/prettier-config"
+  "prettier": "@ncontiero/prettier-config"
 }

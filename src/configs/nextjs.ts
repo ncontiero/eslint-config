@@ -12,7 +12,7 @@ export async function nextJs(
   return [
     {
       files,
-      name: "dkshs/nextjs/rules",
+      name: "ncontiero/nextjs/rules",
       plugins: {
         nextjs: pluginNextJs,
       },

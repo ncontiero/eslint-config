@@ -54,7 +54,7 @@ export async function react(
   return [
     {
       files,
-      name: "dkshs/react/setup",
+      name: "ncontiero/react/setup",
       plugins: {
         "jsx-a11y": pluginA11y,
         react: pluginReact,
@@ -69,9 +69,9 @@ export async function react(
     },
     reactQuery
       ? {
-          name: "dkshs/tanstack-query",
           ...(await interopDefault(import("@tanstack/eslint-plugin-query")))
             .configs["flat/recommended"][0],
+          name: "ncontiero/tanstack-query",
         }
       : {},
     {
@@ -83,7 +83,7 @@ export async function react(
           },
         },
       },
-      name: "dkshs/react/rules",
+      name: "ncontiero/react/rules",
       rules: {
         // react-hooks
         "react-hooks/exhaustive-deps": "warn",

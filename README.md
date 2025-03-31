@@ -1,9 +1,9 @@
 # @dkshs/eslint-config
 
-DKSHS's ESLint config preset for JavaScript, TypeScript, and Prettier.
+Nicolas's ESLint config preset for JavaScript, TypeScript, and Prettier.
 
 [![Version](https://img.shields.io/npm/v/@dkshs/eslint-config)](https://www.npmjs.com/package/@dkshs/eslint-config)
-[![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/dkshs/eslint-config/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/ncontiero/eslint-config/blob/master/LICENSE)
 
 ## Features
 
@@ -19,7 +19,7 @@ DKSHS's ESLint config preset for JavaScript, TypeScript, and Prettier.
 - Requires ESLint v9.20.0+.
 
 > [!IMPORTANT]
-> Since v2.2.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check the [release note](https://github.com/dkshs/eslint-config/releases/tag/v2.2.0) for more details.
+> Since v2.2.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check the [release note](https://github.com/ncontiero/eslint-config/releases/tag/v2.2.0) for more details.
 >
 > Since v3.0.0, ESLint v9.5.0+ is now required.
 >
@@ -39,9 +39,9 @@ npm i -D eslint @dkshs/eslint-config
 
 ```mjs
 // eslint.config.mjs
-import { dkshs } from "@dkshs/eslint-config";
+import { ncontiero } from "@dkshs/eslint-config";
 
-export default dkshs(
+export default ncontiero(
   // Features: it'll detect installed dependency and enable necessary features automatically
   {
     prettier: true,
@@ -117,18 +117,18 @@ Normally you only need to import the `dkshs` preset:
 
 ```js
 // eslint.config.js
-import { dkshs } from "@dkshs/eslint-config";
+import { ncontiero } from "@dkshs/eslint-config";
 
-export default dkshs();
+export default ncontiero();
 ```
 
 And that's it! Or you can configure each integration individually, for example:
 
 ```js
 // eslint.config.js
-import { dkshs } from "@dkshs/eslint-config";
+import { ncontiero } from "@dkshs/eslint-config";
 
-export default dkshs({
+export default ncontiero({
   // TypeScript, React, NextJs, TailwindCSS and TanStack Query are auto-detected,
   // you can also explicitly enable them:
   typescript: true,
@@ -154,11 +154,11 @@ The `dkshs` factory function also accepts any number of arbitrary custom config 
 
 ```js
 // eslint.config.js
-import { dkshs } from "@dkshs/eslint-config";
+import { ncontiero } from "@dkshs/eslint-config";
 
-export default dkshs(
+export default ncontiero(
   {
-    // Configures for dkshs's config
+    // Configures for ncontiero's config
   },
 
   // From the second arguments they are ESLint Flat Configs
@@ -179,9 +179,9 @@ Certain rules would only be enabled in specific files, for example, `ts/*` rules
 
 ```js
 // eslint.config.js
-import { dkshs } from "@dkshs/eslint-config";
+import { ncontiero } from "@dkshs/eslint-config";
 
-export default dkshs({
+export default ncontiero({
   typescript: {
     overrides: {
       "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
@@ -206,9 +206,9 @@ To enable TanStack Query support, you need to have the package installed or expl
 
 ```js
 // eslint.config.js
-import { dkshs } from "@dkshs/eslint-config";
+import { ncontiero } from "@dkshs/eslint-config";
 
-export default dkshs({
+export default ncontiero({
   reactQuery: true,
 });
 ```
