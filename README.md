@@ -1,8 +1,8 @@
-# @dkshs/eslint-config
+# @ncontiero/eslint-config
 
 Nicolas's ESLint config preset for JavaScript, TypeScript, and Prettier.
 
-[![Version](https://img.shields.io/npm/v/@dkshs/eslint-config)](https://www.npmjs.com/package/@dkshs/eslint-config)
+[![Version](https://img.shields.io/npm/v/@ncontiero/eslint-config)](https://www.npmjs.com/package/@ncontiero/eslint-config)
 [![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/ncontiero/eslint-config/blob/master/LICENSE)
 
 ## Features
@@ -18,19 +18,12 @@ Nicolas's ESLint config preset for JavaScript, TypeScript, and Prettier.
 - Optional [React](https://react.dev/), [NextJs](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/), [TanStack Query](https://tanstack.com/query/) support.
 - Requires ESLint v9.20.0+.
 
-> [!IMPORTANT]
-> Since v2.2.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check the [release note](https://github.com/ncontiero/eslint-config/releases/tag/v2.2.0) for more details.
->
-> Since v3.0.0, ESLint v9.5.0+ is now required.
->
-> Since v4.2.0, ESLint v9.20.0+ is now required.
-
 ## Usage
 
 1. Install the dependencies:
 
 ```bash
-npm i -D eslint @dkshs/eslint-config
+npm i -D eslint @ncontiero/eslint-config
 ```
 
 > Require Node.js >= 18.18, and ESLint >= 9.20.0.
@@ -39,7 +32,7 @@ npm i -D eslint @dkshs/eslint-config
 
 ```mjs
 // eslint.config.mjs
-import { ncontiero } from "@dkshs/eslint-config";
+import { ncontiero } from "@ncontiero/eslint-config";
 
 export default ncontiero(
   // Features: it'll detect installed dependency and enable necessary features automatically
@@ -111,13 +104,11 @@ Add the following settings to your `.vscode/settings.json`:
 
 ## Customization
 
-Since v2.2, we migrated to [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new). It provides much better organization and composition.
-
-Normally you only need to import the `dkshs` preset:
+Normally you only need to import the `ncontiero` preset:
 
 ```js
 // eslint.config.js
-import { ncontiero } from "@dkshs/eslint-config";
+import { ncontiero } from "@ncontiero/eslint-config";
 
 export default ncontiero();
 ```
@@ -126,7 +117,7 @@ And that's it! Or you can configure each integration individually, for example:
 
 ```js
 // eslint.config.js
-import { ncontiero } from "@dkshs/eslint-config";
+import { ncontiero } from "@ncontiero/eslint-config";
 
 export default ncontiero({
   // TypeScript, React, NextJs, TailwindCSS and TanStack Query are auto-detected,
@@ -150,11 +141,11 @@ export default ncontiero({
 });
 ```
 
-The `dkshs` factory function also accepts any number of arbitrary custom config overrides:
+The `ncontiero` factory function also accepts any number of arbitrary custom config overrides:
 
 ```js
 // eslint.config.js
-import { ncontiero } from "@dkshs/eslint-config";
+import { ncontiero } from "@ncontiero/eslint-config";
 
 export default ncontiero(
   {
@@ -179,7 +170,7 @@ Certain rules would only be enabled in specific files, for example, `ts/*` rules
 
 ```js
 // eslint.config.js
-import { ncontiero } from "@dkshs/eslint-config";
+import { ncontiero } from "@ncontiero/eslint-config";
 
 export default ncontiero({
   typescript: {
@@ -206,7 +197,7 @@ To enable TanStack Query support, you need to have the package installed or expl
 
 ```js
 // eslint.config.js
-import { ncontiero } from "@dkshs/eslint-config";
+import { ncontiero } from "@ncontiero/eslint-config";
 
 export default ncontiero({
   reactQuery: true,
