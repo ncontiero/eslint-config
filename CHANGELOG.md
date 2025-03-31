@@ -1,5 +1,13 @@
 # @ncontiero/eslint-config
 
+## 5.1.1
+
+### Patch Changes
+
+- [`6b5d724`](https://github.com/ncontiero/eslint-config/commit/6b5d72473c27fb78b5f9a4fcc20c6c40c1c917fc) - docs: fix wrong names in readme
+
+- [`08ca39c`](https://github.com/ncontiero/eslint-config/commit/08ca39c942a6d7a68fc219519d665735a3e9f7f8) - fix: update to new package name in some codes
+
 ## 5.1.0
 
 ### Minor Changes
