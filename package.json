@@ -87,7 +87,7 @@
     "@changesets/cli": "^2.28.1",
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
-    "@dkshs/changelog-github": "^1.0.6",
+    "@ncontiero/changelog-github": "^2.1.0",
     "@ncontiero/prettier-config": "^1.0.0",
     "@tanstack/eslint-plugin-query": "^5.68.0",
     "@types/node": "^22.13.14",

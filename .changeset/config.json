@@ -1,7 +1,7 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
   "changelog": [
-    "@dkshs/changelog-github",
+    "@ncontiero/changelog-github",
     { "repo": "ncontiero/eslint-config", "exclude": { "user": true } }
   ],
   "commit": false,
