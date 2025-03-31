@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 5.1.0
+
+### Minor Changes
+
+- [`c40daea`](https://github.com/ncontiero/eslint-config/commit/c40daead12aa92798f27454adbbd726891c3ebbf) - feat: project migrated from `@dkshs/eslint-config` to `@ncontiero/eslint-config`
+
 ## @dkshs/eslint-config
 
 > This is the package before migration.
