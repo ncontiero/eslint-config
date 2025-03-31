@@ -1,5 +1,5 @@
 {
-  "name": "@dkshs/eslint-config",
+  "name": "@ncontiero/eslint-config",
   "type": "module",
   "version": "5.0.0",
   "packageManager": "pnpm@10.7.0",
