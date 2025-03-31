@@ -34,12 +34,12 @@ function runWithConfig(
         join(target, "eslint.config.js"),
         `
           // @eslint-disable
-          import { ncontiero } from "@dkshs/eslint-config"
+          import { ncontiero } from "@ncontiero/eslint-config";
           
           export default ncontiero(
             ${JSON.stringify(configs)},
             ...${JSON.stringify(items) ?? []},
-          )
+          );
         `,
       );
 

@@ -1,7 +1,7 @@
 import type { Awaitable, FlatConfigItem } from "./types";
 import { isPackageExists } from "local-pkg";
 
-const isCwdInScope = isPackageExists("@dkshs/eslint-config");
+const isCwdInScope = isPackageExists("@ncontiero/eslint-config");
 
 export const parserPlain = {
   meta: {

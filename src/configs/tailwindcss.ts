@@ -13,7 +13,9 @@ export async function tailwindcss(
   const { isInEditor = false, overrides = {} } = options;
 
   if (getPackageInfoSync("tailwindcss")?.version?.startsWith("4")) {
-    console.warn("[@dkshs/eslint-config] TailwindCSS v4 is not supported yet.");
+    console.warn(
+      "[@ncontiero/eslint-config] TailwindCSS v4 is not supported yet.",
+    );
     return [];
   }
 

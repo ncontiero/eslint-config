@@ -234,7 +234,7 @@ export function ncontiero(
 
   if ("files" in options) {
     throw new Error(
-      '[@dkshs/eslint-config] The first argument should not contain the "files" property as the options are supposed to be global. Place it in the second or later config instead.',
+      '[@ncontiero/eslint-config] The first argument should not contain the "files" property as the options are supposed to be global. Place it in the second or later config instead.',
     );
   }
 
