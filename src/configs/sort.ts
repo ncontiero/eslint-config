@@ -35,6 +35,7 @@ export function sortPackageJson(): FlatConfigItem[] {
               "keywords",
               "categories",
               "sideEffects",
+              "imports",
               "exports",
               "main",
               "module",
