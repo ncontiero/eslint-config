@@ -1,5 +1,21 @@
 # @ncontiero/eslint-config
 
+## 5.2.0
+
+### Minor Changes
+
+- [`0a02c89`](https://github.com/ncontiero/eslint-config/commit/0a02c8935336301f76a3318f69c2a063cc71ac83) - chore(deps): upgrade eslint-plugin-unicorn to v59
+
+- [`bd7950c`](https://github.com/ncontiero/eslint-config/commit/bd7950c5104bf33424ad8e5bea282f7cf1b12d27) - feat: enable new rules from unicorn
+
+- [`dde69cd`](https://github.com/ncontiero/eslint-config/commit/dde69cddc583a9f4785fc036ffcce0bb8608fc73) - feat: add 'imports' field to package.json sort order
+
+- [`476e0e8`](https://github.com/ncontiero/eslint-config/commit/476e0e882fe1dfe9963e762c04eec5cc845b542a) - feat: add `libReplacement` and `erasableSyntaxOnly` to tsconfig sort order
+
+### Patch Changes
+
+- [`624ccae`](https://github.com/ncontiero/eslint-config/commit/624ccaec9e4b42aa1942d298da6a23a6671f9fb6) - refactor: remove `isInEditor` option from javascript config and update unused-imports rule
+
 ## 5.1.1
 
 ### Patch Changes
