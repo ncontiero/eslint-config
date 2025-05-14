@@ -127,6 +127,7 @@ export function sortTsconfig(): FlatConfigItem[] {
               "useDefineForClassFields",
               "emitDecoratorMetadata",
               "experimentalDecorators",
+              "libReplacement",
               /* Modules */
               "baseUrl",
               "rootDir",
@@ -201,6 +202,7 @@ export function sortTsconfig(): FlatConfigItem[] {
               "isolatedModules",
               "preserveSymlinks",
               "verbatimModuleSyntax",
+              "erasableSyntaxOnly",
               /* Completeness */
               "skipDefaultLibCheck",
               "skipLibCheck",
