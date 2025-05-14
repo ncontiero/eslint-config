@@ -1,8 +1,4 @@
-import type {
-  FlatConfigItem,
-  OptionsIsInEditor,
-  OptionsOverrides,
-} from "../types";
+import type { FlatConfigItem, OptionsOverrides } from "../types";
 import globals from "globals";
 import { GLOB_SRC, GLOB_SRC_EXT } from "../globs";
 import { pluginAntfu, pluginUnusedImports } from "../plugins";
@@ -13,10 +9,8 @@ export const restrictedSyntaxJs = [
   "WithStatement",
 ];
 
-export function javascript(
-  options: OptionsIsInEditor & OptionsOverrides = {},
-): FlatConfigItem[] {
-  const { isInEditor = false, overrides = {} } = options;
+export function javascript(options: OptionsOverrides = {}): FlatConfigItem[] {
+  const { overrides = {} } = options;
 
   return [
     {
@@ -145,7 +139,7 @@ export function javascript(
         "require-await": "error",
         "require-yield": "error",
         "unicode-bom": ["error", "never"],
-        "unused-imports/no-unused-imports": isInEditor ? "off" : "error",
+        "unused-imports/no-unused-imports": "warn",
         "unused-imports/no-unused-vars": [
           "error",
           { args: "after-used", ignoreRestSiblings: true },

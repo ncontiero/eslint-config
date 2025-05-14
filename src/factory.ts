@@ -142,7 +142,7 @@ export function ncontiero(
   // Base configs
   configs.push(
     ignores(options.ignores),
-    javascript({ isInEditor, overrides: getOverrides(options, "javascript") }),
+    javascript({ overrides: getOverrides(options, "javascript") }),
     comments(),
     jsdoc(),
     imports({ nextJs: enableNextJs === true }),
