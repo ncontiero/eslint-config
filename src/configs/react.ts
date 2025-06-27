@@ -96,7 +96,17 @@ export async function react(
             allowConstantExport: isAllowConstantExport,
             allowExportNames: [
               ...(isUsingReactRouter
-                ? ["meta", "links", "headers", "loader", "action"]
+                ? [
+                    "meta",
+                    "links",
+                    "headers",
+                    "loader",
+                    "action",
+                    "clientLoader",
+                    "clientAction",
+                    "handle",
+                    "shouldRevalidate",
+                  ]
                 : []),
             ],
           },
