@@ -26,7 +26,7 @@ Nicolas's ESLint config preset for JavaScript, TypeScript, and Prettier.
 npm i -D eslint @ncontiero/eslint-config
 ```
 
-> Require Node.js >= 18.18, and ESLint >= 9.20.0.
+> Require Node.js >= 20.11.0, and ESLint >= 9.20.0.
 
 2. Create `eslint.config.mjs` in your project root:
 
