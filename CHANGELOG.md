@@ -1,5 +1,20 @@
 # @ncontiero/eslint-config
 
+## 6.0.0
+
+### Major Changes
+
+- [#434](https://github.com/ncontiero/eslint-config/pull/434) [`3fae1eb`](https://github.com/ncontiero/eslint-config/commit/3fae1eb00e90af1e74ad6accc1616c64519d917b) - chore(deps)!: update eslint-plugin-jsdoc to v51
+  - Requires Node 20.11.0+.
+
+### Minor Changes
+
+- [`72c57b8`](https://github.com/ncontiero/eslint-config/commit/72c57b89310073568c0ffb75d2643b7c09777dce) - feat: expand allowed export names for React Router integration
+
+### Patch Changes
+
+- [`1a94ffe`](https://github.com/ncontiero/eslint-config/commit/1a94ffe058f7e7be573fcbbef54f4cf2eacac83d) - fix: update `object-property-newline` rule option for JSONC config
+
 ## 5.2.0
 
 ### Minor Changes
@@ -39,7 +54,6 @@
 #### Major Changes
 
 - [`14c325d`](https://github.com/ncontiero/eslint-config/commit/14c325dcbfe959a6384a9ce7ae39c2398a2f3606) - refactor!: rename project from `dkshs` to `ncontiero`
-
   - Config names and config initializer have been changed to `ncontiero`:
 
   ```diff
@@ -103,7 +117,6 @@
 #### Minor Changes
 
 - [#385](https://github.com/dkshs/eslint-config/pull/385) [`36ac67a`](https://github.com/dkshs/eslint-config/commit/36ac67a0c9cb74bffc73aef5480558f8951c6acc) - chore(deps): update eslint-plugin-unicorn to v57
-
   - ESLint version ≥9.20.0 will now be required.
 
 #### Patch Changes
@@ -135,7 +148,6 @@
 #### Major Changes
 
 - [`dfe32e8`](https://github.com/dkshs/eslint-config/commit/dfe32e87d3b91d5cbb506196c3736ec6d1f3915c) - feat!: drop CJS build
-
   - If you are still doing `require('@dkshs/eslint-config')`, change your config name to end with `.mjs` and migrate to import.
 
 #### Minor Changes
@@ -339,7 +351,6 @@
 #### Minor Changes
 
 - [`8aff096`](https://github.com/dkshs/eslint-config/commit/8aff0963563847e7782f7eb79ae06ee9971963d1) - feat(deps): update @next/eslint-plugin-next to 14.3.0-canary
-
   - In version 14.2 of @next/eslint-plugin-next, it’s not possible to use ESLint v9. Therefore, it was updated to version 14.3-canary to allow for ESLint v9.
 
 - [`8db8acc`](https://github.com/dkshs/eslint-config/commit/8db8acce95fc98c0503b5171e045378a080105f9) - feat: add jsdoc plugin
@@ -459,7 +470,6 @@
 #### Major Changes
 
 - [#1](https://github.com/dkshs/eslint-config/pull/1) [`5b197e8`](https://github.com/dkshs/eslint-config/commit/5b197e8df4e1f3064f622884fe44667e1ce1eba7) - feat: migrate to eslint flat configuration
-
   - Use [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), users need to [migrate to the new config style as well](/README.md#usage)
   - Requires ESLint v8
 
