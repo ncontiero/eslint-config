@@ -53,7 +53,7 @@ export async function jsonc(
         "jsonc/object-curly-spacing": ["error", "always"],
         "jsonc/object-property-newline": [
           "error",
-          { allowMultiplePropertiesPerLine: true },
+          { allowAllPropertiesOnSameLine: true },
         ],
         "jsonc/quote-props": "off",
         "jsonc/quotes": "off",
