@@ -59,6 +59,7 @@ export function unicorn(
               "unicorn/prefer-array-some": "error",
               "unicorn/prefer-at": "error",
               "unicorn/prefer-blob-reading-methods": "error",
+              "unicorn/prefer-class-fields": "error",
               "unicorn/prefer-date-now": "error",
               "unicorn/prefer-dom-node-append": "error",
               "unicorn/prefer-dom-node-dataset": "error",

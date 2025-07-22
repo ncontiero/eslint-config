@@ -114,6 +114,7 @@ export function javascript(options: OptionsOverrides = {}): FlatConfigItem[] {
         "no-unused-vars": "off",
         "no-useless-backreference": "error",
         "no-useless-catch": "error",
+        "no-useless-constructor": "error",
         "no-useless-escape": "error",
         "no-var": "error",
         "no-void": "error",
