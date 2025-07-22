@@ -90,7 +90,7 @@ export function sortPackageJson(): FlatConfigItem[] {
 export function sortTsconfig(): FlatConfigItem[] {
   return [
     {
-      files: ["**/tsconfig.json", "**/tsconfig.*.json"],
+      files: ["**/[jt]sconfig.json", "**/[jt]sconfig.*.json"],
       name: "ncontiero/sort/tsconfig",
       rules: {
         "jsonc/sort-keys": [
