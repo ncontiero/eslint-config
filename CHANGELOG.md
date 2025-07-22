@@ -1,5 +1,13 @@
 # @ncontiero/eslint-config
 
+## 6.1.0
+
+### Minor Changes
+
+- [`fffffef`](https://github.com/ncontiero/eslint-config/commit/fffffefaf9f644265d9ccb6992f7678520f8ad79) - feat: enable `no-useless-constructor` and `unicorn/prefer-class-fields` rules
+
+- [`a1886e2`](https://github.com/ncontiero/eslint-config/commit/a1886e2ea58ed6181a07c72f6c3bb52be21ea371) - feat: support sort jsconfig
+
 ## 6.0.0
 
 ### Major Changes
