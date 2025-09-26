@@ -3,14 +3,6 @@
   "extends": ["github>ncontiero/renovate-config"],
   "dependencyDashboard": true,
   "packageRules": [
-    {
-      "enabled": false,
-      "matchDepTypes": ["peerDependencies"]
-    },
-    {
-      "groupName": "all non-major dependencies",
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchPackageNames": ["*"]
-    }
+    { "enabled": false, "matchDepTypes": ["peerDependencies"] }
   ]
 }
