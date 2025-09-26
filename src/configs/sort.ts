@@ -81,6 +81,14 @@ export function sortPackageJson(): FlatConfigItem[] {
             order: { type: "asc" },
             pathPattern: "^(?:resolutions|overrides|pnpm.overrides)$",
           },
+          {
+            order: { type: "asc" },
+            pathPattern: "^workspaces\\.catalog$",
+          },
+          {
+            order: { type: "asc" },
+            pathPattern: "^workspaces\\.catalogs\\.[^.]+$",
+          },
         ],
       },
     },
