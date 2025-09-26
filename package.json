@@ -90,6 +90,7 @@
     "@ncontiero/changelog-github": "^2.1.1",
     "@ncontiero/prettier-config": "^1.0.0",
     "@tanstack/eslint-plugin-query": "^5.90.1",
+    "@types/eslint-plugin-jsx-a11y": "^6.10.0",
     "@types/node": "^24.5.2",
     "@typescript-eslint/parser": "^8.44.1",
     "eslint": "^9.36.0",
