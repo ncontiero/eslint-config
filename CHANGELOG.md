@@ -1,5 +1,25 @@
 # @ncontiero/eslint-config
 
+## 6.2.0
+
+### Minor Changes
+
+- [`60fe12a`](https://github.com/ncontiero/eslint-config/commit/60fe12adab6bd5328466c87c26a7203366c166c6) - feat: enable additional rules for JavaScript and TypeScript
+
+- [`809210d`](https://github.com/ncontiero/eslint-config/commit/809210d3edeab7e854a697dae5d622b9d16d414a) - feat: add sort support of Bun catalogs
+
+### Patch Changes
+
+- [`cec15e1`](https://github.com/ncontiero/eslint-config/commit/cec15e1fb23fe736523fb26c5596764e051d5a19) - chore(deps): update eslint-plugin-jsdoc to v60
+
+- [`19f2ac8`](https://github.com/ncontiero/eslint-config/commit/19f2ac8cb8e50ee668c1f48e6cba103a2782365a) - chore: update ecmaVersion to "latest" in JavaScript config
+
+- [`a78d712`](https://github.com/ncontiero/eslint-config/commit/a78d712a8ee642705494e586c718009e4a41c864) - chore: update JavaScript globals to ES2026
+
+- [`8210e61`](https://github.com/ncontiero/eslint-config/commit/8210e614997e34d457545343e5c88999da1efa51) - chore(deps): update eslint-plugin-unicorn to v61
+
+- [`46f564d`](https://github.com/ncontiero/eslint-config/commit/46f564d614d2f31481fbb72d31c1c297a6d98dd8) - refactor: update TypeScript ESLint integration and dependencies
+
 ## 6.1.0
 
 ### Minor Changes
