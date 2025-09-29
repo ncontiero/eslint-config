@@ -3,6 +3,7 @@
   "extends": ["github>ncontiero/renovate-config"],
   "dependencyDashboard": true,
   "packageRules": [
-    { "enabled": false, "matchDepTypes": ["peerDependencies"] }
+    { "enabled": false, "matchDepTypes": ["peerDependencies"] },
+    { "matchDepNames": ["*"], "dependencyDashboardApproval": false }
   ]
 }
