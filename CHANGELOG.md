@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 6.2.1
+
+### Patch Changes
+
+- [`8543432`](https://github.com/ncontiero/eslint-config/commit/85434324dd05c4ace8be54ea024d080b96896291) - chore(deps): update eslint-plugin-de-morga to v2
+
 ## 6.2.0
 
 ### Minor Changes
