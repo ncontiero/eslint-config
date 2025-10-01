@@ -2,6 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>ncontiero/renovate-config"],
   "packageRules": [
-    { "enabled": false, "matchDepTypes": ["peerDependencies"] }
+    { "enabled": false, "matchDepTypes": ["peerDependencies"] },
+    { "matchPackageNames": ["*"], "dependencyDashboardApproval": false }
   ]
 }
