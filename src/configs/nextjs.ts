@@ -38,8 +38,6 @@ export async function nextJs(
         "nextjs/no-title-in-document-head": ["warn"],
         "nextjs/no-typos": ["warn"],
         "nextjs/no-unwanted-polyfillio": ["warn"],
-        // Disable react-refresh/only-export-components in next
-        "react-refresh/only-export-components": ["off"],
 
         ...overrides,
       },

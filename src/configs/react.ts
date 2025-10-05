@@ -17,6 +17,7 @@ const ReactRouterPackages = [
   "@react-router/serve",
   "@react-router/dev",
 ];
+const NextJsPackages = ["next"];
 
 export async function react(
   options: OptionsHasTypeScript &
@@ -46,10 +47,10 @@ export async function react(
   const isAllowConstantExport = ReactRefreshAllowPackages.some((i) =>
     isPackageExists(i),
   );
-
   const isUsingReactRouter = ReactRouterPackages.some((i) =>
     isPackageExists(i),
   );
+  const isUsingNextJs = NextJsPackages.some((i) => isPackageExists(i));
 
   return [
     {
@@ -95,6 +96,26 @@ export async function react(
           {
             allowConstantExport: isAllowConstantExport,
             allowExportNames: [
+              ...(isUsingNextJs
+                ? [
+                    // https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
+                    "experimental_ppr",
+                    "dynamic",
+                    "dynamicParams",
+                    "revalidate",
+                    "fetchCache",
+                    "runtime",
+                    "preferredRegion",
+                    "maxDuration",
+                    "generateStaticParams",
+                    // https://nextjs.org/docs/app/api-reference/functions/generate-metadata
+                    "metadata",
+                    "generateMetadata",
+                    // https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+                    "viewport",
+                    "generateViewport",
+                  ]
+                : []),
               ...(isUsingReactRouter
                 ? [
                     "meta",
