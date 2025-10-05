@@ -87,8 +87,21 @@ export async function react(
       name: "ncontiero/react/rules",
       rules: {
         // react-hooks
+        "react-hooks/component-hook-factories": "warn",
+        "react-hooks/error-boundaries": "warn",
         "react-hooks/exhaustive-deps": "warn",
+        "react-hooks/globals": "warn",
+        "react-hooks/immutability": "warn",
+        "react-hooks/incompatible-library": "warn",
+        "react-hooks/preserve-manual-memoization": "warn",
+        "react-hooks/purity": "warn",
+        "react-hooks/refs": "warn",
         "react-hooks/rules-of-hooks": "error",
+        "react-hooks/set-state-in-effect": "warn",
+        "react-hooks/set-state-in-render": "warn",
+        "react-hooks/static-components": "warn",
+        "react-hooks/unsupported-syntax": "warn",
+        "react-hooks/use-memo": "warn",
 
         // react refresh
         "react-refresh/only-export-components": [
