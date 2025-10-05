@@ -145,7 +145,7 @@ export function ncontiero(
     javascript({ overrides: getOverrides(options, "javascript") }),
     comments(),
     jsdoc(),
-    imports({ nextJs: enableNextJs === true }),
+    imports({ nextJs: !!enableNextJs }),
     node(),
     promise(),
     command(),
