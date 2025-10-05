@@ -5,6 +5,9 @@ import { execa } from "execa";
 import { glob } from "tinyglobby";
 import { afterAll, beforeAll, it } from "vitest";
 
+const isWindows = process.platform === "win32";
+const TIMEOUT = isWindows ? 300_000 : 60_000;
+
 beforeAll(async () => {
   await fs.rm("_fixtures", { recursive: true, force: true });
 });
@@ -66,7 +69,7 @@ function runWithConfig(
         }),
       );
     },
-    60_000,
+    TIMEOUT,
   );
 }
 
