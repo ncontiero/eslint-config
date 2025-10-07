@@ -1,26 +1,31 @@
 import type {
   FlatConfigItem,
   OptionsIsInEditor,
-  OptionsOverrides,
+  OptionsTailwindCSS,
 } from "../types";
-import { getPackageInfoSync } from "local-pkg";
+import path from "node:path";
 import { GLOB_HTML, GLOB_REACT } from "../globs";
 import { interopDefault } from "../utils";
 
 export async function tailwindcss(
-  options: OptionsIsInEditor & OptionsOverrides = {},
+  options: OptionsIsInEditor & OptionsTailwindCSS = {},
 ): Promise<FlatConfigItem[]> {
-  const { isInEditor = false, overrides = {} } = options;
+  const { overrides = {} } = options;
 
-  if (getPackageInfoSync("tailwindcss")?.version?.startsWith("4")) {
-    console.warn(
-      "[@ncontiero/eslint-config] TailwindCSS v4 is not supported yet.",
-    );
-    return [];
-  }
+  const resolvePath = (p: string) => {
+    if (path.isAbsolute(p)) return p;
+    return path.resolve(process.cwd(), p);
+  };
+
+  const cssGlobalPath = resolvePath(
+    options.cssGlobalPath ?? path.join("src", "app", "globals.css"),
+  );
+  const configPath = resolvePath(
+    options.configPath ?? path.join("tailwind.config.ts"),
+  );
 
   const pluginTailwindCss = await interopDefault(
-    import("eslint-plugin-tailwindcss"),
+    import("eslint-plugin-better-tailwindcss"),
   );
 
   return [
@@ -31,15 +36,8 @@ export async function tailwindcss(
       },
       settings: {
         tailwindcss: {
-          callees: ["cn", "classnames", "clsx", "cva"],
-          config: "tailwind.config.ts",
-          /**
-           * Performance issue with the plugin, somewhat mitigated setting cssFiles to an empty array.
-           * @see https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/276
-           * @see https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/174
-           */
-          cssFiles: [],
-          removeDuplicates: true,
+          entryPoint: cssGlobalPath,
+          tailwindConfig: configPath,
         },
       },
     },
@@ -47,11 +45,21 @@ export async function tailwindcss(
       files: [GLOB_REACT, GLOB_HTML],
       name: "ncontiero/tailwindcss/rules",
       rules: {
-        "tailwindcss/classnames-order": isInEditor ? "off" : "warn",
-        "tailwindcss/enforces-negative-arbitrary-values": ["warn"],
-        "tailwindcss/enforces-shorthand": ["warn"],
-        "tailwindcss/no-contradicting-classname": ["error"],
-        "tailwindcss/no-custom-classname": ["warn"],
+        "tailwindcss/enforce-consistent-class-order": "warn",
+        "tailwindcss/enforce-consistent-important-position": "warn",
+        "tailwindcss/enforce-consistent-line-wrapping": [
+          "warn",
+          { group: "never", preferSingleLine: true, printWidth: 120 },
+        ],
+        "tailwindcss/enforce-consistent-variable-syntax": "error",
+        "tailwindcss/enforce-shorthand-classes": "warn",
+        "tailwindcss/no-conflicting-classes": "error",
+        "tailwindcss/no-deprecated-classes": "error",
+        "tailwindcss/no-duplicate-classes": "error",
+        "tailwindcss/no-restricted-classes": "error",
+        "tailwindcss/no-unknown-classes": "warn",
+        "tailwindcss/no-unnecessary-whitespace": "warn",
+
         ...overrides,
       },
     },

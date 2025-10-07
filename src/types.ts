@@ -77,6 +77,21 @@ export interface OptionsUnicorn extends OptionsOverrides {
   allRecommended?: boolean;
 }
 
+export interface OptionsTailwindCSS extends OptionsOverrides {
+  /**
+   * Path to the Tailwind CSS config file.
+   *
+   * @default "tailwind.config.ts"
+   */
+  configPath?: string;
+  /**
+   * Path to the global CSS file.
+   *
+   * @default "src/app/globals.css"
+   */
+  cssGlobalPath?: string;
+}
+
 export interface OptionsConfig {
   /**
    * Enable gitignore support.
@@ -171,7 +186,7 @@ export interface OptionsConfig {
    *
    * @default auto-detect based on the dependencies
    */
-  tailwindcss?: boolean | OptionsOverrides;
+  tailwindcss?: boolean | OptionsTailwindCSS;
 
   /**
    * Enable TanStack React Query support.

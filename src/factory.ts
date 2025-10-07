@@ -225,6 +225,7 @@ export function ncontiero(
     configs.push(
       tailwindcss({
         isInEditor,
+        ...resolveSubOptions(options, "tailwindcss"),
         overrides: getOverrides(options, "tailwindcss"),
       }),
     );
