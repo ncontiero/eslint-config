@@ -77,6 +77,17 @@ export interface OptionsUnicorn extends OptionsOverrides {
   allRecommended?: boolean;
 }
 
+export interface HTMLOptions extends OptionsOverrides {
+  /**
+   * Custom template engine syntax to be recognized by the HTML parser.
+   * This allows the parser to correctly handle template delimiters like `{{...}}` or `{%...%}`.
+   *
+   * @see https://html-eslint.org/docs/integrating-template-engine
+   * @default { "{{": "}}", "{%": "%}" }
+   */
+  templateEngineSyntax?: Record<string, string>;
+}
+
 export interface OptionsTailwindCSS extends OptionsOverrides {
   /**
    * Path to the Tailwind CSS config file.
@@ -157,6 +168,14 @@ export interface OptionsConfig {
    * @default true
    */
   regexp?: boolean | OptionsOverrides;
+
+  /**
+   * Enable HTML linting.
+   *
+   * @see https://html-eslint.org/
+   * @default true
+   */
+  html?: boolean | HTMLOptions;
 
   /**
    * Enable Prettier support.

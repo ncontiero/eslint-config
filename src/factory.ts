@@ -11,6 +11,7 @@ import {
   command,
   comments,
   deMorgan,
+  html,
   ignores,
   imports,
   javascript,
@@ -219,6 +220,15 @@ export function ncontiero(
 
   if (enableNextJs) {
     configs.push(nextJs({ overrides: getOverrides(options, "nextjs") }));
+  }
+
+  if (options.html ?? true) {
+    configs.push(
+      html({
+        ...resolveSubOptions(options, "html"),
+        overrides: getOverrides(options, "html"),
+      }),
+    );
   }
 
   if (enableTailwindCSS) {

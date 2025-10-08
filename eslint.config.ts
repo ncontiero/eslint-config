@@ -4,7 +4,7 @@ export default ncontiero(
   {
     react: true,
     nextjs: true,
-    tailwindcss: false,
+    tailwindcss: true,
     reactQuery: true,
     javascript: {
       overrides: {

@@ -1,6 +1,7 @@
 export * from "./command";
 export * from "./comments";
 export * from "./de-morgan";
+export * from "./html";
 export * from "./ignores";
 export * from "./imports";
 export * from "./javascript";
