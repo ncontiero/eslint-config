@@ -1,5 +1,25 @@
 # @ncontiero/eslint-config
 
+## 6.3.0
+
+### Minor Changes
+
+- [`b9e2ea4`](https://github.com/ncontiero/eslint-config/commit/b9e2ea41e0366728748fc4606b469ed13f709e26) - feat(react): enable additional react-hooks linting rules
+
+- [`97a80e9`](https://github.com/ncontiero/eslint-config/commit/97a80e9d762af1b11189c42d38bd72a1fe643ee4) - feat: add Next.js support for allowed export names in react config
+
+- [`87f9b63`](https://github.com/ncontiero/eslint-config/commit/87f9b6303e5af47ccb6245e6e720ab72b62d7a1c) - feat(html): add HTML linting support with [html-eslint](https://html-eslint.org/)
+
+- [`099891a`](https://github.com/ncontiero/eslint-config/commit/099891a7aadfca5dffbab745ea434179b332d260) - feat: replace `eslint-plugin-tailwindcss` with `eslint-plugin-better-tailwindcss`
+
+### Patch Changes
+
+- [`fdb280e`](https://github.com/ncontiero/eslint-config/commit/fdb280ec9fa34cbf8e50d419444b3de22125d5ce) - fix(prettier): apply specific parsers for different file types
+
+- [`ec07328`](https://github.com/ncontiero/eslint-config/commit/ec07328ac8303b95e3d5efc103c413e0d9884abd) - fix: ensure nextJs option is cast to boolean
+
+- [#448](https://github.com/ncontiero/eslint-config/pull/448) [`972f415`](https://github.com/ncontiero/eslint-config/commit/972f4156891ae009b27b2d353c9851be576535e5) - chore(deps): update eslint-plugin-react-hooks to v6
+
 ## 6.2.1
 
 ### Patch Changes
