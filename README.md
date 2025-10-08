@@ -42,7 +42,7 @@ export default ncontiero(
     react: true, // auto detection
     nextjs: false, // auto detection
     tailwindcss: false, // auto detection
-    reactQuery: false,  // auto detection
+    reactQuery: false, // auto detection
   },
   {
     /* your custom config */
@@ -189,6 +189,7 @@ export default ncontiero({
 ### Optional Configs
 
 We provide some optional configs for specific use cases, that we don't include their dependencies by default.
+
 > React, Next.js and Tailwind CSS have their dependencies by default.
 
 #### TanStack Query

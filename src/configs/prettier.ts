@@ -1,6 +1,13 @@
 import type { FlatConfigItem, PrettierOptions } from "../types";
-import { GLOB_SRC } from "../globs";
-import { interopDefault } from "../utils";
+import {
+  GLOB_CSS,
+  GLOB_LESS,
+  GLOB_MARKDOWN,
+  GLOB_POSTCSS,
+  GLOB_SCSS,
+  GLOB_SRC,
+} from "../globs";
+import { interopDefault, parserPlain } from "../utils";
 
 export async function prettier(
   options: PrettierOptions = {},
@@ -34,6 +41,40 @@ export async function prettier(
       name: "ncontiero/prettier/rules",
       rules: {
         "prettier/prettier": ["warn", options],
+      },
+    },
+    {
+      files: [GLOB_MARKDOWN],
+      languageOptions: {
+        parser: parserPlain,
+      },
+      name: "ncontiero/prettier/markdown",
+      rules: {
+        "prettier/prettier": ["warn", { ...options, parser: "markdown" }],
+      },
+    },
+    {
+      files: [GLOB_CSS, GLOB_POSTCSS],
+      languageOptions: {
+        parser: parserPlain,
+      },
+      name: "ncontiero/prettier/css",
+      rules: {
+        "prettier/prettier": ["warn", { ...options, parser: "css" }],
+      },
+    },
+    {
+      files: [GLOB_SCSS],
+      name: "ncontiero/prettier/scss",
+      rules: {
+        "prettier/prettier": ["warn", { ...options, parser: "scss" }],
+      },
+    },
+    {
+      files: [GLOB_LESS],
+      name: "ncontiero/prettier/less",
+      rules: {
+        "prettier/prettier": ["warn", { ...options, parser: "less" }],
       },
     },
   ];
