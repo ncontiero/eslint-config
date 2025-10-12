@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 6.3.1
+
+### Patch Changes
+
+- [`004af0b`](https://github.com/ncontiero/eslint-config/commit/004af0b5cc08e35f6fafb4eadbb121ba3d5c7461) - chore: remove unnecessary `isInEditor` option
+
 ## 6.3.0
 
 ### Minor Changes
