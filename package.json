@@ -33,11 +33,12 @@
     "dev": "pnpm dlx @eslint/config-inspector --config eslint-inspector.config.ts",
     "build:inspector": "pnpm build && pnpm dlx @eslint/config-inspector build --config eslint-inspector.config.ts",
     "typegen": "tsx scripts/typegen.ts",
+    "test": "vitest",
     "lint": "eslint .",
     "lint:fix": "pnpm lint --fix",
-    "changeset": "changeset",
-    "test": "vitest",
     "typecheck": "tsc --noEmit",
+    "check": "pnpm lint && pnpm typecheck",
+    "release": "changeset publish",
     "prepare": "husky"
   },
   "peerDependencies": {
