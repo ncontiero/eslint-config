@@ -39,7 +39,6 @@ import {
   hasTailwind,
   hasTanStackReactQuery,
   hasTypeScript,
-  isInEditorEnv,
 } from "./env";
 import { GLOB_TS, GLOB_TSX } from "./globs";
 import { composer, interopDefault } from "./utils";
@@ -102,7 +101,6 @@ export function ncontiero(
 ) {
   const {
     gitignore: enableGitignore = true,
-    isInEditor = isInEditorEnv,
     nextjs: enableNextJs = hasNextJs,
     react: enableReact = hasReact,
     reactQuery: enableTanStackReactQuery = hasTanStackReactQuery,
@@ -234,7 +232,6 @@ export function ncontiero(
   if (enableTailwindCSS) {
     configs.push(
       tailwindcss({
-        isInEditor,
         ...resolveSubOptions(options, "tailwindcss"),
         overrides: getOverrides(options, "tailwindcss"),
       }),

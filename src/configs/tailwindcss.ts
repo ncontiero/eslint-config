@@ -1,14 +1,10 @@
-import type {
-  FlatConfigItem,
-  OptionsIsInEditor,
-  OptionsTailwindCSS,
-} from "../types";
+import type { FlatConfigItem, OptionsTailwindCSS } from "../types";
 import path from "node:path";
 import { GLOB_HTML, GLOB_REACT } from "../globs";
 import { interopDefault } from "../utils";
 
 export async function tailwindcss(
-  options: OptionsIsInEditor & OptionsTailwindCSS = {},
+  options: OptionsTailwindCSS = {},
 ): Promise<FlatConfigItem[]> {
   const { overrides = {} } = options;
 

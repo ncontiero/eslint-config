@@ -55,10 +55,6 @@ export interface OptionsHasTanStackReactQuery {
 export type OptionsTypescript = OptionsTypeScriptParserOptions &
   OptionsOverrides;
 
-export interface OptionsIsInEditor {
-  isInEditor?: boolean;
-}
-
 export interface StyleConfig {
   indent?: number;
   semi?: boolean;
@@ -213,12 +209,6 @@ export interface OptionsConfig {
    * @default auto-detect based on the dependencies
    */
   reactQuery?: boolean;
-
-  /**
-   * Control to disable some rules in editors.
-   * @default auto-detect based on the process.env
-   */
-  isInEditor?: boolean;
 }
 
 export { PrettierOptions };
