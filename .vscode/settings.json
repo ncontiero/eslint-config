@@ -1,8 +1,4 @@
 {
-  // Enable the ESlint flat config support
-  "exportall.config.folderListener": ["/src", "/src/configs"],
-  "exportall.config.semis": false,
-
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
   "editor.formatOnSave": false,
