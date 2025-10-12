@@ -65,6 +65,9 @@ export async function prettier(
     },
     {
       files: [GLOB_SCSS],
+      languageOptions: {
+        parser: parserPlain,
+      },
       name: "ncontiero/prettier/scss",
       rules: {
         "prettier/prettier": ["warn", { ...options, parser: "scss" }],
@@ -72,6 +75,9 @@ export async function prettier(
     },
     {
       files: [GLOB_LESS],
+      languageOptions: {
+        parser: parserPlain,
+      },
       name: "ncontiero/prettier/less",
       rules: {
         "prettier/prettier": ["warn", { ...options, parser: "less" }],
