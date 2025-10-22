@@ -21,8 +21,8 @@ importers:
         specifier: ^0.47.0
         version: 0.47.0(jiti@2.6.1)
       '@next/eslint-plugin-next':
-        specifier: ^15.5.4
-        version: 15.5.4
+        specifier: ^16.0.0
+        version: 16.0.0
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.46.2
         version: 8.46.2(@typescript-eslint/parser@8.46.2(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3))(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3)
@@ -703,8 +703,8 @@ packages:
   '@ncontiero/prettier-config@1.0.0':
     resolution: {integrity: sha512-i+dkvx9H8NBTkYmEje9ut0VHglw87DTJ92JzsviJnGe2LvmPF5M2M+FsV86G7VTZ27a3XN53MD64MpXIN4MsMw==}
 
-  '@next/eslint-plugin-next@15.5.4':
-    resolution: {integrity: sha512-SR1vhXNNg16T4zffhJ4TS7Xn7eq4NfKfcOsRwea7RIAHrjRpI9ALYbamqIJqkAhowLlERffiwk0FMvTLNdnVtw==}
+  '@next/eslint-plugin-next@16.0.0':
+    resolution: {integrity: sha512-IB7RzmmtrPOrpAgEBR1PIQPD0yea5lggh5cq54m51jHjjljU80Ia+czfxJYMlSDl1DPvpzb8S9TalCc0VMo9Hw==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -4333,7 +4333,7 @@ snapshots:
 
   '@ncontiero/prettier-config@1.0.0': {}
 
-  '@next/eslint-plugin-next@15.5.4':
+  '@next/eslint-plugin-next@16.0.0':
     dependencies:
       fast-glob: 3.3.1
 
