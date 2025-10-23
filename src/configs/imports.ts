@@ -28,7 +28,7 @@ export function imports(options: OptionsHasNextJs = {}): FlatConfigItem[] {
       files: [
         `**/*config*.${GLOB_SRC_EXT}`,
         `**/{views,pages,routes,middleware,plugins,api,app}/${GLOB_SRC}`,
-        nextJs ? "{,src/}middleware.{ts,js}" : "",
+        nextJs ? "{,src/}{middleware,proxy}.{ts,js}" : "",
         `**/{index,vite,esbuild,rollup,rolldown,webpack,rspack}.ts`,
         "**/*.d.ts",
         `${GLOB_MARKDOWN}/**`,
