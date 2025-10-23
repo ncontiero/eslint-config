@@ -1,5 +1,17 @@
 # @ncontiero/eslint-config
 
+## 6.4.0
+
+### Minor Changes
+
+- [`f1e87ec`](https://github.com/ncontiero/eslint-config/commit/f1e87ec3dc7bf42159515c03080091a1f283f0b2) - feat(imports): expand file matching to include `proxy` files for Next.js
+
+### Patch Changes
+
+- [`61a40e1`](https://github.com/ncontiero/eslint-config/commit/61a40e1f8169056fec1ab575413f45a176083a0d) - chore(deps): update @next/eslint-plugin-next to v16
+
+- [`6894c12`](https://github.com/ncontiero/eslint-config/commit/6894c12930950c8716a906ffb0c49ab835ea17f2) - chore(react, next): allow `generateImageMetadata` and `generateSitemaps` in `only-export-components`
+
 ## 6.3.1
 
 ### Patch Changes
