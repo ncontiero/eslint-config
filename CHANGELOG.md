@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 6.4.1
+
+### Patch Changes
+
+- [#465](https://github.com/ncontiero/eslint-config/pull/465) [`cfe86ad`](https://github.com/ncontiero/eslint-config/commit/cfe86ad458fbb8397f011b2a7ce52276a41d146d) - chore(deps): update eslint-plugin-unicorn to v62
+
 ## 6.4.0
 
 ### Minor Changes
