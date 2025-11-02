@@ -61,7 +61,7 @@
     "eslint-config-flat-gitignore": "^2.1.0",
     "eslint-merge-processors": "^2.0.0",
     "eslint-plugin-antfu": "^3.1.1",
-    "eslint-plugin-better-tailwindcss": "4.0.0-beta.2",
+    "eslint-plugin-better-tailwindcss": "4.0.0-beta.3",
     "eslint-plugin-command": "^3.3.1",
     "eslint-plugin-de-morgan": "^2.0.0",
     "eslint-plugin-import-x": "^4.16.1",
