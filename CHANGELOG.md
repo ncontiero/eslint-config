@@ -1,5 +1,15 @@
 # @ncontiero/eslint-config
 
+## 6.4.1
+
+### Patch Changes
+
+- [`17dc450`](https://github.com/ncontiero/eslint-config/commit/17dc450d909ab34df66a0f7fdd654165064d890e) - chore(deps): update eslint-plugin-better-tailwindcss to v4.0.0-beta.3
+
+- [#465](https://github.com/ncontiero/eslint-config/pull/465) [`cfe86ad`](https://github.com/ncontiero/eslint-config/commit/cfe86ad458fbb8397f011b2a7ce52276a41d146d) - chore(deps): update eslint-plugin-unicorn to v62
+
+- [`2664a4b`](https://github.com/ncontiero/eslint-config/commit/2664a4bfc86180a15a3438eabad375beca2a1dba) - chore(tailwindcss): disable `no-unknown-classes` rule
+
 ## 6.4.0
 
 ### Minor Changes
