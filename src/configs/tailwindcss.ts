@@ -53,7 +53,7 @@ export async function tailwindcss(
         "tailwindcss/no-deprecated-classes": "error",
         "tailwindcss/no-duplicate-classes": "error",
         "tailwindcss/no-restricted-classes": "error",
-        "tailwindcss/no-unknown-classes": "warn",
+        "tailwindcss/no-unknown-classes": "off",
         "tailwindcss/no-unnecessary-whitespace": "warn",
 
         ...overrides,
