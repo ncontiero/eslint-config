@@ -53,8 +53,8 @@
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/markdown": "^7.5.0",
-    "@html-eslint/eslint-plugin": "^0.47.0",
-    "@html-eslint/parser": "^0.47.0",
+    "@html-eslint/eslint-plugin": "^0.48.0",
+    "@html-eslint/parser": "^0.48.0",
     "@next/eslint-plugin-next": "^16.0.1",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
