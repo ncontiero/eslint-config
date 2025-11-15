@@ -95,7 +95,7 @@
     "@ncontiero/prettier-config": "^1.0.0",
     "@tanstack/eslint-plugin-query": "^5.91.2",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
-    "@types/node": "^24.9.2",
+    "@types/node": "^24.10.1",
     "eslint": "^9.39.0",
     "eslint-typegen": "^2.3.0",
     "execa": "^9.6.0",
