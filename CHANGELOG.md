@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 6.5.0
+
+### Minor Changes
+
+- [`5bedadf`](https://github.com/ncontiero/eslint-config/commit/5bedadf23d835c279e7459ff419975ee4196979e) - feat: add sorting rules for `pnpm-workspace.yaml` files
+
 ## 6.4.1
 
 ### Patch Changes
