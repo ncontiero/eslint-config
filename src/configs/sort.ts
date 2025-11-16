@@ -223,3 +223,39 @@ export function sortTsconfig(): FlatConfigItem[] {
     },
   ];
 }
+
+export const sortPnpmWorkspace = (): FlatConfigItem[] => [
+  {
+    files: ["**/pnpm-workspace.yaml"],
+    name: "ncontiero/sort/pnpm-workspace",
+    rules: {
+      "yml/sort-keys": [
+        "error",
+        {
+          order: [
+            "packages",
+            "overrides",
+            "patchedDependencies",
+
+            "defines",
+            "catalog",
+            "catalogs",
+
+            { order: { type: "asc" } },
+          ],
+          pathPattern: "^$",
+        },
+        {
+          allowLineSeparatedGroups: true,
+          order: { type: "asc" },
+          pathPattern: "^(catalog|catalogs|overrides)$",
+        },
+        {
+          allowLineSeparatedGroups: true,
+          order: { type: "asc" },
+          pathPattern: String.raw`^catalogs\..+$`,
+        },
+      ],
+    },
+  },
+];
