@@ -1,5 +1,13 @@
 # @ncontiero/eslint-config
 
+## 6.5.2
+
+### Patch Changes
+
+- [#511](https://github.com/ncontiero/eslint-config/pull/511) [`94a5c1e`](https://github.com/ncontiero/eslint-config/commit/94a5c1e1208ea4004a778eb0a8de428aa23a1f00) - chore(deps): update eslint-plugin-better-tailwindcss to v4.0.0-beta.5
+
+- [#515](https://github.com/ncontiero/eslint-config/pull/515) [`bb9c831`](https://github.com/ncontiero/eslint-config/commit/bb9c8318f29631c9f232c35cc5578c4138d0c34a) - chore(deps): update eslint-plugin-better-tailwindcss to v4.0.0-beta.6
+
 ## 6.5.1
 
 ### Patch Changes
