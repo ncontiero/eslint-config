@@ -55,7 +55,7 @@
     "@eslint/markdown": "^7.5.1",
     "@html-eslint/eslint-plugin": "^0.52.0",
     "@html-eslint/parser": "^0.52.0",
-    "@next/eslint-plugin-next": "^16.1.0",
+    "@next/eslint-plugin-next": "^16.1.1",
     "@typescript-eslint/eslint-plugin": "^8.50.0",
     "@typescript-eslint/parser": "^8.50.0",
     "eslint-config-flat-gitignore": "^2.1.0",
