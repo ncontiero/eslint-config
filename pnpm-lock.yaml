@@ -39,8 +39,8 @@ importers:
         specifier: ^3.1.3
         version: 3.1.3(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-better-tailwindcss:
-        specifier: 4.0.0-beta.6
-        version: 4.0.0-beta.6(eslint@9.39.2(jiti@2.6.1))(tailwindcss@4.1.16)(typescript@5.9.3)
+        specifier: 4.0.0-rc.0
+        version: 4.0.0-rc.0(eslint@9.39.2(jiti@2.6.1))(tailwindcss@4.1.16)(typescript@5.9.3)
       eslint-plugin-command:
         specifier: ^3.4.0
         version: 3.4.0(eslint@9.39.2(jiti@2.6.1))
@@ -1648,12 +1648,18 @@ packages:
     peerDependencies:
       eslint: '*'
 
-  eslint-plugin-better-tailwindcss@4.0.0-beta.6:
-    resolution: {integrity: sha512-DBtvXwoDLM7xve7/HsT8Y6B1h5DsyUPoUo0eEHRxTCnsXiC7b/CM4JIOHOV7T1lEcQ+KxW6VwYh82w6t0m96sg==}
+  eslint-plugin-better-tailwindcss@4.0.0-rc.0:
+    resolution: {integrity: sha512-GhVpJvjDt5PpIe3ryyj/ahSVeMfYyd+oRExorluBL/1AYPwL2l0yiKKTIvdqyl2VXFDxD/v3NKMRBZvHkeySFA==}
     engines: {node: ^20.19.0 || ^22.12.0 || >=23.0.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-      tailwindcss: ^3.3.0 || ^4.1.15
+      oxlint: ^1.35.0
+      tailwindcss: ^3.3.0 || ^4.1.17
+    peerDependenciesMeta:
+      eslint:
+        optional: true
+      oxlint:
+        optional: true
 
   eslint-plugin-command@3.4.0:
     resolution: {integrity: sha512-EW4eg/a7TKEhG0s5IEti72kh3YOTlnhfFNuctq5WnB1fst37/IHTd5OkD+vnlRf3opTvUcSRihAateP6bT5ZcA==}
@@ -5219,18 +5225,19 @@ snapshots:
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
 
-  eslint-plugin-better-tailwindcss@4.0.0-beta.6(eslint@9.39.2(jiti@2.6.1))(tailwindcss@4.1.16)(typescript@5.9.3):
+  eslint-plugin-better-tailwindcss@4.0.0-rc.0(eslint@9.39.2(jiti@2.6.1))(tailwindcss@4.1.16)(typescript@5.9.3):
     dependencies:
       '@eslint/css-tree': 3.6.8
       '@valibot/to-json-schema': 1.5.0(valibot@1.2.0(typescript@5.9.3))
       enhanced-resolve: 5.18.4
-      eslint: 9.39.2(jiti@2.6.1)
       jiti: 2.6.1
       synckit: 0.11.11
       tailwind-csstree: 0.1.4
       tailwindcss: 4.1.16
       tsconfig-paths-webpack-plugin: 4.2.0
       valibot: 1.2.0(typescript@5.9.3)
+    optionalDependencies:
+      eslint: 9.39.2(jiti@2.6.1)
     transitivePeerDependencies:
       - typescript
 
