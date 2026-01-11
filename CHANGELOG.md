@@ -1,5 +1,24 @@
 # @ncontiero/eslint-config
 
+## 7.0.0
+
+### Major Changes
+
+- [`4b064e8`](https://github.com/ncontiero/eslint-config/commit/4b064e83e7100a8132b0501d5312f368d25cccb7) - chore(deps)!: update eslint-plugin-jsdoc to v62
+  - BREAKING CHANGE: Requires Node 20.19.0+.
+
+### Minor Changes
+
+- [#529](https://github.com/ncontiero/eslint-config/pull/529) [`fc8c64b`](https://github.com/ncontiero/eslint-config/commit/fc8c64bd22750910330e8d99b476215f607175b2) - chore(deps): update eslint-plugin-perfectionist to v5
+
+### Patch Changes
+
+- [`7e900c2`](https://github.com/ncontiero/eslint-config/commit/7e900c22f74678525c1980405bc18179cb70cfd1) - chore(deps): update toml-eslint-parser to v1
+
+- [#534](https://github.com/ncontiero/eslint-config/pull/534) [`a5828f0`](https://github.com/ncontiero/eslint-config/commit/a5828f03519e7be4c21c031fcf1260533a03ab37) - chore(deps): update globals to v17
+
+- [#526](https://github.com/ncontiero/eslint-config/pull/526) [`66aa7a4`](https://github.com/ncontiero/eslint-config/commit/66aa7a4a8b927f64fc464e81152ea073c109474b) - chore(deps): update eslint-plugin-better-tailwindcss to v4.0.0-rc.0
+
 ## 6.5.2
 
 ### Patch Changes
