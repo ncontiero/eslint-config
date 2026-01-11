@@ -108,8 +108,8 @@ importers:
         specifier: ^3.7.4
         version: 3.7.4
       toml-eslint-parser:
-        specifier: ^0.10.1
-        version: 0.10.1
+        specifier: ^1.0.0
+        version: 1.0.0
       yaml-eslint-parser:
         specifier: ^1.3.2
         version: 1.3.2
@@ -3258,13 +3258,13 @@ packages:
     resolution: {integrity: sha512-41wJyvKep3yT2tyPqX/4blcfybknGB4D+oETKLs7Q76UiPqRpUJK3hr1nxelyYO0PHKVzJwlu0aCeEAsGI6rpw==}
     engines: {node: '>=20'}
 
-  toml-eslint-parser@0.10.1:
-    resolution: {integrity: sha512-9mjy3frhioGIVGcwamlVlUyJ9x+WHw/TXiz9R4YOlmsIuBN43r9Dp8HZ35SF9EKjHrn3BUZj04CF+YqZ2oJ+7w==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
   toml-eslint-parser@0.12.0:
     resolution: {integrity: sha512-4qHgkGXl0LyFp/3aNoi6dKWuPuxFsCiDtBl5IbJljeYR57+5l3pJHJEW9xPSOu2U1drGlG82tpGqkJz/uJZ2Fw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  toml-eslint-parser@1.0.0:
+    resolution: {integrity: sha512-syGkwm4fa+uOzswyJQy6aFmmpcSBm/M0+F/iOAWfDkFuz33OnPMJkVQzaCk10WpqwzKcbaeAJWxfSGkkH8GiBw==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
@@ -7130,13 +7130,13 @@ snapshots:
       '@sindresorhus/base62': 1.0.0
       reserved-identifiers: 1.2.0
 
-  toml-eslint-parser@0.10.1:
-    dependencies:
-      eslint-visitor-keys: 3.4.3
-
   toml-eslint-parser@0.12.0:
     dependencies:
       eslint-visitor-keys: 3.4.3
+
+  toml-eslint-parser@1.0.0:
+    dependencies:
+      eslint-visitor-keys: 5.0.0
 
   tr46@0.0.3: {}
 
