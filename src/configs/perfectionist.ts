@@ -18,26 +18,24 @@ export function perfectionist(): FlatConfigItem[] {
         "perfectionist/sort-imports": [
           "warn",
           {
-            customGroups: {
-              type: {
-                react: ["^react$", "^react-(?!.*.css$).+"],
+            customGroups: [
+              {
+                elementNamePattern: ["^react$", "^react-(?!.*.css$).+"],
+                groupName: "react",
               },
-              value: {
-                react: ["^react$", "^react-(?!.*.css$).+"],
-              },
-            },
+            ],
             groups: [
               "side-effect-style",
               "style",
-              "type",
-              "internal-type",
-              ["parent-type", "sibling-type", "index-type"],
+              "type-import",
+              "type-external",
+              "type-internal",
+              ["type-parent", "type-sibling", "type-index"],
               "builtin",
               "react",
               "external",
               "internal",
               ["parent", "sibling", "index"],
-              "object",
               "unknown",
             ],
             internalPattern: ["^[~@#]/.*"],
@@ -47,11 +45,11 @@ export function perfectionist(): FlatConfigItem[] {
         ],
         "perfectionist/sort-named-exports": [
           "warn",
-          { groupKind: "types-first" },
+          { groups: ["type-export", "value-export"] },
         ],
         "perfectionist/sort-named-imports": [
           "warn",
-          { groupKind: "types-first" },
+          { groups: ["type-import", "value-import"] },
         ],
       },
     },
