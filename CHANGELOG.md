@@ -1,5 +1,19 @@
 # @ncontiero/eslint-config
 
+## 7.0.1
+
+### Patch Changes
+
+- [`32a8251`](https://github.com/ncontiero/eslint-config/commit/32a8251aa593640fcab24f9dd24f64c2773f3cf0) - chore(deps): update yaml-eslint-parser to v2
+
+- [#540](https://github.com/ncontiero/eslint-config/pull/540) [`097801b`](https://github.com/ncontiero/eslint-config/commit/097801b68a2001c07805450abdb780f57abb6e8b) - chore(deps): update eslint-plugin-better-tailwindcss to v4.0.1
+
+- [`f4f6a6e`](https://github.com/ncontiero/eslint-config/commit/f4f6a6e7154aa85af8522cce5cfd12161f078946) - chore(deps): update eslint-plugin-regexp to v3
+
+- [#549](https://github.com/ncontiero/eslint-config/pull/549) [`04c6953`](https://github.com/ncontiero/eslint-config/commit/04c695319d5abe79ff68189c23a70200ca43054d) - chore(deps): update eslint-plugin-toml to v1
+
+- [`d898eaf`](https://github.com/ncontiero/eslint-config/commit/d898eaf4112f9fe086a6b6b975bb8a4dc95e44ba) - chore(deps): update eslint-plugin-yml to v3
+
 ## 7.0.0
 
 ### Major Changes
