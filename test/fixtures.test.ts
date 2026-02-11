@@ -46,7 +46,7 @@ function runWithConfig(
         `,
       );
 
-      await execa("pnpm", ["dlx", "eslint", ".", "--fix"], {
+      await execa("pnpm", ["dlx", "eslint@9", ".", "--fix"], {
         cwd: target,
         stdio: "pipe",
       });
