@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 7.0.2
+
+### Patch Changes
+
+- [`8bedaf5`](https://github.com/ncontiero/eslint-config/commit/8bedaf54a6391b2fdd6e695a3a05584915198d81) - chore(deps): update eslint-plugin-unicorn to v63
+
 ## 7.0.1
 
 ### Patch Changes
