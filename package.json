@@ -1,7 +1,7 @@
 {
   "name": "@ncontiero/eslint-config",
   "type": "module",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "packageManager": "pnpm@10.29.3",
   "description": "Nicolas's ESLint config.",
   "author": {
