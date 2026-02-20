@@ -62,6 +62,7 @@ export async function html(options: HTMLOptions): Promise<FlatConfigItem[]> {
         "html/no-nested-interactive": "error",
         "html/no-non-scalable-viewport": "warn",
         "html/no-obsolete-tags": "error",
+        "html/no-redundant-role": "warn",
         "html/no-script-style-type": "warn",
         "html/no-target-blank": "error",
         "html/no-trailing-spaces": "warn",
