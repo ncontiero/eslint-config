@@ -99,6 +99,12 @@ export interface OptionsTailwindCSS extends OptionsOverrides {
    * @default "src/app/globals.css"
    */
   cssGlobalPath?: string;
+  /**
+   * The working directory used to resolve `tailwindcss` and related config files.
+   * This is useful for monorepos where linting runs from the repository root
+   * but each project has its own `node_modules` and Tailwind setup.
+   */
+  cwd?: string;
 }
 
 export interface OptionsConfig {

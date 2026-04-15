@@ -19,6 +19,7 @@ export async function tailwindcss(
   const configPath = resolvePath(
     options.configPath ?? path.join("tailwind.config.ts"),
   );
+  const cwd = options.cwd ? resolvePath(options.cwd) : undefined;
 
   const pluginTailwindCss = await interopDefault(
     import("eslint-plugin-better-tailwindcss"),
@@ -32,6 +33,7 @@ export async function tailwindcss(
       },
       settings: {
         tailwindcss: {
+          cwd,
           entryPoint: cssGlobalPath,
           tailwindConfig: configPath,
         },
