@@ -1,13 +1,18 @@
 import type { FlatConfigItem } from "../types";
+import { GLOB_SRC } from "../globs";
 import { interopDefault } from "../utils";
 
 export async function jsdoc(): Promise<FlatConfigItem[]> {
   return [
     {
-      name: "ncontiero/jsdoc/rules",
+      name: "ncontiero/jsdoc/setup",
       plugins: {
         jsdoc: await interopDefault(import("eslint-plugin-jsdoc")),
       },
+    },
+    {
+      files: [GLOB_SRC],
+      name: "ncontiero/jsdoc/rules",
       rules: {
         "jsdoc/check-access": "warn",
         "jsdoc/check-param-names": "warn",
