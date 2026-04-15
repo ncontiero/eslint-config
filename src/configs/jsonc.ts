@@ -2,7 +2,6 @@ import type {
   FlatConfigItem,
   OptionsFiles,
   OptionsOverrides,
-  Rules,
   StyleOptions,
 } from "../types";
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from "../globs";
@@ -19,26 +18,19 @@ export async function jsonc(
 
   const { indent = 2 } = typeof style === "boolean" ? {} : style;
 
-  const [pluginJsonc, parserJsonc] = await Promise.all([
+  const [pluginJsonc] = await Promise.all([
     interopDefault(import("eslint-plugin-jsonc")),
-    interopDefault(import("jsonc-eslint-parser")),
   ] as const);
 
   return [
-    {
-      name: "ncontiero/jsonc/setup",
-      plugins: {
-        jsonc: pluginJsonc,
-      },
-    },
+    ...pluginJsonc.configs["recommended-with-jsonc"].map((config) => ({
+      ...config,
+      name: `ncontiero/jsonc/${config.name || "recommended"}`,
+    })),
     {
       files,
-      languageOptions: {
-        parser: parserJsonc,
-      },
       name: "ncontiero/jsonc/rules",
       rules: {
-        ...(pluginJsonc.configs["recommended-with-jsonc"].rules as Rules),
         "jsonc/array-bracket-spacing": ["error", "never"],
         "jsonc/comma-style": ["error", "last"],
         "jsonc/indent": ["error", indent],
