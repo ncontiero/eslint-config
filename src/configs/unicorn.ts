@@ -50,6 +50,7 @@ export function unicorn(
               "unicorn/no-unnecessary-array-splice-count": "error",
               "unicorn/no-unnecessary-await": "error",
               "unicorn/no-unnecessary-slice-end": "error",
+              "unicorn/no-useless-iterator-to-array": "error",
               "unicorn/no-zero-fractions": "error",
               "unicorn/number-literal-case": "error",
               "unicorn/prefer-add-event-listener": "error",
@@ -79,6 +80,7 @@ export function unicorn(
               "unicorn/prefer-query-selector": "error",
               "unicorn/prefer-reflect-apply": "error",
               "unicorn/prefer-regexp-test": "error",
+              "unicorn/prefer-simple-condition-first": "error",
               "unicorn/prefer-single-call": "error",
               "unicorn/prefer-string-replace-all": "error",
               "unicorn/prefer-string-slice": "error",
@@ -87,6 +89,7 @@ export function unicorn(
               // top level await is not supported in all environments
               // "unicorn/prefer-top-level-await": "error",
               "unicorn/prefer-type-error": "error",
+              "unicorn/switch-case-break-position": "error",
               "unicorn/throw-new-error": "error",
             }),
 
