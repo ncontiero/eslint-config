@@ -18,10 +18,10 @@
     "url": "https://github.com/ncontiero/eslint-config/issues"
   },
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "files": [
     "dist"
   ],
@@ -29,7 +29,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "pnpm typegen && tsup",
+    "build": "pnpm typegen && tsdown",
     "dev": "pnpm dlx @eslint/config-inspector --config eslint-inspector.config.ts",
     "build:inspector": "pnpm build && pnpm dlx @eslint/config-inspector build --config eslint-inspector.config.ts",
     "typegen": "tsx scripts/typegen.ts",
@@ -101,7 +101,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "tinyglobby": "^0.2.16",
-    "tsup": "^8.5.1",
+    "tsdown": "^0.21.9",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^4.1.4"
