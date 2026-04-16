@@ -1,5 +1,30 @@
 # @ncontiero/eslint-config
 
+## 7.2.0
+
+### Minor Changes
+
+- [`5795338`](https://github.com/ncontiero/eslint-config/commit/5795338739c2ddb3ae96ba27a9c7c00b70fd621d) - feat(tailwindcss): support custom cwd for Tailwind resolution
+
+- [`e719892`](https://github.com/ncontiero/eslint-config/commit/e7198920f0ace6ac8f30d6ac45c2c99d16bad225) - feat(unicorn): enable rules:
+  - `no-useless-iterator-to-array`
+  - `prefer-simple-condition-first`
+  - `switch-case-break-position`
+
+### Patch Changes
+
+- [`bbf629d`](https://github.com/ncontiero/eslint-config/commit/bbf629d4f440373ebc32b0acc648e75609865590) - chore(deps): update eslint to v10
+
+- [`5051ffd`](https://github.com/ncontiero/eslint-config/commit/5051ffdb98aeba36391253fd53a20a71f6e1a38d) - fix(jsdoc): separate setup from rule configuration
+
+- [`9f09563`](https://github.com/ncontiero/eslint-config/commit/9f09563f437a0fc91eded92f706bb33a4e2ab766) - chore(deps): update eslint-plugin-unicorn to v64
+
+- [`310fdbc`](https://github.com/ncontiero/eslint-config/commit/310fdbcca886437cb3182286314ad76cdda10c83) - chore(deps): update typescript to v6
+
+- [`3481cab`](https://github.com/ncontiero/eslint-config/commit/3481cab638516ee18fe9a34f571198033bb0480d) - chore(deps): update @eslint/markdown to v8
+
+- [`3fab3d1`](https://github.com/ncontiero/eslint-config/commit/3fab3d125274f8ce6dd62cc7cad79031fee51c25) - fix(node): separate setup from rule configuration
+
 ## 7.1.0
 
 ### Minor Changes
