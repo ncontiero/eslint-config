@@ -92,7 +92,7 @@
     "@commitlint/config-conventional": "^20.5.0",
     "@ncontiero/changelog-github": "^2.1.2",
     "@ncontiero/prettier-config": "^1.0.0",
-    "@tanstack/eslint-plugin-query": "^5.99.0",
+    "@tanstack/eslint-plugin-query": "^5.99.2",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/node": "^25.6.0",
     "eslint": "^10.2.1",
