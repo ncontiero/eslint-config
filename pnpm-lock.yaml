@@ -121,8 +121,8 @@ importers:
         specifier: ^20.5.0
         version: 20.5.0
       '@ncontiero/changelog-github':
-        specifier: ^2.1.2
-        version: 2.1.2
+        specifier: ^2.1.3
+        version: 2.1.3
       '@ncontiero/prettier-config':
         specifier: ^1.0.0
         version: 1.0.0
@@ -288,8 +288,8 @@ packages:
   '@changesets/get-dependents-graph@2.1.4':
     resolution: {integrity: sha512-ZsS00x6WvmHq3sQv8oCMwL0f/z3wbXCVuSVTJwCnnmbC/iBdNJGFx1EcbMG4PC6sXRyH69liM4A2WKXzn/kRPg==}
 
-  '@changesets/get-github-info@0.6.0':
-    resolution: {integrity: sha512-v/TSnFVXI8vzX9/w3DU2Ol+UlTZcu3m0kXTjTT4KlAdwSvwutcByYwyYn9hwerPWfPkT2JfpoX0KgvCEi8Q/SA==}
+  '@changesets/get-github-info@0.8.0':
+    resolution: {integrity: sha512-cRnC+xdF0JIik7coko3iUP9qbnfi1iJQ3sAa6dE+Tx3+ET8bjFEm63PA4WEohgjYcmsOikPHWzPsMWWiZmntOQ==}
 
   '@changesets/get-release-plan@4.0.16':
     resolution: {integrity: sha512-2K5Om6CrMPm45rtvckfzWo7e9jOVCKLCnXia5eUPaURH7/LWzri7pK1TycdzAuAtehLkW7VPbWLCSExTHmiI6g==}
@@ -751,8 +751,8 @@ packages:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
 
-  '@ncontiero/changelog-github@2.1.2':
-    resolution: {integrity: sha512-8rDTtx/NuhvxHFEWvmAv8OH9iXdMAg7KknegLrTbaipNbAOIXDWqdu8RO863qtBz0C3ZnRtp+sVK8zOyMTtUCw==}
+  '@ncontiero/changelog-github@2.1.3':
+    resolution: {integrity: sha512-QS55JkJIJ8JpTdPvROl0ACSOtoU6KRNSExMYCHrZ+bON8A/c2NWxt9GvfxFqpl3u/JBlBtYyQedsB6KnNuJ2kQ==}
 
   '@ncontiero/prettier-config@1.0.0':
     resolution: {integrity: sha512-i+dkvx9H8NBTkYmEje9ut0VHglw87DTJ92JzsviJnGe2LvmPF5M2M+FsV86G7VTZ27a3XN53MD64MpXIN4MsMw==}
@@ -3989,7 +3989,7 @@ snapshots:
       picocolors: 1.1.1
       semver: 7.7.4
 
-  '@changesets/get-github-info@0.6.0':
+  '@changesets/get-github-info@0.8.0':
     dependencies:
       dataloader: 1.4.0
       node-fetch: 2.7.0
@@ -4520,9 +4520,9 @@ snapshots:
       '@tybys/wasm-util': 0.10.1
     optional: true
 
-  '@ncontiero/changelog-github@2.1.2':
+  '@ncontiero/changelog-github@2.1.3':
     dependencies:
-      '@changesets/get-github-info': 0.6.0
+      '@changesets/get-github-info': 0.8.0
       dotenv: 17.4.2
     transitivePeerDependencies:
       - encoding
