@@ -51,27 +51,25 @@ export async function markdown(
       },
       name: "ncontiero/markdown/rules",
       rules: {
-        "@typescript-eslint/comma-dangle": "off",
-        "@typescript-eslint/consistent-type-imports": "off",
-        "@typescript-eslint/no-extraneous-class": "off",
-        "@typescript-eslint/no-namespace": "off",
-        "@typescript-eslint/no-redeclare": "off",
-        "@typescript-eslint/no-require-imports": "off",
-        "@typescript-eslint/no-unused-expressions": "off",
-        "@typescript-eslint/no-unused-vars": "off",
-        "@typescript-eslint/no-use-before-define": "off",
-
         "import/newline-after-import": "off",
-
         "no-alert": "off",
         "no-console": "off",
         "no-restricted-imports": "off",
         "no-undef": "off",
         "no-unused-expressions": "off",
         "no-unused-vars": "off",
-
         "node/prefer-global/buffer": "off",
         "node/prefer-global/process": "off",
+
+        "ts/comma-dangle": "off",
+        "ts/consistent-type-imports": "off",
+        "ts/no-extraneous-class": "off",
+        "ts/no-namespace": "off",
+        "ts/no-redeclare": "off",
+        "ts/no-require-imports": "off",
+        "ts/no-unused-expressions": "off",
+        "ts/no-unused-vars": "off",
+        "ts/no-use-before-define": "off",
 
         "unused-imports/no-unused-imports": "off",
         "unused-imports/no-unused-vars": "off",

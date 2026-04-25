@@ -30,7 +30,7 @@ export async function typescript(
     {
       name: "ncontiero/typescript/setup",
       plugins: {
-        "@typescript-eslint": pluginTs,
+        ts: pluginTs,
       },
     },
     {
@@ -51,31 +51,34 @@ export async function typescript(
         ...pluginTs.configs["eslint-recommended"].overrides![0].rules,
         ...pluginTs.configs.recommended.rules,
 
-        "@typescript-eslint/ban-ts-comment": [
+        "no-restricted-syntax": [
+          "error",
+          ...restrictedSyntaxJs,
+          "TSEnumDeclaration[const=true]",
+        ],
+
+        "ts/ban-ts-comment": [
           "error",
           { "ts-ignore": "allow-with-description" },
         ],
-        "@typescript-eslint/consistent-type-assertions": [
+        "ts/consistent-type-assertions": [
           "error",
           {
             assertionStyle: "as",
             objectLiteralTypeAssertions: "allow-as-parameter",
           },
         ],
-        "@typescript-eslint/consistent-type-imports": [
+        "ts/consistent-type-imports": [
           "error",
           { disallowTypeAnnotations: false, fixStyle: "inline-type-imports" },
         ],
-        "@typescript-eslint/method-signature-style": ["error", "property"], // https://www.totaltypescript.com/method-shorthand-syntax-considered-harmful
-        "@typescript-eslint/no-empty-object-type": [
-          "error",
-          { allowInterfaces: "always" },
-        ],
-        "@typescript-eslint/no-explicit-any": "off",
-        "@typescript-eslint/no-import-type-side-effects": "error",
-        "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/no-redeclare": "error",
-        "@typescript-eslint/no-unused-expressions": [
+        "ts/method-signature-style": ["error", "property"], // https://www.totaltypescript.com/method-shorthand-syntax-considered-harmful
+        "ts/no-empty-object-type": ["error", { allowInterfaces: "always" }],
+        "ts/no-explicit-any": "off",
+        "ts/no-import-type-side-effects": "error",
+        "ts/no-non-null-assertion": "off",
+        "ts/no-redeclare": "error",
+        "ts/no-unused-expressions": [
           "error",
           {
             allowShortCircuit: true,
@@ -86,19 +89,13 @@ export async function typescript(
         ],
 
         // handled by unused-imports/no-unused-imports
-        "@typescript-eslint/no-unused-vars": "off",
-        "@typescript-eslint/no-useless-constructor": "error",
-        "@typescript-eslint/no-wrapper-object-types": "error",
-        "@typescript-eslint/prefer-as-const": "warn",
-        "@typescript-eslint/prefer-literal-enum-member": [
+        "ts/no-unused-vars": "off",
+        "ts/no-useless-constructor": "error",
+        "ts/no-wrapper-object-types": "error",
+        "ts/prefer-as-const": "warn",
+        "ts/prefer-literal-enum-member": [
           "error",
           { allowBitwiseExpressions: true },
-        ],
-
-        "no-restricted-syntax": [
-          "error",
-          ...restrictedSyntaxJs,
-          "TSEnumDeclaration[const=true]",
         ],
 
         ...overrides,
@@ -118,7 +115,7 @@ export async function typescript(
       files: [GLOB_JS, "**/*.cjs"],
       name: "ncontiero/typescript/cjs-rules",
       rules: {
-        "@typescript-eslint/no-require-imports": "off",
+        "ts/no-require-imports": "off",
       },
     },
   ];

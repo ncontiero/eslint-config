@@ -175,7 +175,7 @@ import { ncontiero } from "@ncontiero/eslint-config";
 export default ncontiero({
   typescript: {
     overrides: {
-      "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+      "ts/consistent-type-definitions": ["error", "interface"],
     },
   },
   yaml: {

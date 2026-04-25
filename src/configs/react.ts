@@ -45,8 +45,8 @@ export async function react(
     {
       name: "ncontiero/react/setup",
       plugins: {
-        "@eslint-react": pluginReact,
         "jsx-a11y": pluginA11y,
+        react: pluginReact,
         "react-refresh": pluginReactRefresh,
       },
     },
@@ -70,23 +70,6 @@ export async function react(
       name: "ncontiero/react/rules",
       rules: {
         ...pluginReact.configs.recommended.rules,
-
-        // react-dom
-        "@eslint-react/dom-no-missing-button-type": "warn",
-        "@eslint-react/dom-no-missing-iframe-sandbox": "warn",
-        "@eslint-react/dom-no-unknown-property": "warn",
-        "@eslint-react/dom-no-unsafe-target-blank": "warn",
-        // react
-        "@eslint-react/globals": "warn",
-        "@eslint-react/immutability": "warn",
-        "@eslint-react/jsx-no-useless-fragment": "warn",
-        "@eslint-react/no-duplicate-key": "warn",
-        "@eslint-react/no-leaked-conditional-rendering": "error",
-        "@eslint-react/no-missing-component-display-name": "warn",
-        "@eslint-react/no-unstable-context-value": "warn",
-        "@eslint-react/no-unstable-default-props": "warn",
-        "@eslint-react/no-unused-props": "warn",
-        "@eslint-react/refs": "warn",
 
         // a11y rules
         "jsx-a11y/alt-text": [
@@ -159,9 +142,7 @@ export async function react(
             video: [],
           },
         ],
-
         "jsx-a11y/mouse-events-have-key-events": ["warn"],
-
         "jsx-a11y/no-access-key": ["warn"],
         "jsx-a11y/no-autofocus": ["warn", { ignoreNonDOM: true }],
         "jsx-a11y/no-distracting-elements": [
@@ -172,7 +153,6 @@ export async function react(
           "warn",
           { tr: ["none", "presentation"] },
         ],
-
         "jsx-a11y/no-noninteractive-element-interactions": [
           "warn",
           {
@@ -234,6 +214,7 @@ export async function react(
         "jsx-a11y/role-supports-aria-props": ["warn"],
         "jsx-a11y/scope": ["warn"],
         "jsx-a11y/tabindex-no-positive": ["warn"],
+
         // react refresh
         "react-refresh/only-export-components": [
           "warn",
@@ -281,6 +262,23 @@ export async function react(
             ],
           },
         ],
+
+        // react-dom
+        "react/dom-no-missing-button-type": "warn",
+        "react/dom-no-missing-iframe-sandbox": "warn",
+        "react/dom-no-unknown-property": "warn",
+        "react/dom-no-unsafe-target-blank": "warn",
+        // react
+        "react/globals": "warn",
+        "react/immutability": "warn",
+        "react/jsx-no-useless-fragment": "warn",
+        "react/no-duplicate-key": "warn",
+        "react/no-leaked-conditional-rendering": "error",
+        "react/no-missing-component-display-name": "warn",
+        "react/no-unstable-context-value": "warn",
+        "react/no-unstable-default-props": "warn",
+        "react/no-unused-props": "warn",
+        "react/refs": "warn",
 
         ...overrides,
       },

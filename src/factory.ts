@@ -53,6 +53,11 @@ const flatConfigProps = [
   "settings",
 ] satisfies (keyof FlatConfigItem)[];
 
+export const defaultPluginRenaming = {
+  "@eslint-react": "react",
+  "@typescript-eslint": "ts",
+};
+
 export type ResolvedOptions<T> = T extends boolean ? never : NonNullable<T>;
 
 export function resolveSubOptions<K extends keyof OptionsConfig>(
@@ -253,5 +258,8 @@ export function ncontiero(
   }, {} as FlatConfigItem);
   if (Object.keys(fusedConfig).length > 0) configs.push([fusedConfig]);
 
-  return composer(...configs, ...(userConfigs as any));
+  return composer({
+    configs: [...configs, ...(userConfigs as any)],
+    pluginsNameMap: defaultPluginRenaming,
+  });
 }
