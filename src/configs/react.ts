@@ -2,7 +2,6 @@ import type {
   FlatConfigItem,
   OptionsFiles,
   OptionsHasTanStackReactQuery,
-  OptionsHasTypeScript,
   OptionsOverrides,
 } from "../types";
 import { isPackageExists } from "local-pkg";
@@ -20,29 +19,19 @@ const ReactRouterPackages = [
 const NextJsPackages = ["next"];
 
 export async function react(
-  options: OptionsHasTypeScript &
-    OptionsOverrides &
-    OptionsFiles &
-    OptionsHasTanStackReactQuery = {},
+  options: OptionsOverrides & OptionsFiles & OptionsHasTanStackReactQuery = {},
 ): Promise<FlatConfigItem[]> {
-  const {
-    files = [GLOB_REACT],
-    overrides = {},
-    reactQuery,
-    typescript,
-  } = options;
+  const { files = [GLOB_REACT], overrides = {}, reactQuery } = options;
 
   if (reactQuery) {
     ensurePackages(["@tanstack/eslint-plugin-query"]);
   }
 
-  const [pluginA11y, pluginReact, pluginReactHooks, pluginReactRefresh] =
-    await Promise.all([
-      interopDefault(import("eslint-plugin-jsx-a11y")),
-      interopDefault(import("eslint-plugin-react")),
-      interopDefault(import("eslint-plugin-react-hooks")),
-      interopDefault(import("eslint-plugin-react-refresh")),
-    ] as const);
+  const [pluginA11y, pluginReact, pluginReactRefresh] = await Promise.all([
+    interopDefault(import("eslint-plugin-jsx-a11y")),
+    interopDefault(import("@eslint-react/eslint-plugin")),
+    interopDefault(import("eslint-plugin-react-refresh")),
+  ] as const);
 
   const isAllowConstantExport = ReactRefreshAllowPackages.some((i) =>
     isPackageExists(i),
@@ -54,18 +43,11 @@ export async function react(
 
   return [
     {
-      files,
       name: "ncontiero/react/setup",
       plugins: {
+        "@eslint-react": pluginReact,
         "jsx-a11y": pluginA11y,
-        react: pluginReact,
-        "react-hooks": pluginReactHooks,
         "react-refresh": pluginReactRefresh,
-      },
-      settings: {
-        react: {
-          version: "detect",
-        },
       },
     },
     reactQuery
@@ -83,210 +65,28 @@ export async function react(
             jsx: true,
           },
         },
+        sourceType: "module",
       },
       name: "ncontiero/react/rules",
       rules: {
-        // react-hooks
-        "react-hooks/component-hook-factories": "warn",
-        "react-hooks/error-boundaries": "warn",
-        "react-hooks/exhaustive-deps": "warn",
-        "react-hooks/globals": "warn",
-        "react-hooks/immutability": "warn",
-        "react-hooks/incompatible-library": "warn",
-        "react-hooks/preserve-manual-memoization": "warn",
-        "react-hooks/purity": "warn",
-        "react-hooks/refs": "warn",
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/set-state-in-effect": "warn",
-        "react-hooks/set-state-in-render": "warn",
-        "react-hooks/static-components": "warn",
-        "react-hooks/unsupported-syntax": "warn",
-        "react-hooks/use-memo": "warn",
+        ...pluginReact.configs.recommended.rules,
 
-        // react refresh
-        "react-refresh/only-export-components": [
-          "warn",
-          {
-            allowConstantExport: isAllowConstantExport,
-            allowExportNames: [
-              ...(isUsingNextJs
-                ? [
-                    // https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
-                    "experimental_ppr",
-                    "dynamic",
-                    "dynamicParams",
-                    "revalidate",
-                    "fetchCache",
-                    "runtime",
-                    "preferredRegion",
-                    "maxDuration",
-                    // https://nextjs.org/docs/app/api-reference/functions/generate-metadata
-                    "metadata",
-                    "generateMetadata",
-                    // https://nextjs.org/docs/app/api-reference/functions/generate-viewport
-                    "viewport",
-                    "generateViewport",
-                    // https://nextjs.org/docs/app/api-reference/functions/generate-image-metadata
-                    "generateImageMetadata",
-                    // https://nextjs.org/docs/app/api-reference/functions/generate-sitemaps
-                    "generateSitemaps",
-                    // https://nextjs.org/docs/app/api-reference/functions/generate-static-params
-                    "generateStaticParams",
-                  ]
-                : []),
-              ...(isUsingReactRouter
-                ? [
-                    "meta",
-                    "links",
-                    "headers",
-                    "loader",
-                    "action",
-                    "clientLoader",
-                    "clientAction",
-                    "handle",
-                    "shouldRevalidate",
-                  ]
-                : []),
-            ],
-          },
-        ],
-
-        // recommended rules react
-        // https://github.com/jsx-eslint/eslint-plugin-react/issues/3717
-        "react/boolean-prop-naming": [
-          "off",
-          {
-            rule: "^(is|has|are|can|should|did|will)[A-Z]([A-Za-z0-9])+",
-            validateNested: true,
-          },
-        ],
-        "react/button-has-type": [
-          "error",
-          {
-            button: true,
-            reset: false,
-            submit: true,
-          },
-        ],
-        "react/display-name": ["error", { ignoreTranspilerName: false }],
-        "react/hook-use-state": ["error"],
-        "react/iframe-missing-sandbox": ["error"],
-        "react/jsx-boolean-value": ["error", "never"],
-        "react/jsx-filename-extension": [
-          "warn",
-          {
-            extensions: [".tsx"],
-          },
-        ],
-        "react/jsx-fragments": ["error", "syntax"],
-        "react/jsx-handler-names": [
-          "error",
-          {
-            eventHandlerPrefix: "handle",
-            eventHandlerPropPrefix: "on",
-          },
-        ],
-        "react/jsx-key": [
-          "error",
-          {
-            checkFragmentShorthand: true,
-            checkKeyMustBeforeSpread: true,
-            warnOnDuplicates: true,
-          },
-        ],
-        "react/jsx-no-bind": ["error", { allowArrowFunctions: true }],
-        "react/jsx-no-comment-textnodes": "error",
-        "react/jsx-no-constructed-context-values": "error",
-        "react/jsx-no-duplicate-props": ["error"],
-        "react/jsx-no-leaked-render": ["error"],
-        "react/jsx-no-script-url": ["error", [{ name: "Link", props: ["to"] }]],
-        "react/jsx-no-target-blank": [
-          "error",
-          {
-            forms: true,
-            links: true,
-            warnOnSpreadAttributes: true,
-          },
-        ],
-        "react/jsx-no-undef": "error",
-        "react/jsx-no-useless-fragment": "error",
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
-        "react/no-access-state-in-setstate": "error",
-        "react/no-array-index-key": "error",
-        "react/no-arrow-function-lifecycle": "error",
-        "react/no-children-prop": "error",
-        "react/no-danger": "error",
-        "react/no-danger-with-children": "error",
-        "react/no-deprecated": "error",
-        "react/no-did-update-set-state": "error",
-        "react/no-direct-mutation-state": "error",
-        "react/no-find-dom-node": "error",
-        "react/no-invalid-html-attribute": "error",
-        "react/no-is-mounted": "error",
-        "react/no-namespace": "error",
-        "react/no-object-type-as-default-prop": "error",
-        "react/no-redundant-should-component-update": "error",
-        "react/no-render-return-value": "error",
-        "react/no-string-refs": ["error", { noTemplateLiterals: true }],
-        "react/no-this-in-sfc": ["error"],
-        "react/no-typos": ["error"],
-        "react/no-unescaped-entities": "error",
-        "react/no-unknown-property": "error",
-        "react/no-unstable-nested-components": ["error"],
-        "react/no-unused-class-component-methods": ["error"],
-        "react/no-unused-prop-types": [
-          "error",
-          {
-            customValidators: [],
-            skipShapeProps: true,
-          },
-        ],
-        "react/no-unused-state": ["error"],
-        "react/no-will-update-set-state": ["error"],
-        "react/prefer-es6-class": ["error", "always"],
-        "react/prefer-exact-props": ["error"],
-        "react/prefer-read-only-props": ["error"],
-        "react/prefer-stateless-function": [
-          "error",
-          {
-            ignorePureComponents: true,
-          },
-        ],
-        "react/prop-types": [
-          "error",
-          {
-            customValidators: [],
-            ignore: [],
-            skipUndeclared: false,
-          },
-        ],
-        "react/react-in-jsx-scope": "off",
-        "react/require-render-return": "error",
-        "react/self-closing-comp": [
-          "error",
-          {
-            component: true,
-            html: true,
-          },
-        ],
-        "react/sort-default-props": ["error"],
-        "react/state-in-constructor": ["error", "never"],
-        "react/static-property-placement": ["error", "property assignment"],
-        "react/style-prop-object": [
-          "error",
-          {
-            allow: ["FormattedNumber"],
-          },
-        ],
-        "react/void-dom-elements-no-children": ["error"],
-
-        ...(typescript
-          ? {
-              "react/jsx-no-undef": "off",
-              "react/prop-types": "off",
-            }
-          : {}),
+        // react-dom
+        "@eslint-react/dom-no-missing-button-type": "warn",
+        "@eslint-react/dom-no-missing-iframe-sandbox": "warn",
+        "@eslint-react/dom-no-unknown-property": "warn",
+        "@eslint-react/dom-no-unsafe-target-blank": "warn",
+        // react
+        "@eslint-react/globals": "warn",
+        "@eslint-react/immutability": "warn",
+        "@eslint-react/jsx-no-useless-fragment": "warn",
+        "@eslint-react/no-duplicate-key": "warn",
+        "@eslint-react/no-leaked-conditional-rendering": "error",
+        "@eslint-react/no-missing-component-display-name": "warn",
+        "@eslint-react/no-unstable-context-value": "warn",
+        "@eslint-react/no-unstable-default-props": "warn",
+        "@eslint-react/no-unused-props": "warn",
+        "@eslint-react/refs": "warn",
 
         // a11y rules
         "jsx-a11y/alt-text": [
@@ -359,7 +159,9 @@ export async function react(
             video: [],
           },
         ],
+
         "jsx-a11y/mouse-events-have-key-events": ["warn"],
+
         "jsx-a11y/no-access-key": ["warn"],
         "jsx-a11y/no-autofocus": ["warn", { ignoreNonDOM: true }],
         "jsx-a11y/no-distracting-elements": [
@@ -370,6 +172,7 @@ export async function react(
           "warn",
           { tr: ["none", "presentation"] },
         ],
+
         "jsx-a11y/no-noninteractive-element-interactions": [
           "warn",
           {
@@ -431,6 +234,53 @@ export async function react(
         "jsx-a11y/role-supports-aria-props": ["warn"],
         "jsx-a11y/scope": ["warn"],
         "jsx-a11y/tabindex-no-positive": ["warn"],
+        // react refresh
+        "react-refresh/only-export-components": [
+          "warn",
+          {
+            allowConstantExport: isAllowConstantExport,
+            allowExportNames: [
+              ...(isUsingNextJs
+                ? [
+                    // https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
+                    "experimental_ppr",
+                    "dynamic",
+                    "dynamicParams",
+                    "revalidate",
+                    "fetchCache",
+                    "runtime",
+                    "preferredRegion",
+                    "maxDuration",
+                    // https://nextjs.org/docs/app/api-reference/functions/generate-metadata
+                    "metadata",
+                    "generateMetadata",
+                    // https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+                    "viewport",
+                    "generateViewport",
+                    // https://nextjs.org/docs/app/api-reference/functions/generate-image-metadata
+                    "generateImageMetadata",
+                    // https://nextjs.org/docs/app/api-reference/functions/generate-sitemaps
+                    "generateSitemaps",
+                    // https://nextjs.org/docs/app/api-reference/functions/generate-static-params
+                    "generateStaticParams",
+                  ]
+                : []),
+              ...(isUsingReactRouter
+                ? [
+                    "meta",
+                    "links",
+                    "headers",
+                    "loader",
+                    "action",
+                    "clientLoader",
+                    "clientAction",
+                    "handle",
+                    "shouldRevalidate",
+                  ]
+                : []),
+            ],
+          },
+        ],
 
         ...overrides,
       },

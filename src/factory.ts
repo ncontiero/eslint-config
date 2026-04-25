@@ -211,7 +211,6 @@ export function ncontiero(
       react({
         overrides: getOverrides(options, "react"),
         reactQuery: !!enableTanStackReactQuery,
-        typescript: !!enableTypescript,
       }),
     );
   }
