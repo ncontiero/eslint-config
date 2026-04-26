@@ -11,11 +11,22 @@ export async function nextJs(
 
   return [
     {
-      files,
-      name: "ncontiero/nextjs/rules",
+      name: "ncontiero/nextjs/setup",
       plugins: {
         nextjs: pluginNextJs,
       },
+    },
+    {
+      files,
+      languageOptions: {
+        parserOptions: {
+          ecmaFeatures: {
+            jsx: true,
+          },
+        },
+        sourceType: "module",
+      },
+      name: "ncontiero/nextjs/rules",
       rules: {
         "nextjs/google-font-display": "warn",
         "nextjs/google-font-preconnect": "warn",
@@ -40,6 +51,11 @@ export async function nextJs(
         "nextjs/no-unwanted-polyfillio": "warn",
 
         ...overrides,
+      },
+      settings: {
+        react: {
+          version: "detect",
+        },
       },
     },
   ];
