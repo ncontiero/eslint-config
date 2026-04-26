@@ -1,11 +1,11 @@
 import type { FlatConfigItem, OptionsFiles, OptionsOverrides } from "../types";
-import { GLOB_REACT } from "../globs";
+import { GLOB_SRC } from "../globs";
 import { interopDefault } from "../utils";
 
 export async function nextJs(
   options: OptionsFiles & OptionsOverrides = {},
 ): Promise<FlatConfigItem[]> {
-  const { files = [GLOB_REACT], overrides = {} } = options;
+  const { files = [GLOB_SRC], overrides = {} } = options;
 
   const pluginNextJs = await interopDefault(import("@next/eslint-plugin-next"));
 

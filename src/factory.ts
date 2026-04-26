@@ -143,6 +143,12 @@ export function ncontiero(
       : (options.ignores = [GLOB_TS, GLOB_TSX]);
   }
 
+  const typescriptOptions = resolveSubOptions(options, "typescript");
+  const tsconfigPath =
+    "tsconfigPath" in typescriptOptions
+      ? typescriptOptions.tsconfigPath
+      : undefined;
+
   // Base configs
   configs.push(
     ignores(options.ignores),
@@ -168,8 +174,9 @@ export function ncontiero(
   if (enableTypescript) {
     configs.push(
       typescript({
-        ...resolveSubOptions(options, "typescript"),
+        ...typescriptOptions,
         overrides: getOverrides(options, "typescript"),
+        tsconfigPath,
       }),
     );
   }
@@ -214,8 +221,10 @@ export function ncontiero(
   if (enableReact) {
     configs.push(
       react({
+        ...typescriptOptions,
         overrides: getOverrides(options, "react"),
         reactQuery: !!enableTanStackReactQuery,
+        tsconfigPath,
       }),
     );
   }

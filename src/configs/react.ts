@@ -3,9 +3,11 @@ import type {
   OptionsFiles,
   OptionsHasTanStackReactQuery,
   OptionsOverrides,
+  OptionsTypeScriptParserOptions,
+  OptionsTypeScriptWithTypes,
 } from "../types";
 import { isPackageExists } from "local-pkg";
-import { GLOB_REACT } from "../globs";
+import { GLOB_MARKDOWN, GLOB_SRC, GLOB_TS, GLOB_TSX } from "../globs";
 import { ensurePackages, interopDefault } from "../utils";
 
 // react refresh
@@ -19,13 +21,31 @@ const ReactRouterPackages = [
 const NextJsPackages = ["next"];
 
 export async function react(
-  options: OptionsOverrides & OptionsFiles & OptionsHasTanStackReactQuery = {},
+  options: OptionsTypeScriptParserOptions &
+    OptionsTypeScriptWithTypes &
+    OptionsOverrides &
+    OptionsFiles &
+    OptionsHasTanStackReactQuery = {},
 ): Promise<FlatConfigItem[]> {
-  const { files = [GLOB_REACT], overrides = {}, reactQuery } = options;
+  const {
+    files = [GLOB_SRC],
+    filesTypeAware = [GLOB_TS, GLOB_TSX],
+    ignoresTypeAware = [`${GLOB_MARKDOWN}/**`],
+    overrides = {},
+    reactQuery,
+    tsconfigPath,
+  } = options;
 
   if (reactQuery) {
     ensurePackages(["@tanstack/eslint-plugin-query"]);
   }
+
+  const isTypeAware = !!tsconfigPath;
+
+  const typeAwareRules: FlatConfigItem["rules"] = {
+    "react/no-leaked-conditional-rendering": "error",
+    "react/no-unused-props": "warn",
+  };
 
   const [pluginA11y, pluginReact, pluginReactRefresh] = await Promise.all([
     interopDefault(import("eslint-plugin-jsx-a11y")),
@@ -266,22 +286,40 @@ export async function react(
         // react-dom
         "react/dom-no-missing-button-type": "warn",
         "react/dom-no-missing-iframe-sandbox": "warn",
-        "react/dom-no-unknown-property": "warn",
         "react/dom-no-unsafe-target-blank": "warn",
         // react
         "react/globals": "warn",
         "react/immutability": "warn",
         "react/jsx-no-useless-fragment": "warn",
         "react/no-duplicate-key": "warn",
-        "react/no-leaked-conditional-rendering": "error",
         "react/no-missing-component-display-name": "warn",
         "react/no-unstable-context-value": "warn",
         "react/no-unstable-default-props": "warn",
-        "react/no-unused-props": "warn",
         "react/refs": "warn",
 
         ...overrides,
       },
     },
+    {
+      files: filesTypeAware,
+      name: "ncontiero/react/typescript",
+      rules: {
+        // Disables rules that are already handled by TypeScript
+        "react/dom-no-string-style-prop": "off",
+        "react/dom-no-unknown-property": "off",
+      },
+    },
+    ...(isTypeAware
+      ? [
+          {
+            files: filesTypeAware,
+            ignores: ignoresTypeAware,
+            name: "ncontiero/react/type-aware-rules",
+            rules: {
+              ...typeAwareRules,
+            },
+          },
+        ]
+      : []),
   ];
 }

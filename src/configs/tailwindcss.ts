@@ -1,6 +1,6 @@
 import type { FlatConfigItem, OptionsTailwindCSS } from "../types";
 import path from "node:path";
-import { GLOB_HTML, GLOB_REACT } from "../globs";
+import { GLOB_HTML, GLOB_SRC } from "../globs";
 import { interopDefault } from "../utils";
 
 export async function tailwindcss(
@@ -40,7 +40,7 @@ export async function tailwindcss(
       },
     },
     {
-      files: [GLOB_REACT, GLOB_HTML],
+      files: [GLOB_SRC, GLOB_HTML],
       name: "ncontiero/tailwindcss/rules",
       rules: {
         "tailwindcss/enforce-consistent-class-order": "warn",

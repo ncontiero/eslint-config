@@ -2,10 +2,12 @@ import type { ParserOptions } from "@typescript-eslint/parser";
 import type { Linter } from "eslint";
 import type { FlatGitignoreOptions } from "eslint-config-flat-gitignore";
 import type { Options as PrettierOptions } from "prettier";
-import type { RuleOptions } from "./typegen";
+import type { ConfigNames, RuleOptions } from "./typegen";
 
 export type Awaitable<T> = T | Promise<T>;
 export interface Rules extends RuleOptions {}
+
+export type { ConfigNames, PrettierOptions };
 
 export interface FlatConfigItem extends Omit<
   Linter.Config<Linter.RulesRecord & Rules>,
@@ -13,7 +15,8 @@ export interface FlatConfigItem extends Omit<
 > {
   // Relax plugins type limitation, as most of the plugins did not have correct type info yet.
   /**
-   * An object containing a name-value mapping of plugin names to plugin objects. When `files` is specified, these plugins are only available to the matching files.
+   * An object containing a name-value mapping of plugin names to plugin objects.
+   * When `files` is specified, these plugins are only available to the matching files.
    *
    * @see [Using plugins in your configuration](https://eslint.org/docs/latest/user-guide/configuring/configuration-files-new#using-plugins-in-your-configuration)
    */
@@ -36,7 +39,36 @@ export interface OptionsTypeScriptParserOptions {
    * Additional parser options for TypeScript.
    */
   parserOptions?: Partial<ParserOptions>;
+
+  /**
+   * Glob patterns for files that should be type aware.
+   * @default ["**\/*.{ts,tsx}"]
+   */
+  filesTypeAware?: string[];
+
+  /**
+   * Glob patterns for files that should not be type aware.
+   * @default ["**\/*.md\/**"]
+   */
+  ignoresTypeAware?: string[];
 }
+
+export interface OptionsTypeScriptWithTypes {
+  /**
+   * When this options is provided, type aware rules will be enabled.
+   * @see https://typescript-eslint.io/linting/typed-linting/
+   */
+  tsconfigPath?: string;
+
+  /**
+   * Override type aware rules.
+   */
+  overridesTypeAware?: Rules;
+}
+
+export type OptionsTypescript =
+  | (OptionsTypeScriptWithTypes & OptionsOverrides)
+  | (OptionsTypeScriptParserOptions & OptionsOverrides);
 
 export interface OptionsHasTypeScript {
   typescript?: boolean;
@@ -53,9 +85,6 @@ export interface OptionsHasRegexp {
 export interface OptionsHasTanStackReactQuery {
   reactQuery?: boolean;
 }
-
-export type OptionsTypescript = OptionsTypeScriptParserOptions &
-  OptionsOverrides;
 
 export interface StyleConfig {
   indent?: number;
@@ -218,5 +247,3 @@ export interface OptionsConfig {
    */
   reactQuery?: boolean;
 }
-
-export { PrettierOptions };

@@ -3,7 +3,7 @@ import { ncontiero } from "./src";
 export default ncontiero(
   {
     react: true,
-    nextjs: true,
+    nextjs: false,
     tailwindcss: false,
     reactQuery: true,
     javascript: {
