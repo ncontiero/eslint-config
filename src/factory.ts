@@ -40,7 +40,6 @@ import {
   hasTanStackReactQuery,
   hasTypeScript,
 } from "./env";
-import { GLOB_TS, GLOB_TSX } from "./globs";
 import { composer, interopDefault } from "./utils";
 
 const flatConfigProps = [
@@ -137,12 +136,6 @@ export function ncontiero(
     }
   }
 
-  if (!enableTypescript) {
-    options.ignores
-      ? options.ignores.push(GLOB_TS, GLOB_TSX)
-      : (options.ignores = [GLOB_TS, GLOB_TSX]);
-  }
-
   const typescriptOptions = resolveSubOptions(options, "typescript");
   const tsconfigPath =
     "tsconfigPath" in typescriptOptions
@@ -151,7 +144,7 @@ export function ncontiero(
 
   // Base configs
   configs.push(
-    ignores(options.ignores),
+    ignores(options.ignores, !enableTypescript),
     javascript({ overrides: getOverrides(options, "javascript") }),
     comments(),
     jsdoc(),
