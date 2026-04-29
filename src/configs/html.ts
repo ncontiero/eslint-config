@@ -44,7 +44,7 @@ export async function html(options: HTMLOptions): Promise<FlatConfigItem[]> {
         "html/no-duplicate-id": "error",
         "html/no-duplicate-in-head": "error",
         "html/no-empty-headings": "warn",
-        "html/no-extra-spacing-attrs": [
+        "html/no-extra-spacing-tags": [
           "warn",
           {
             disallowInAssignment: true,
