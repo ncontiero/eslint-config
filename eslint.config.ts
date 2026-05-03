@@ -14,6 +14,9 @@ export default ncontiero(
         ],
       },
     },
+    e18e: {
+      moduleReplacements: true,
+    },
   },
   {
     ignores: ["fixtures", "_fixtures"],

@@ -1,7 +1,7 @@
 import type { FlatConfigItem, OptionsConfig } from "../src/types";
 import fs from "node:fs/promises";
 import { join, resolve } from "node:path";
-import { execa } from "execa";
+import { x } from "tinyexec";
 import { glob } from "tinyglobby";
 import { afterAll, beforeAll, it } from "vitest";
 
@@ -46,9 +46,11 @@ function runWithConfig(
         `,
       );
 
-      await execa("pnpm", ["dlx", "eslint@9", ".", "--fix"], {
-        cwd: target,
-        stdio: "pipe",
+      await x("pnpm", ["dlx", "eslint@9", ".", "--fix"], {
+        nodeOptions: {
+          cwd: target,
+          stdio: "pipe",
+        },
       });
 
       const files = await glob("**/*", {
