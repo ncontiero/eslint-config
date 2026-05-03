@@ -295,6 +295,7 @@ export async function react(
         "react/no-missing-component-display-name": "warn",
         "react/no-unstable-context-value": "warn",
         "react/no-unstable-default-props": "warn",
+        "react/no-unused-state": "warn",
         "react/refs": "warn",
 
         ...overrides,
