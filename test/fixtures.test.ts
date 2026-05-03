@@ -46,7 +46,7 @@ function runWithConfig(
         `,
       );
 
-      await x("pnpm", ["dlx", "eslint@9", ".", "--fix"], {
+      await x("pnpm", ["dlx", "eslint@10", ".", "--fix"], {
         nodeOptions: {
           cwd: target,
           stdio: "pipe",
@@ -91,9 +91,35 @@ runWithConfig(
     typescript: true,
   },
   {
-    files: ["*.ts", "*.tsx"],
     rules: {
       "ts/consistent-type-definitions": ["error", "type"],
+    },
+  },
+);
+runWithConfig(
+  "ts-strict",
+  {
+    typescript: {
+      tsconfigPath: "./tsconfig.json",
+    },
+  },
+  {
+    rules: {
+      "ts/no-unsafe-return": ["off"],
+    },
+  },
+);
+runWithConfig(
+  "ts-strict-with-react",
+  {
+    typescript: {
+      tsconfigPath: "./tsconfig.json",
+    },
+    react: true,
+  },
+  {
+    rules: {
+      "ts/no-unsafe-return": ["off"],
     },
   },
 );
