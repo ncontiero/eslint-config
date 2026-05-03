@@ -11,6 +11,7 @@ import {
   command,
   comments,
   deMorgan,
+  e18e,
   html,
   ignores,
   imports,
@@ -104,6 +105,7 @@ export function ncontiero(
   >[]
 ) {
   const {
+    e18e: enableE18e = true,
     gitignore: enableGitignore = true,
     nextjs: enableNextJs = hasNextJs,
     react: enableReact = hasReact,
@@ -155,6 +157,10 @@ export function ncontiero(
     perfectionist(),
     deMorgan(),
   );
+
+  if (enableE18e) {
+    configs.push(e18e(enableE18e === true ? {} : enableE18e));
+  }
 
   if (enableUnicorn) {
     configs.push(
