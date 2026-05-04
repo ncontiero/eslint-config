@@ -30,6 +30,7 @@ import {
   sortPackageJson,
   sortTsconfig,
   tailwindcss,
+  tanstackQuery,
   toml,
   typescript,
   unicorn,
@@ -39,7 +40,7 @@ import {
   hasNextJs,
   hasReact,
   hasTailwind,
-  hasTanStackReactQuery,
+  hasTanStackQuery,
   hasTypeScript,
 } from "./env";
 import { composer, interopDefault } from "./utils";
@@ -111,9 +112,9 @@ export function ncontiero(
     jsx: enableJsx = true,
     nextjs: enableNextJs = hasNextJs,
     react: enableReact = hasReact,
-    reactQuery: enableTanStackReactQuery = hasTanStackReactQuery,
     regexp: enableRegexp = true,
     tailwindcss: enableTailwindCSS = hasTailwind,
+    tanstackQuery: enableTanStackQuery = hasTanStackQuery,
     typescript: enableTypescript = hasTypeScript,
     unicorn: enableUnicorn = true,
   } = options;
@@ -186,6 +187,15 @@ export function ncontiero(
     );
   }
 
+  if (enableTanStackQuery) {
+    configs.push(
+      tanstackQuery({
+        ...resolveSubOptions(options, "tanstackQuery"),
+        overrides: getOverrides(options, "tanstackQuery"),
+      }),
+    );
+  }
+
   if (options.jsonc ?? true) {
     configs.push(
       jsonc({
@@ -228,7 +238,6 @@ export function ncontiero(
       react({
         ...typescriptOptions,
         overrides: getOverrides(options, "react"),
-        reactQuery: !!enableTanStackReactQuery,
         tsconfigPath,
       }),
     );

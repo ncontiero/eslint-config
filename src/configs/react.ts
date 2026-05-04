@@ -1,14 +1,13 @@
 import type {
   FlatConfigItem,
   OptionsFiles,
-  OptionsHasTanStackReactQuery,
   OptionsOverrides,
   OptionsTypeScriptParserOptions,
   OptionsTypeScriptWithTypes,
 } from "../types";
 import { isPackageExists } from "local-pkg";
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_TS, GLOB_TSX } from "../globs";
-import { ensurePackages, interopDefault } from "../utils";
+import { interopDefault } from "../utils";
 
 // react refresh
 const ReactRefreshAllowPackages = ["vite"];
@@ -24,21 +23,15 @@ export async function react(
   options: OptionsTypeScriptParserOptions &
     OptionsTypeScriptWithTypes &
     OptionsOverrides &
-    OptionsFiles &
-    OptionsHasTanStackReactQuery = {},
+    OptionsFiles = {},
 ): Promise<FlatConfigItem[]> {
   const {
     files = [GLOB_SRC],
     filesTypeAware = [GLOB_TS, GLOB_TSX],
     ignoresTypeAware = [`${GLOB_MARKDOWN}/**`],
     overrides = {},
-    reactQuery,
     tsconfigPath,
   } = options;
-
-  if (reactQuery) {
-    ensurePackages(["@tanstack/eslint-plugin-query"]);
-  }
 
   const isTypeAware = !!tsconfigPath;
 
@@ -68,13 +61,6 @@ export async function react(
         "react-refresh": pluginReactRefresh,
       },
     },
-    reactQuery
-      ? {
-          ...(await interopDefault(import("@tanstack/eslint-plugin-query")))
-            .configs["flat/recommended"][0],
-          name: "ncontiero/tanstack-query",
-        }
-      : {},
     {
       files,
       languageOptions: {

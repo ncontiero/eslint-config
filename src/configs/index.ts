@@ -19,6 +19,7 @@ export * from "./react";
 export * from "./regexp";
 export * from "./sort";
 export * from "./tailwindcss";
+export * from "./tanstack-query";
 export * from "./toml";
 export * from "./typescript";
 export * from "./unicorn";

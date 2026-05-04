@@ -82,10 +82,6 @@ export interface OptionsHasRegexp {
   regexp?: boolean;
 }
 
-export interface OptionsHasTanStackReactQuery {
-  reactQuery?: boolean;
-}
-
 export interface StyleConfig {
   indent?: number;
   semi?: boolean;
@@ -295,9 +291,9 @@ export interface OptionsConfig {
   tailwindcss?: boolean | OptionsTailwindCSS;
 
   /**
-   * Enable TanStack React Query support.
+   * Enable TanStack Query support.
    *
    * @default auto-detect based on the dependencies
    */
-  reactQuery?: boolean;
+  tanstackQuery?: boolean | OptionsOverrides;
 }
