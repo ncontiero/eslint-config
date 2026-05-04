@@ -199,14 +199,14 @@ We provide some optional configs for specific use cases, that we don't include t
 
 #### TanStack Query
 
-To enable TanStack Query support, you need to have the package installed or explicitly enable it:
+To enable TanStack Query support, you need to explicitly turn it on:
 
 ```js
 // eslint.config.js
 import { ncontiero } from "@ncontiero/eslint-config";
 
 export default ncontiero({
-  reactQuery: true,
+  tanstackQuery: true,
 });
 ```
 
