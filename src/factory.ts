@@ -18,6 +18,7 @@ import {
   javascript,
   jsdoc,
   jsonc,
+  jsx,
   markdown,
   nextJs,
   node,
@@ -107,6 +108,7 @@ export function ncontiero(
   const {
     e18e: enableE18e = true,
     gitignore: enableGitignore = true,
+    jsx: enableJsx = true,
     nextjs: enableNextJs = hasNextJs,
     react: enableReact = hasReact,
     reactQuery: enableTanStackReactQuery = hasTanStackReactQuery,
@@ -168,6 +170,10 @@ export function ncontiero(
         enableUnicorn === true ? { regexp: !!enableRegexp } : enableUnicorn,
       ),
     );
+  }
+
+  if (enableJsx) {
+    configs.push(jsx(enableJsx === true ? {} : enableJsx));
   }
 
   if (enableTypescript) {

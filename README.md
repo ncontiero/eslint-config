@@ -9,7 +9,7 @@ Nicolas's ESLint config preset for JavaScript, TypeScript, and Prettier.
 
 - Format with Prettier.
 - Reasonable defaults, best practices, only one line of config.
-- Designed to work with TypeScript out-of-box.
+- Designed to work with TypeScript and JSX. Out-of-box.
 - Support JSON(5), YAML, TOML, Markdown, HTML with [HTML Eslint](https://html-eslint.org/).
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files), compose easily!
 - Sort imports, `package.json`, `tsconfig.json`...

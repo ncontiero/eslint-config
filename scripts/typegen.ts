@@ -10,6 +10,9 @@ const configs = await ncontiero({
     },
   },
   react: true,
+  jsx: {
+    a11y: true,
+  },
   nextjs: true,
   tailwindcss: true,
   reactQuery: true,

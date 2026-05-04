@@ -160,6 +160,20 @@ export interface OptionsE18e extends OptionsOverrides {
   performanceImprovements?: boolean;
 }
 
+export interface OptionsJSXA11y extends OptionsOverrides {
+  // Add future a11y-specific options here
+}
+
+export interface OptionsJSX {
+  /**
+   * Enable JSX accessibility rules.
+   *
+   * Can be a boolean or an object for custom options and overrides.
+   * @default false
+   */
+  a11y?: boolean | OptionsJSXA11y;
+}
+
 export interface OptionsConfig {
   /**
    * Enable gitignore support.
@@ -182,6 +196,15 @@ export interface OptionsConfig {
    * @default auto-detect based on the dependencies
    */
   typescript?: boolean | OptionsTypescript;
+
+  /**
+   * Enable JSX related rules.
+   *
+   * Passing an object to enable JSX accessibility rules.
+   *
+   * @default true
+   */
+  jsx?: boolean | OptionsJSX;
 
   /**
    * Options for eslint-plugin-unicorn.

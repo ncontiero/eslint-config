@@ -6,6 +6,9 @@ export default ncontiero(
     nextjs: false,
     tailwindcss: false,
     reactQuery: true,
+    jsx: {
+      a11y: true,
+    },
     javascript: {
       overrides: {
         "node/no-unsupported-features/node-builtins": [
