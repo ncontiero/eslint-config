@@ -6,4 +6,7 @@ export default ncontiero({
   tailwindcss: true,
   reactQuery: true,
   gitignore: false,
+  jsx: {
+    a11y: true,
+  },
 });
