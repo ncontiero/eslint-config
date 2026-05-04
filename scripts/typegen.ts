@@ -15,7 +15,7 @@ const configs = await ncontiero({
   },
   nextjs: true,
   tailwindcss: true,
-  reactQuery: true,
+  tanstackQuery: true,
 });
 
 const configNames = configs.map((i) => i.name).filter(Boolean) as string[];

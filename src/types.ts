@@ -293,7 +293,10 @@ export interface OptionsConfig {
   /**
    * Enable TanStack Query support.
    *
-   * @default auto-detect based on the dependencies
+   * Requires installing:
+   * - `@tanstack/eslint-plugin-query`
+   *
+   * @default false
    */
   tanstackQuery?: boolean | OptionsOverrides;
 }

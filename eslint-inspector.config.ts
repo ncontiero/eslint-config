@@ -4,7 +4,7 @@ export default ncontiero({
   react: true,
   nextjs: true,
   tailwindcss: true,
-  reactQuery: true,
+  tanstackQuery: true,
   gitignore: false,
   jsx: {
     a11y: true,

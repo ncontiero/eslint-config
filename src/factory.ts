@@ -36,13 +36,7 @@ import {
   unicorn,
   yml,
 } from "./configs";
-import {
-  hasNextJs,
-  hasReact,
-  hasTailwind,
-  hasTanStackQuery,
-  hasTypeScript,
-} from "./env";
+import { hasNextJs, hasReact, hasTailwind, hasTypeScript } from "./env";
 import { composer, interopDefault } from "./utils";
 
 const flatConfigProps = [
@@ -114,7 +108,7 @@ export function ncontiero(
     react: enableReact = hasReact,
     regexp: enableRegexp = true,
     tailwindcss: enableTailwindCSS = hasTailwind,
-    tanstackQuery: enableTanStackQuery = hasTanStackQuery,
+    tanstackQuery: enableTanStackQuery = false,
     typescript: enableTypescript = hasTypeScript,
     unicorn: enableUnicorn = true,
   } = options;
@@ -190,7 +184,6 @@ export function ncontiero(
   if (enableTanStackQuery) {
     configs.push(
       tanstackQuery({
-        ...resolveSubOptions(options, "tanstackQuery"),
         overrides: getOverrides(options, "tanstackQuery"),
       }),
     );
