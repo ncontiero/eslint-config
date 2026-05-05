@@ -1,5 +1,69 @@
 # @ncontiero/eslint-config
 
+## 8.0.0
+
+### Major Changes
+
+- [`cc0e3bf`](https://github.com/ncontiero/eslint-config/commit/cc0e3bfbf2a9448b412663d1241b41ddd6a32233) - feat!: extract JSX a11y config into dedicated JSX option
+  - If you want to continue using the a11y plugin, you will need to activate it manually:
+
+  ```diff
+  import { ncontiero } from "@ncontiero/eslint-config";
+
+  export default ncontiero(
+    {
+      react: true,
+  +   jsx: {
+  +     a11y: true,
+  +   },
+    },
+  );
+  ```
+
+- [`afd63b7`](https://github.com/ncontiero/eslint-config/commit/afd63b716fbe154cf1b44bbc99591c7f085609fb) - feat!: add standalone tanstack query config
+  - The `reactQuery` option has been changed to `tanstackQuery`:
+
+  ```diff
+  import { ncontiero } from "@ncontiero/eslint-config";
+
+  export default ncontiero(
+    {
+      react: true,
+  -   reactQuery: true,
+  +   tanstackQuery: true,
+    },
+  );
+  ```
+
+- [`6171f70`](https://github.com/ncontiero/eslint-config/commit/6171f703148d0791907c995a9c97d90556d4c3e8) - feat!: add plugin renaming support and update rule prefixes
+  - The plugin `@typescript-eslint` is now renamed to `ts` in the default plugin renaming map. If you are using `@typescript-eslint` in your configuration, please update it to `ts` ("@typescript-eslint/indent" -> "ts/indent").
+
+### Minor Changes
+
+- [`7860db7`](https://github.com/ncontiero/eslint-config/commit/7860db7e1b069343d75fe3a0fb49f838b5658529) - feat: migrate `eslint-plugin-react` and `eslint-plugin-react-hooks` to `@eslint-react/eslint-plugin`
+
+- [`d8fcea6`](https://github.com/ncontiero/eslint-config/commit/d8fcea6ea4549d80e6018dc1063a6da130240a84) - feat: add [@e18e/eslint-plugin](https://github.com/e18e/eslint-plugin)
+
+- [`7216149`](https://github.com/ncontiero/eslint-config/commit/72161492391a1cdd3511be011b1ca63b0e726067) - feat: add type-aware TypeScript and React linting options
+
+### Patch Changes
+
+- [`21c0fed`](https://github.com/ncontiero/eslint-config/commit/21c0fed98bc74412beab571df0926ad1ecbdc5ac) - fix: remove `eslint-plugin-tailwindcss` from `stub.d.ts`
+
+- [`5becf72`](https://github.com/ncontiero/eslint-config/commit/5becf72ef3b404a834f0514d8f15ff991f1ffee5) - chore(deps): update @eslint-react/eslint-plugin to v5.6.0
+
+- [`cf1e230`](https://github.com/ncontiero/eslint-config/commit/cf1e230441093d91db8aca4918ed4341c06796bf) - chore: split nextjs setup and rules with jsx parser and react detection
+
+- [`0a5a8f5`](https://github.com/ncontiero/eslint-config/commit/0a5a8f58843e7a23678fe10e97dc2aaab7180574) - chore(html): use `no-extra-spacing-tags` instead of `no-extra-spacing-attrs`
+
+- [`22943e1`](https://github.com/ncontiero/eslint-config/commit/22943e14400ae44217e99314eba8dbb80435d238) - chore: simplify tanstack query config and update defaults
+
+- [`d4df758`](https://github.com/ncontiero/eslint-config/commit/d4df758ec9fc8f5ac764486b679196d7a5f89d75) - docs: update README
+
+- [`531f008`](https://github.com/ncontiero/eslint-config/commit/531f008ae69f7535f0e8c2d04108f4278c09afb6) - chore(react): enable `no-unused-state` rule
+
+- [`6292e1d`](https://github.com/ncontiero/eslint-config/commit/6292e1da9c963cd7462e9e581fc336e59c25d2ea) - chore: move TypeScript ignore to global ignore config
+
 ## 7.2.0
 
 ### Minor Changes
