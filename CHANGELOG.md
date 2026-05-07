@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 8.0.1
+
+### Patch Changes
+
+- [`1690726`](https://github.com/ncontiero/eslint-config/commit/16907263b23ef2a9661d256d2255de1834a13df4) - chore(deps): update eslint-plugin-n to v18
+
 ## 8.0.0
 
 ### Major Changes
