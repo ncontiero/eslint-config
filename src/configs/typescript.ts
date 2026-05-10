@@ -32,27 +32,34 @@ export async function typescript(
   const typeAwareRules: FlatConfigItem["rules"] = {
     "dot-notation": "off",
     "no-implied-eval": "off",
+    "no-throw-literal": "off",
+    "prefer-promise-reject-errors": "off",
+    "require-await": "off",
     "ts/await-thenable": "error",
     "ts/dot-notation": ["error", { allowKeywords: true }],
     "ts/no-floating-promises": "error",
     "ts/no-for-in-array": "error",
     "ts/no-implied-eval": "error",
     "ts/no-misused-promises": "error",
+    "ts/no-unnecessary-type-arguments": "error",
     "ts/no-unnecessary-type-assertion": "error",
     "ts/no-unsafe-argument": "error",
     "ts/no-unsafe-assignment": "error",
     "ts/no-unsafe-call": "error",
     "ts/no-unsafe-member-access": "error",
     "ts/no-unsafe-return": "error",
+    "ts/only-throw-error": "error",
+    "ts/prefer-promise-reject-errors": "error",
     "ts/promise-function-async": "error",
+    "ts/require-await": "error",
     "ts/restrict-plus-operands": "error",
     "ts/restrict-template-expressions": "error",
-    "ts/return-await": ["error", "in-try-catch"],
-    "ts/strict-boolean-expressions": [
+    "ts/return-await": ["error", "always"],
+    "ts/strict-boolean-expressions": ["error", { allowNullableBoolean: true }],
+    "ts/switch-exhaustiveness-check": [
       "error",
-      { allowNullableBoolean: true, allowNullableObject: true },
+      { considerDefaultExhaustiveForUnions: true },
     ],
-    "ts/switch-exhaustiveness-check": "error",
     "ts/unbound-method": "error",
   };
 
@@ -152,7 +159,6 @@ export async function typescript(
         "ts/no-invalid-void-type": "off",
         "ts/no-non-null-assertion": "off",
         "ts/no-redeclare": ["error", { builtinGlobals: false }],
-        "ts/no-require-imports": "error",
         "ts/no-unused-expressions": [
           "error",
           {
@@ -166,7 +172,7 @@ export async function typescript(
         // handled by unused-imports/no-unused-imports
         "ts/no-unused-vars": "off",
         "ts/no-useless-constructor": "off",
-        "ts/no-wrapper-object-types": "error",
+
         "ts/prefer-as-const": "warn",
         "ts/prefer-literal-enum-member": [
           "error",
