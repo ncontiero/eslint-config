@@ -101,10 +101,20 @@ export function ncontiero(
   >[]
 ) {
   const {
+    deMorgan: enableDeMorgan = true,
     e18e: enableE18e = true,
     gitignore: enableGitignore = true,
+    html: enableHtml = true,
+    ignores: userIgnores = [],
+    imports: enableImports = true,
+    jsdoc: enableJsdoc = true,
+    jsonc: enableJsonc = true,
     jsx: enableJsx = true,
+    markdown: enableMarkdown = true,
     nextjs: enableNextJs = hasNextJs,
+    node: enableNode = true,
+    prettier: enablePrettier = true,
+    promise: enablePromise = true,
     react: enableReact = hasReact,
     regexp: enableRegexp = true,
     tailwindcss: enableTailwindCSS = hasTailwind,
@@ -143,17 +153,37 @@ export function ncontiero(
 
   // Base configs
   configs.push(
-    ignores(options.ignores, !enableTypescript),
+    ignores(userIgnores, !enableTypescript),
     javascript({ overrides: getOverrides(options, "javascript") }),
     comments(),
-    jsdoc(),
-    imports({ nextJs: !!enableNextJs }),
-    node(),
-    promise(),
     command(),
     perfectionist(),
-    deMorgan(),
   );
+
+  if (enableNode) {
+    configs.push(node());
+  }
+
+  if (enablePromise) {
+    configs.push(promise({ overrides: getOverrides(options, "promise") }));
+  }
+
+  if (enableJsdoc) {
+    configs.push(jsdoc());
+  }
+
+  if (enableImports) {
+    configs.push(
+      imports({
+        nextJs: !!enableNextJs,
+        overrides: getOverrides(options, "imports"),
+      }),
+    );
+  }
+
+  if (enableDeMorgan) {
+    configs.push(deMorgan());
+  }
 
   if (enableE18e) {
     configs.push(e18e(enableE18e === true ? {} : enableE18e));
@@ -189,7 +219,7 @@ export function ncontiero(
     );
   }
 
-  if (options.jsonc ?? true) {
+  if (enableJsonc) {
     configs.push(
       jsonc({
         overrides: getOverrides(options, "jsonc"),
@@ -218,7 +248,7 @@ export function ncontiero(
     );
   }
 
-  if (options.markdown ?? true) {
+  if (enableMarkdown) {
     configs.push(markdown({ overrides: getOverrides(options, "markdown") }));
   }
 
@@ -240,7 +270,7 @@ export function ncontiero(
     configs.push(nextJs({ overrides: getOverrides(options, "nextjs") }));
   }
 
-  if (options.html ?? true) {
+  if (enableHtml) {
     configs.push(
       html({
         ...resolveSubOptions(options, "html"),
@@ -258,7 +288,9 @@ export function ncontiero(
     );
   }
 
-  if (options.prettier ?? true) configs.push(prettier(prettierOptions));
+  if (enablePrettier) {
+    configs.push(prettier(prettierOptions));
+  }
 
   if ("files" in options) {
     throw new Error(

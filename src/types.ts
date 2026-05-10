@@ -185,6 +185,35 @@ export interface OptionsConfig {
   javascript?: OptionsOverrides;
 
   /**
+   * Enable Node.js rules
+   *
+   * @default true
+   */
+  node?: boolean;
+
+  /**
+   * Enable JSDoc rules
+   *
+   * @default true
+   */
+  jsdoc?: boolean;
+
+  /**
+   * Enable De Morgan rules.
+   *
+   * @see [eslint-plugin-de-morgan](https://github.com/azat-io/eslint-plugin-de-morgan)
+   * @default true
+   */
+  deMorgan?: boolean;
+
+  /**
+   * Options for eslint-plugin-promise.
+   *
+   * @default true
+   */
+  promise?: boolean | OptionsOverrides;
+
+  /**
    * Enable TypeScript support.
    *
    * Passing an object to enable TypeScript Language Server support.
@@ -215,6 +244,13 @@ export interface OptionsConfig {
    * @default true
    */
   e18e?: boolean | OptionsE18e;
+
+  /**
+   * Options for eslint-plugin-import-x.
+   *
+   * @default true
+   */
+  imports?: boolean | OptionsOverrides;
 
   /**
    * Enable JSONC support.

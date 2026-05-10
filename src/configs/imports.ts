@@ -1,9 +1,15 @@
-import type { FlatConfigItem, OptionsHasNextJs } from "../types";
+import type {
+  FlatConfigItem,
+  OptionsHasNextJs,
+  OptionsOverrides,
+} from "../types";
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from "../globs";
 import { pluginAntfu, pluginImport } from "../plugins";
 
-export function imports(options: OptionsHasNextJs = {}): FlatConfigItem[] {
-  const { nextJs = false } = options;
+export function imports(
+  options: OptionsHasNextJs & OptionsOverrides = {},
+): FlatConfigItem[] {
+  const { nextJs = false, overrides = {} } = options;
 
   return [
     {
@@ -22,6 +28,8 @@ export function imports(options: OptionsHasNextJs = {}): FlatConfigItem[] {
         "import/no-named-default": "error",
         "import/no-self-import": "error",
         "import/no-webpack-loader-syntax": "error",
+
+        ...overrides,
       },
     },
     {

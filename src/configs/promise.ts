@@ -1,7 +1,11 @@
-import type { FlatConfigItem } from "../types";
+import type { FlatConfigItem, OptionsOverrides } from "../types";
 import { interopDefault } from "../utils";
 
-export async function promise(): Promise<FlatConfigItem[]> {
+export async function promise(
+  options: OptionsOverrides = {},
+): Promise<FlatConfigItem[]> {
+  const { overrides = {} } = options;
+
   const pluginPromise = await interopDefault(import("eslint-plugin-promise"));
 
   return [
@@ -14,6 +18,8 @@ export async function promise(): Promise<FlatConfigItem[]> {
       rules: {
         "promise/always-return": ["error", { ignoreLastCallback: true }],
         "promise/no-multiple-resolved": "warn",
+
+        ...overrides,
       },
     },
   ];
