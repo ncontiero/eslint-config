@@ -1,5 +1,17 @@
 # @ncontiero/eslint-config
 
+## 8.1.0
+
+### Minor Changes
+
+- [`947d512`](https://github.com/ncontiero/eslint-config/commit/947d51230029244f51ef2d8eee31a36e8c8c3d69) - feat(javascript): enable `no-throw-literal` and `prefer-promise-reject-errors` rules
+
+- [`31a5c1b`](https://github.com/ncontiero/eslint-config/commit/31a5c1b3a94eb10f01722e65ae7282ca084df03b) - feat: add enable/disable options for Node, JSDoc, De Morgan, Promise and Imports
+
+- [`d4cbce3`](https://github.com/ncontiero/eslint-config/commit/d4cbce3dbab4b30d69420071b64c92d0ff35b802) - feat(config): refine TypeScript rules for async, errors, and exhaustiveness
+
+- [`c4c9d2a`](https://github.com/ncontiero/eslint-config/commit/c4c9d2a677368b1b5109e12b38e9a2ce37880262) - feat(tailwindcss): enhance better-tailwindcss configuration
+
 ## 8.0.1
 
 ### Patch Changes
