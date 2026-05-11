@@ -1,6 +1,6 @@
 import { ncontiero } from "./src";
 
-export default await ncontiero({
+export default ncontiero({
   react: true,
   nextjs: true,
   tailwindcss: true,
