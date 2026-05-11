@@ -282,6 +282,7 @@ export function ncontiero(
   if (enableTailwindCSS) {
     configs.push(
       tailwindcss({
+        tsconfigPath,
         ...resolveSubOptions(options, "tailwindcss"),
         overrides: getOverrides(options, "tailwindcss"),
       }),

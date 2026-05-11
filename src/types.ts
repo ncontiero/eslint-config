@@ -115,21 +115,48 @@ export interface OptionsTailwindCSS extends OptionsOverrides {
   /**
    * Path to the Tailwind CSS config file.
    *
+   * For Tailwind CSS v4 and the css based config, use the `cssGlobalPath` option instead.
+   *
+   * @see [better-tailwindcss settings](https://github.com/schoero/eslint-plugin-better-tailwindcss/blob/main/docs/settings/settings.md#tailwindconfig)
    * @default "tailwind.config.ts"
    */
   configPath?: string;
+
   /**
    * Path to the global CSS file.
    *
+   * @see @see [better-tailwindcss settings](https://github.com/schoero/eslint-plugin-better-tailwindcss/blob/main/docs/settings/settings.md#entrypoint)
    * @default "src/app/globals.css"
    */
   cssGlobalPath?: string;
+
   /**
    * The working directory used to resolve `tailwindcss` and related config files.
    * This is useful for monorepos where linting runs from the repository root
    * but each project has its own `node_modules` and Tailwind setup.
+   *
+   * @see [better-tailwindcss settings](https://github.com/schoero/eslint-plugin-better-tailwindcss/blob/main/docs/settings/settings.md#cwd)
    */
   cwd?: string;
+
+  /**
+   * The path to the tsconfig file. If not specified, the plugin will try to find it automatically.
+   *
+   * The tsconfig is used to resolve tsconfig [`path`](https://www.typescriptlang.org/tsconfig/#paths) aliases.
+   *
+   * @see [better-tailwindcss settings](https://github.com/schoero/eslint-plugin-better-tailwindcss/blob/main/docs/settings/settings.md#tsconfig)
+   */
+  tsconfigPath?: string;
+
+  /**
+   * Tailwind CSS v4 allows you to define custom component classes like `card`, `btn`, `badge` etc.
+   *
+   * If you want to create such classes, you can set this option to true to allow the rule to detect those classes and not report them as unknown classes.
+   *
+   * @see [better-tailwindcss settings](https://github.com/schoero/eslint-plugin-better-tailwindcss/blob/main/docs/settings/settings.md#detectcomponentclasses)
+   * @default false
+   */
+  detectComponentClasses?: boolean;
 }
 
 export interface OptionsE18e extends OptionsOverrides {
