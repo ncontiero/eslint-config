@@ -57,7 +57,7 @@ export async function typescript(
     "ts/require-await": "error",
     "ts/restrict-plus-operands": "error",
     "ts/restrict-template-expressions": "error",
-    "ts/return-await": ["error", "always"],
+    "ts/return-await": ["error", "in-try-catch"],
     "ts/strict-boolean-expressions": [
       "error",
       { allowNullableBoolean: true, allowNullableString: true },
