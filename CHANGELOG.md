@@ -1,5 +1,19 @@
 # @ncontiero/eslint-config
 
+## 8.2.0
+
+### Minor Changes
+
+- [`888d5d3`](https://github.com/ncontiero/eslint-config/commit/888d5d3086712fcc9fa6bc267d886246c8824fcd) - feat: make `perfectionist` configurable
+
+### Patch Changes
+
+- [`612d0f9`](https://github.com/ncontiero/eslint-config/commit/612d0f90bac50ab8ba17ac19a8e19318bebb435d) - chore(javascript): enable `allowAsStatement` option in `no-void` rule
+
+- [`022ce0b`](https://github.com/ncontiero/eslint-config/commit/022ce0bb8c26e535dd29757151a4325bdd715f4a) - chore(typescript): relax `no-misused-promises` rule for void-return attributes
+
+- [`473425f`](https://github.com/ncontiero/eslint-config/commit/473425f62b3b375d31730808a45bb9dea024be06) - chore(typescript): enable `allowNullableString` option in `ts/strict-boolean-expressions` rule
+
 ## 8.1.0
 
 ### Minor Changes
