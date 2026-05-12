@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 8.2.1
+
+### Patch Changes
+
+- [`beee582`](https://github.com/ncontiero/eslint-config/commit/beee5825fd164443aea9206a44688fc1f1a1966c) - chore(typescript): relax `return-await` rule to only enforce in try-catch blocks
+
 ## 8.2.0
 
 ### Minor Changes
