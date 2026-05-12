@@ -55,7 +55,10 @@ export async function typescript(
     "ts/restrict-plus-operands": "error",
     "ts/restrict-template-expressions": "error",
     "ts/return-await": ["error", "always"],
-    "ts/strict-boolean-expressions": ["error", { allowNullableBoolean: true }],
+    "ts/strict-boolean-expressions": [
+      "error",
+      { allowNullableBoolean: true, allowNullableString: true },
+    ],
     "ts/switch-exhaustiveness-check": [
       "error",
       { considerDefaultExhaustiveForUnions: true },
