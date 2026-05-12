@@ -1,4 +1,4 @@
-import type { FlatConfigItem } from "../types";
+import type { FlatConfigItem, OptionsOverrides } from "../types";
 import { pluginPerfectionist } from "../plugins";
 
 /**
@@ -6,7 +6,11 @@ import { pluginPerfectionist } from "../plugins";
  *
  * @see https://github.com/azat-io/eslint-plugin-perfectionist
  */
-export function perfectionist(): FlatConfigItem[] {
+export function perfectionist(
+  options: OptionsOverrides = {},
+): FlatConfigItem[] {
+  const { overrides = {} } = options;
+
   return [
     {
       name: "ncontiero/perfectionist/rules",
@@ -51,6 +55,8 @@ export function perfectionist(): FlatConfigItem[] {
           "warn",
           { groups: ["type-import", "value-import"] },
         ],
+
+        ...overrides,
       },
     },
   ];

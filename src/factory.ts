@@ -113,6 +113,7 @@ export function ncontiero(
     markdown: enableMarkdown = true,
     nextjs: enableNextJs = hasNextJs,
     node: enableNode = true,
+    perfectionist: enablePerfectionist = true,
     prettier: enablePrettier = true,
     promise: enablePromise = true,
     react: enableReact = hasReact,
@@ -157,8 +158,15 @@ export function ncontiero(
     javascript({ overrides: getOverrides(options, "javascript") }),
     comments(),
     command(),
-    perfectionist(),
   );
+
+  if (enablePerfectionist) {
+    configs.push(
+      perfectionist({
+        overrides: getOverrides(options, "perfectionist"),
+      }),
+    );
+  }
 
   if (enableNode) {
     configs.push(node());

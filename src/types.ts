@@ -266,6 +266,13 @@ export interface OptionsConfig {
   unicorn?: boolean | OptionsUnicorn;
 
   /**
+   * Options for eslint-plugin-perfectionist.
+   *
+   * @default true
+   */
+  perfectionist?: boolean | OptionsOverrides;
+
+  /**
    * Options for [@e18e/eslint-plugin](https://github.com/e18e/eslint-plugin)
    *
    * @default true
