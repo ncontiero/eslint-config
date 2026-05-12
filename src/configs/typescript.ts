@@ -40,7 +40,10 @@ export async function typescript(
     "ts/no-floating-promises": "error",
     "ts/no-for-in-array": "error",
     "ts/no-implied-eval": "error",
-    "ts/no-misused-promises": "error",
+    "ts/no-misused-promises": [
+      "error",
+      { checksVoidReturn: { attributes: false } },
+    ],
     "ts/no-unnecessary-type-arguments": "error",
     "ts/no-unnecessary-type-assertion": "error",
     "ts/no-unsafe-argument": "error",
