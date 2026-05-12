@@ -120,7 +120,7 @@ export function javascript(options: OptionsOverrides = {}): FlatConfigItem[] {
         "no-useless-escape": "error",
         "no-useless-rename": "error",
         "no-var": "error",
-        "no-void": "error",
+        "no-void": ["error", { allowAsStatement: true }],
         "no-with": "error",
         "object-shorthand": [
           "error",
