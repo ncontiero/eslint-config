@@ -124,8 +124,8 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3)
       '@ncontiero/changelog-github':
-        specifier: ^2.1.3
-        version: 2.1.3
+        specifier: ^2.1.4
+        version: 2.1.4
       '@ncontiero/prettier-config':
         specifier: ^1.0.0
         version: 1.0.0
@@ -766,8 +766,8 @@ packages:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
 
-  '@ncontiero/changelog-github@2.1.3':
-    resolution: {integrity: sha512-QS55JkJIJ8JpTdPvROl0ACSOtoU6KRNSExMYCHrZ+bON8A/c2NWxt9GvfxFqpl3u/JBlBtYyQedsB6KnNuJ2kQ==}
+  '@ncontiero/changelog-github@2.1.4':
+    resolution: {integrity: sha512-sAel68JiSrSxPVjmTZCm1IlabYHc6+cg4M8NTIO4M79BsmEZc1K1m2bUJMgiUZ+ykDvRvB//9xml6L+IN+/DeQ==}
 
   '@ncontiero/prettier-config@1.0.0':
     resolution: {integrity: sha512-i+dkvx9H8NBTkYmEje9ut0VHglw87DTJ92JzsviJnGe2LvmPF5M2M+FsV86G7VTZ27a3XN53MD64MpXIN4MsMw==}
@@ -4599,7 +4599,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.2
     optional: true
 
-  '@ncontiero/changelog-github@2.1.3':
+  '@ncontiero/changelog-github@2.1.4':
     dependencies:
       '@changesets/get-github-info': 0.8.0
       dotenv: 17.4.2
@@ -4922,8 +4922,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.59.1(typescript@6.0.3)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.59.1(typescript@6.0.3)
-      '@typescript-eslint/types': 8.59.1
+      '@typescript-eslint/tsconfig-utils': 8.59.3(typescript@6.0.3)
+      '@typescript-eslint/types': 8.59.3
       debug: 4.4.3
       typescript: 6.0.3
     transitivePeerDependencies:
