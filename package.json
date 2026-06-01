@@ -101,7 +101,7 @@
     "eslint-typegen": "^2.3.1",
     "husky": "^9.1.7",
     "nano-staged": "^1.0.2",
-    "tinyexec": "^1.1.2",
+    "tinyexec": "^1.2.2",
     "tinyglobby": "^0.2.16",
     "tsdown": "^0.22.1",
     "tsx": "^4.21.0",
