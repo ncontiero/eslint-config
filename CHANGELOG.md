@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 8.2.2
+
+### Patch Changes
+
+- [#630](https://github.com/ncontiero/eslint-config/pull/630) [`7831f6b`](https://github.com/ncontiero/eslint-config/commit/7831f6be75e74c53a19b19cdd71a5f201fc3b43c) - chore(deps): update eslint-plugin-jsdoc to v63
+
 ## 8.2.1
 
 ### Patch Changes
