@@ -1,5 +1,17 @@
 # @ncontiero/eslint-config
 
+## 8.3.0
+
+### Minor Changes
+
+- [`4a17c82`](https://github.com/ncontiero/eslint-config/commit/4a17c82a54e172534f2fb408da01376d5e0aa3cc) - feat: enable additional unicorn rules
+
+### Patch Changes
+
+- [`8fd9df1`](https://github.com/ncontiero/eslint-config/commit/8fd9df1d7c579bc472f29d3932f4eeb878d5a440) - chore: add tanstack router support to react refresh config
+
+- [`9704341`](https://github.com/ncontiero/eslint-config/commit/9704341101d731646523d949aa2a8dbe8ad3862b) - chore(deps): update eslint-plugin-unicorn to v65
+
 ## 8.2.2
 
 ### Patch Changes
