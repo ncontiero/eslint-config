@@ -25,6 +25,11 @@ export function perfectionist(
             customGroups: [
               {
                 elementNamePattern: ["^react$", "^react-(?!.*.css$).+"],
+                groupName: "react-type",
+                selector: "type",
+              },
+              {
+                elementNamePattern: ["^react$", "^react-(?!.*.css$).+"],
                 groupName: "react",
               },
             ],
@@ -32,6 +37,7 @@ export function perfectionist(
               "side-effect-style",
               "style",
               "type-import",
+              "react-type",
               "type-external",
               "type-internal",
               ["type-parent", "type-sibling", "type-index"],
