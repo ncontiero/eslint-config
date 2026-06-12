@@ -17,6 +17,7 @@ const ReactRouterPackages = [
   "@react-router/serve",
   "@react-router/dev",
 ];
+const TanstackRouterPackages = ["@tanstack/react-router"];
 const NextJsPackages = ["next"];
 
 export async function react(
@@ -49,6 +50,9 @@ export async function react(
     isPackageExists(i),
   );
   const isUsingReactRouter = ReactRouterPackages.some((i) =>
+    isPackageExists(i),
+  );
+  const isUsingTanstackRouter = TanstackRouterPackages.some((i) =>
     isPackageExists(i),
   );
   const isUsingNextJs = NextJsPackages.some((i) => isPackageExists(i));
@@ -117,6 +121,21 @@ export async function react(
                     "clientAction",
                     "handle",
                     "shouldRevalidate",
+                  ]
+                : []),
+            ],
+            // Necessary for TanStack Start / Router
+            // https://github.com/ArnaudBarre/eslint-plugin-react-refresh/issues/102
+            extraHOCs: [
+              ...(isUsingTanstackRouter
+                ? [
+                    "createFileRoute",
+                    "createLazyFileRoute",
+                    "createRootRoute",
+                    "createRootRouteWithContext",
+                    "createLink",
+                    "createRoute",
+                    "createLazyRoute",
                   ]
                 : []),
             ],
