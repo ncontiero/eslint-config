@@ -78,10 +78,6 @@ export interface OptionsHasNextJs {
   nextJs?: boolean;
 }
 
-export interface OptionsHasRegexp {
-  regexp?: boolean;
-}
-
 export interface StyleConfig {
   indent?: number;
   semi?: boolean;

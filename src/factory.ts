@@ -198,11 +198,7 @@ export function ncontiero(
   }
 
   if (enableUnicorn) {
-    configs.push(
-      unicorn(
-        enableUnicorn === true ? { regexp: !!enableRegexp } : enableUnicorn,
-      ),
-    );
+    configs.push(unicorn(enableUnicorn === true ? {} : enableUnicorn));
   }
 
   if (enableJsx) {

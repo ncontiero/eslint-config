@@ -1,14 +1,8 @@
-import type {
-  FlatConfigItem,
-  OptionsHasRegexp,
-  OptionsUnicorn,
-} from "../types";
+import type { FlatConfigItem, OptionsUnicorn } from "../types";
 import { pluginUnicorn } from "../plugins";
 
-export function unicorn(
-  options: OptionsHasRegexp & OptionsUnicorn = {},
-): FlatConfigItem[] {
-  const { allRecommended, overrides = {}, regexp = false } = options;
+export function unicorn(options: OptionsUnicorn = {}): FlatConfigItem[] {
+  const { allRecommended, overrides = {} } = options;
 
   return [
     {
@@ -20,14 +14,13 @@ export function unicorn(
         ...(allRecommended
           ? pluginUnicorn.configs.recommended.rules
           : {
-              // disable if using `eslint-plugin-regexp`
-              "unicorn/better-regex": regexp ? "off" : "error",
               "unicorn/catch-error-name": "error",
               "unicorn/consistent-date-clone": "error",
               "unicorn/consistent-empty-array-spread": "error",
               "unicorn/consistent-existence-index-check": "error",
               "unicorn/consistent-function-scoping": "error",
               "unicorn/custom-error-definition": "error",
+              "unicorn/dom-node-dataset": "error",
               "unicorn/error-message": "error",
               "unicorn/escape-case": "error",
               "unicorn/explicit-length-check": "error",
@@ -63,7 +56,6 @@ export function unicorn(
               "unicorn/prefer-class-fields": "error",
               "unicorn/prefer-date-now": "error",
               "unicorn/prefer-dom-node-append": "error",
-              "unicorn/prefer-dom-node-dataset": "error",
               "unicorn/prefer-dom-node-remove": "error",
               "unicorn/prefer-dom-node-text-content": "error",
               "unicorn/prefer-includes": "error",
