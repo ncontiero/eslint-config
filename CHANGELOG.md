@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 8.3.1
+
+### Patch Changes
+
+- [`ba967b8`](https://github.com/ncontiero/eslint-config/commit/ba967b86aebe93175fb5231659192184644fb876) - feat: add dedicated react type import group to perfectionist config
+
 ## 8.3.0
 
 ### Minor Changes
