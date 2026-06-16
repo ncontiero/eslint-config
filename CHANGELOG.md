@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 8.3.2
+
+### Patch Changes
+
+- [`70ea615`](https://github.com/ncontiero/eslint-config/commit/70ea61572d2dd1201dc3e9604fcb0f99a1794adc) - chore: adjust tailwindcss line wrapping print width
+
 ## 8.3.1
 
 ### Patch Changes
