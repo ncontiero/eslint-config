@@ -51,7 +51,7 @@ export async function tailwindcss(
         "tailwindcss/enforce-consistent-important-position": "warn",
         "tailwindcss/enforce-consistent-line-wrapping": [
           "warn",
-          { group: "never", preferSingleLine: true, printWidth: 120 },
+          { group: "never", preferSingleLine: true, printWidth: 125 },
         ],
         "tailwindcss/enforce-consistent-variable-syntax": "error",
         "tailwindcss/enforce-consistent-variant-order": "warn",
