@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 8.3.3
+
+### Patch Changes
+
+- [#662](https://github.com/ncontiero/eslint-config/pull/662) [`194fbbf`](https://github.com/ncontiero/eslint-config/commit/194fbbfe5a4bfcbdea8839095a921735e25dbe88) - chore(deps): update eslint-plugin-unicorn to v69
+
 ## 8.3.2
 
 ### Patch Changes
