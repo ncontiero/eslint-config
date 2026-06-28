@@ -39,7 +39,6 @@ export function unicorn(options: OptionsUnicorn = {}): FlatConfigItem[] {
               "unicorn/no-blob-to-file": "error",
               "unicorn/no-console-spaces": "error",
               "unicorn/no-for-loop": "error",
-              "unicorn/no-hex-escape": "error",
               "unicorn/no-incorrect-query-selector": "error",
               "unicorn/no-instanceof-builtins": "error",
               "unicorn/no-invalid-remove-event-listener": "error",
@@ -94,6 +93,7 @@ export function unicorn(options: OptionsUnicorn = {}): FlatConfigItem[] {
               // top level await is not supported in all environments
               // "unicorn/prefer-top-level-await": "error",
               "unicorn/prefer-type-error": "error",
+              "unicorn/prefer-unicode-code-point-escapes": "error",
               "unicorn/switch-case-break-position": "error",
               "unicorn/throw-new-error": "error",
             }),
