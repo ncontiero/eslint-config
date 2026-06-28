@@ -1,4 +1,5 @@
 import type { FlatConfigItem, OptionsUnicorn } from "../types";
+import { GLOB_SRC } from "../globs";
 import { pluginUnicorn } from "../plugins";
 
 export function unicorn(options: OptionsUnicorn = {}): FlatConfigItem[] {
@@ -6,10 +7,14 @@ export function unicorn(options: OptionsUnicorn = {}): FlatConfigItem[] {
 
   return [
     {
-      name: "ncontiero/unicorn/rules",
+      name: "ncontiero/unicorn/setup",
       plugins: {
         unicorn: pluginUnicorn,
       },
+    },
+    {
+      files: [GLOB_SRC],
+      name: "ncontiero/unicorn/rules",
       rules: {
         ...(allRecommended
           ? pluginUnicorn.configs.recommended.rules
