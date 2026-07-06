@@ -1,4 +1,9 @@
-# Header
+Setext Header
+=============
+
+This is a paragraph.
+
+# ATX Header
 
 _Look,_ code blocks are formatted _too!_
 
