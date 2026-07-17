@@ -40,7 +40,8 @@
     "typecheck": "tsc --noEmit",
     "check": "pnpm lint && pnpm typecheck",
     "release": "pnpm build && changeset publish",
-    "prepare": "husky"
+    "prepare": "husky",
+    "postinstall": "pnpm typegen"
   },
   "peerDependencies": {
     "@tanstack/eslint-plugin-query": ">=5.50.0",
