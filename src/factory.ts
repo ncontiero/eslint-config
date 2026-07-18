@@ -31,6 +31,7 @@ import {
   sortTsconfig,
   tailwindcss,
   tanstackQuery,
+  test,
   toml,
   typescript,
   unicorn,
@@ -52,6 +53,7 @@ const flatConfigProps = [
 export const defaultPluginRenaming = {
   "@eslint-react": "react",
   "@typescript-eslint": "ts",
+  vitest: "test",
 };
 
 export type ResolvedOptions<T> = T extends boolean ? never : NonNullable<T>;
@@ -258,6 +260,15 @@ export function ncontiero(
 
   if (enableRegexp) {
     configs.push(regexp(typeof enableRegexp === "boolean" ? {} : enableRegexp));
+  }
+
+  if (options.test ?? true) {
+    configs.push(
+      test({
+        isTypeAware: !!enableTypescript && !!tsconfigPath,
+        overrides: getOverrides(options, "test"),
+      }),
+    );
   }
 
   if (enableReact) {

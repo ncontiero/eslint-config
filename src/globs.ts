@@ -1,4 +1,5 @@
 export const GLOB_SRC_EXT = "?([cm])[jt]s?(x)";
+export const GLOB_EXT_TS_TSX = "?([cm])ts?(x)";
 export const GLOB_SRC = "**/*.?([cm])[jt]s?(x)";
 
 export const GLOB_JS = "**/*.?([cm])js";
@@ -23,6 +24,21 @@ export const GLOB_YAML = "**/*.y?(a)ml";
 export const GLOB_TOML = "**/*.toml";
 export const GLOB_HTML = "**/*.htm?(l)";
 export const GLOB_MARKDOWN_CODE = `${GLOB_MARKDOWN}/${GLOB_SRC}`;
+
+export const GLOB_TESTS = [
+  `**/__tests__/**/*.${GLOB_SRC_EXT}`,
+  `**/*.spec.${GLOB_SRC_EXT}`,
+  `**/*.test.${GLOB_SRC_EXT}`,
+  `**/*.bench.${GLOB_SRC_EXT}`,
+  `**/*.benchmark.${GLOB_SRC_EXT}`,
+];
+export const GLOB_TS_TESTS = [
+  `**/__tests__/**/*.${GLOB_EXT_TS_TSX}`,
+  `**/*.spec.${GLOB_EXT_TS_TSX}`,
+  `**/*.test.${GLOB_EXT_TS_TSX}`,
+  `**/*.bench.${GLOB_EXT_TS_TSX}`,
+  `**/*.benchmark.${GLOB_EXT_TS_TSX}`,
+];
 
 export const GLOB_ALL_SRC = [
   GLOB_SRC,

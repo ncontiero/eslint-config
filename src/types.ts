@@ -319,6 +319,13 @@ export interface OptionsConfig {
   regexp?: boolean | OptionsOverrides;
 
   /**
+   * Enable test support.
+   *
+   * @default true
+   */
+  test?: boolean | OptionsOverrides;
+
+  /**
    * Enable HTML linting.
    *
    * @see https://html-eslint.org/
