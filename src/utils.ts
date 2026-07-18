@@ -42,7 +42,7 @@ export async function interopDefault<T>(
 }
 
 export function ensurePackages(packages: (string | undefined)[]) {
-  if (process.env.CI || !process.stdout.isTTY || !isCwdInScope) return;
+  if (!isCwdInScope || process.env.CI || !process.stdout.isTTY) return;
 
   const nonExistingPackages = packages.filter((i) => i && !isPackageExists(i));
   if (nonExistingPackages.length === 0) return;
