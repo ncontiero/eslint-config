@@ -16,7 +16,8 @@ export async function jsonc(
     style = true,
   } = options;
 
-  const { indent = 2 } = typeof style === "boolean" ? {} : style;
+  const { indent = 2, quotes = "double" } =
+    typeof style === "boolean" ? {} : style;
 
   const [pluginJsonc] = await Promise.all([
     interopDefault(import("eslint-plugin-jsonc")),
@@ -47,8 +48,8 @@ export async function jsonc(
           "error",
           { allowAllPropertiesOnSameLine: true },
         ],
-        "jsonc/quote-props": "off",
-        "jsonc/quotes": "off",
+        "jsonc/quote-props": "error",
+        "jsonc/quotes": ["error", quotes],
 
         ...overrides,
       },

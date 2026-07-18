@@ -46,7 +46,7 @@ function runWithConfig(
         `,
       );
 
-      await x("pnpm", ["dlx", "eslint@10", ".", "--fix"], {
+      await x("pnpm", ["exec", "eslint", ".", "--fix"], {
         nodeOptions: {
           cwd: target,
           stdio: "pipe",

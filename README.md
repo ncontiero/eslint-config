@@ -1,7 +1,7 @@
 # @ncontiero/eslint-config
 
-[![Version](https://img.shields.io/npm/v/@ncontiero/eslint-config?color6C47FF)](https://www.npmjs.com/package/@ncontiero/eslint-config)
-[![License](https://img.shields.io/badge/licence-MIT-6C47FF)](https://github.com/ncontiero/eslint-config/blob/master/LICENSE)
+[![Open on npmx.dev](https://npmx.dev/api/registry/badge/version/@ncontiero/eslint-config?color=7c3aed&name=true)](https://npmx.dev/package/@ncontiero/eslint-config)
+[![Open License](https://npmx.dev/api/registry/badge/license/@ncontiero/eslint-config?color=7c3aed)](https://github.com/ncontiero/eslint-config/blob/master/LICENSE)
 
 Nicolas's ESLint config preset for JavaScript, TypeScript, and Prettier.
 
