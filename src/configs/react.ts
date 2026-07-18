@@ -34,7 +34,7 @@ export async function react(
     tsconfigPath,
   } = options;
 
-  const isTypeAware = !!tsconfigPath;
+  const isTypeAware = !!tsconfigPath || !!options.typeAware;
 
   const typeAwareRules: FlatConfigItem["rules"] = {
     "react/no-leaked-conditional-rendering": "error",

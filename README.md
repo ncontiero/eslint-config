@@ -271,6 +271,19 @@ export default ncontiero({
 });
 ```
 
+You can also enable it without specifying a path by setting `typeAware: true`. `typescript-eslint` will automatically find the `tsconfig.json` file:
+
+```js
+// eslint.config.js
+import { ncontiero } from "@ncontiero/eslint-config";
+
+export default ncontiero({
+  typescript: {
+    typeAware: true,
+  },
+});
+```
+
 ## References and inspirations
 
 - [@antfu/eslint-config](https://github.com/antfu/eslint-config) - Anthony's ESLint config preset.

@@ -61,6 +61,13 @@ export interface OptionsTypeScriptWithTypes {
   tsconfigPath?: string;
 
   /**
+   * Enable type aware rules without specifying a tsconfig path.
+   * `typescript-eslint` will automatically find the tsconfig.json.
+   * @default false
+   */
+  typeAware?: boolean;
+
+  /**
    * Override type aware rules.
    */
   overridesTypeAware?: Rules;

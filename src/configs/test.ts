@@ -1,4 +1,10 @@
-import type { FlatConfigItem, OptionsFiles, OptionsOverrides } from "../types";
+import type {
+  FlatConfigItem,
+  OptionsFiles,
+  OptionsHasTypeScript,
+  OptionsOverrides,
+  OptionsTypeScriptWithTypes,
+} from "../types";
 
 import { GLOB_TESTS, GLOB_TS_TESTS } from "../globs";
 import { interopDefault } from "../utils";
@@ -7,11 +13,20 @@ import { interopDefault } from "../utils";
 let _pluginTest: any;
 
 export async function test(
-  options: OptionsFiles & OptionsOverrides & { isTypeAware?: boolean } = {},
+  options: OptionsFiles &
+    OptionsOverrides &
+    OptionsHasTypeScript &
+    OptionsTypeScriptWithTypes = {},
 ): Promise<FlatConfigItem[]> {
-  const { files = GLOB_TESTS, isTypeAware = false, overrides = {} } = options;
+  const {
+    files = GLOB_TESTS,
+    overrides = {},
+    tsconfigPath,
+    typescript = false,
+  } = options;
 
   const filesTypeAware = [GLOB_TS_TESTS];
+  const isTypeAware = typescript && (!!tsconfigPath || !!options.typeAware);
 
   const [pluginVitest, pluginNoOnlyTests] = await Promise.all([
     interopDefault(import("@vitest/eslint-plugin")),

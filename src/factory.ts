@@ -236,7 +236,7 @@ export function ncontiero(
     );
   }
 
-  if (options.yaml ?? true) {
+  if (options.yaml !== false) {
     configs.push(
       yml({
         overrides: getOverrides(options, "yaml"),
@@ -245,7 +245,7 @@ export function ncontiero(
     );
   }
 
-  if (options.toml ?? true) {
+  if (options.toml !== false) {
     configs.push(
       toml({
         overrides: getOverrides(options, "toml"),
@@ -262,11 +262,13 @@ export function ncontiero(
     configs.push(regexp(typeof enableRegexp === "boolean" ? {} : enableRegexp));
   }
 
-  if (options.test ?? true) {
+  if (options.test !== false) {
     configs.push(
       test({
-        isTypeAware: !!enableTypescript && !!tsconfigPath,
+        ...typescriptOptions,
         overrides: getOverrides(options, "test"),
+        tsconfigPath,
+        typescript: !!enableTypescript,
       }),
     );
   }

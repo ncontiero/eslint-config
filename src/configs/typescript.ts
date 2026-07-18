@@ -27,7 +27,7 @@ export async function typescript(
   const filesTypeAware = options.filesTypeAware ?? [GLOB_TS, GLOB_TSX];
   const ignoresTypeAware = options.ignoresTypeAware ?? [`${GLOB_MARKDOWN}/**`];
   const tsconfigPath = options?.tsconfigPath ? options.tsconfigPath : undefined;
-  const isTypeAware = !!tsconfigPath;
+  const isTypeAware = !!tsconfigPath || !!options.typeAware;
 
   const typeAwareRules: FlatConfigItem["rules"] = {
     "dot-notation": "off",
@@ -90,7 +90,7 @@ export async function typescript(
             ? {
                 projectService: {
                   allowDefaultProject: ["./*.js"],
-                  defaultProject: tsconfigPath,
+                  ...(tsconfigPath ? { defaultProject: tsconfigPath } : {}),
                 },
                 tsconfigRootDir: process.cwd(),
               }
