@@ -1,5 +1,25 @@
 # @ncontiero/eslint-config
 
+## 8.4.0
+
+### Minor Changes
+
+- [`d75ad0b`](https://github.com/ncontiero/eslint-config/commit/d75ad0bca2a1932731376cdc5f8405738b578950) - feat: add `typeAware` option to enable type-aware rules without explicit `tsconfigPath`
+
+- [`041af4e`](https://github.com/ncontiero/eslint-config/commit/041af4e0abc4992f26fa689ef706b7126d8aa2a4) - feat: add configurable quote style for jsonc configs
+
+- [`cc1e24b`](https://github.com/ncontiero/eslint-config/commit/cc1e24bf876bc1d91de926481f3850b6940eee90) - feat: add test linting support
+
+### Patch Changes
+
+- [#666](https://github.com/ncontiero/eslint-config/pull/666) [`e3e2290`](https://github.com/ncontiero/eslint-config/commit/e3e2290eba381186ebabd4634d256fb8957afef2) - chore(deps): update eslint-plugin-unicorn to v70
+
+- [#670](https://github.com/ncontiero/eslint-config/pull/670) [`7e4c336`](https://github.com/ncontiero/eslint-config/commit/7e4c33652dc31bd564393417114517df5d3be189) - chore(deps): update eslint-plugin-unicorn to v71
+
+- [`371ee26`](https://github.com/ncontiero/eslint-config/commit/371ee269c0e7613cf67ffeac14c26425683a63be) - chore(deps): update eslint-plugin-unicorn to v72
+
+- [`444c4a4`](https://github.com/ncontiero/eslint-config/commit/444c4a448651b8ab8161e6a7c34973f77c540382) - chore: apply jsonc quote styles based on style options
+
 ## 8.3.3
 
 ### Patch Changes
