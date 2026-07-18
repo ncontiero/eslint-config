@@ -114,8 +114,13 @@ export default ncontiero({
   tailwindcss: true,
   reactQuery: true,
 
-  // Disable jsonc, yaml and toml support
-  jsonc: false,
+  // You can pass an object to customize the options
+  jsonc: {
+    quotes: "single",
+  },
+
+  // Or disable jsonc, yaml and toml support entirely
+  // jsonc: false,
   yaml: false,
   toml: false,
 

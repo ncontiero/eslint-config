@@ -1,14 +1,14 @@
 import type {
   FlatConfigItem,
   OptionsFiles,
-  OptionsOverrides,
+  OptionsJsonc,
   StyleOptions,
 } from "../types";
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from "../globs";
 import { interopDefault } from "../utils";
 
 export async function jsonc(
-  options: OptionsFiles & OptionsOverrides & StyleOptions = {},
+  options: OptionsFiles & OptionsJsonc & StyleOptions = {},
 ): Promise<FlatConfigItem[]> {
   const {
     files = [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
@@ -16,8 +16,8 @@ export async function jsonc(
     style = true,
   } = options;
 
-  const { indent = 2, quotes = "double" } =
-    typeof style === "boolean" ? {} : style;
+  const { indent = 2 } = typeof style === "boolean" ? {} : style;
+  const quotes = options.quotes ?? "double";
 
   const [pluginJsonc] = await Promise.all([
     interopDefault(import("eslint-plugin-jsonc")),

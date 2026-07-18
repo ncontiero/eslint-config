@@ -94,6 +94,14 @@ export interface StyleOptions {
   style?: boolean | StyleConfig;
 }
 
+export interface OptionsJsonc extends OptionsOverrides {
+  /**
+   * Quotes type for JSON files.
+   * @default "double"
+   */
+  quotes?: "single" | "double";
+}
+
 export interface OptionsUnicorn extends OptionsOverrides {
   /**
    * Include all rules recommended by `eslint-plugin-unicorn`, instead of just the chosen ones.
@@ -294,7 +302,7 @@ export interface OptionsConfig {
    *
    * @default true
    */
-  jsonc?: boolean | OptionsOverrides;
+  jsonc?: boolean | OptionsJsonc;
 
   /**
    * Enable YAML support.

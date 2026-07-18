@@ -228,6 +228,7 @@ export function ncontiero(
   if (enableJsonc) {
     configs.push(
       jsonc({
+        ...resolveSubOptions(options, "jsonc"),
         overrides: getOverrides(options, "jsonc"),
         style: styleOptions,
       }),
