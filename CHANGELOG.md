@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 8.4.1
+
+### Patch Changes
+
+- [`43170e9`](https://github.com/ncontiero/eslint-config/commit/43170e9f16b12a6b0bdf518d819c7bce8c3c0f10) - fix: relax unicorn function scoping rule for arrow functions
+
 ## 8.4.0
 
 ### Minor Changes
