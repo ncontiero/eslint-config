@@ -87,7 +87,6 @@ export function unicorn(options: OptionsUnicorn = {}): FlatConfigItem[] {
               "unicorn/prefer-query-selector": "error",
               "unicorn/prefer-reflect-apply": "error",
               "unicorn/prefer-regexp-test": "error",
-              "unicorn/prefer-simple-condition-first": "error",
               "unicorn/prefer-single-call": "error",
               "unicorn/prefer-string-replace-all": "error",
               "unicorn/prefer-string-slice": "error",
