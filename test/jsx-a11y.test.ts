@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/consistent-function-scoping */
 import fs from "node:fs/promises";
 import { resolve } from "node:path";
 import { ESLint } from "eslint";

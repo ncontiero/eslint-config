@@ -24,7 +24,10 @@ export function unicorn(options: OptionsUnicorn = {}): FlatConfigItem[] {
               "unicorn/consistent-date-clone": "error",
               "unicorn/consistent-empty-array-spread": "error",
               "unicorn/consistent-existence-index-check": "error",
-              "unicorn/consistent-function-scoping": "error",
+              "unicorn/consistent-function-scoping": [
+                "error",
+                { checkArrowFunctions: false },
+              ],
               "unicorn/custom-error-definition": "error",
               "unicorn/dom-node-dataset": "error",
               "unicorn/error-message": "error",
