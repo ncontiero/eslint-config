@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 8.4.2
+
+### Patch Changes
+
+- [`f8c9378`](https://github.com/ncontiero/eslint-config/commit/f8c9378d4326045668e396c6dbf5f5d6d232dfc6) - chore(unicorn): disable `prefer-simple-condition-first` rule
+
 ## 8.4.1
 
 ### Patch Changes
