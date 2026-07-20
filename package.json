@@ -37,11 +37,10 @@
     "test": "vitest",
     "lint": "eslint .",
     "lint:fix": "pnpm lint --fix",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "pnpm typegen && tsc --noEmit",
     "check": "pnpm lint && pnpm typecheck",
     "release": "pnpm build && changeset publish",
-    "prepare": "husky",
-    "postinstall": "pnpm typegen"
+    "prepare": "husky"
   },
   "peerDependencies": {
     "@tanstack/eslint-plugin-query": ">=5.50.0",
