@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 8.4.3
+
+### Patch Changes
+
+- [`7b423cd`](https://github.com/ncontiero/eslint-config/commit/7b423cd52ec651d7939f397d9f12775e502f792d) - chore(scripts): run type generation during typecheck instead of postinstall
+
 ## 8.4.2
 
 ### Patch Changes
