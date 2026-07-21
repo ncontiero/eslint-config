@@ -130,8 +130,8 @@ importers:
         specifier: 3.1.0
         version: 3.1.0(eslint@10.7.0(jiti@2.7.0)(supports-color@7.2.0))(srvx@0.11.22)(typescript@6.0.3)
       '@ncontiero/changelog-github':
-        specifier: 2.1.4
-        version: 2.1.4
+        specifier: 3.0.0
+        version: 3.0.0
       '@ncontiero/prettier-config':
         specifier: 1.0.0
         version: 1.0.0
@@ -740,8 +740,8 @@ packages:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
 
-  '@ncontiero/changelog-github@2.1.4':
-    resolution: {integrity: sha512-sAel68JiSrSxPVjmTZCm1IlabYHc6+cg4M8NTIO4M79BsmEZc1K1m2bUJMgiUZ+ykDvRvB//9xml6L+IN+/DeQ==}
+  '@ncontiero/changelog-github@3.0.0':
+    resolution: {integrity: sha512-M9Ua1w03IJmt3J47B5kRcexrvPUQTNBFh/t/wC0XwmN6+8ShsaxkvKmVyxjXuCTKOIDLPqImaJRsD5/iEAhXLw==}
 
   '@ncontiero/prettier-config@1.0.0':
     resolution: {integrity: sha512-i+dkvx9H8NBTkYmEje9ut0VHglw87DTJ92JzsviJnGe2LvmPF5M2M+FsV86G7VTZ27a3XN53MD64MpXIN4MsMw==}
@@ -1769,10 +1769,6 @@ packages:
   dir-glob@3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
     engines: {node: '>=8'}
-
-  dotenv@17.4.2:
-    resolution: {integrity: sha512-nI4U3TottKAcAD9LLud4Cb7b2QztQMUEfHbvhTH09bqXTxnSie8WnjPALV/WMCrJZ6UV/qHJ6L03OqO3LcdYZw==}
-    engines: {node: '>=12'}
 
   dts-resolver@3.0.0:
     resolution: {integrity: sha512-1T1f+z+4tl9XD+m+0HBgWoL/nm0bOIffyWaUuUSBlFg/86IWvfx+wjNaO/ybU0AJzG9/Mi5hBUgGV6zCmWEN7Q==}
@@ -4529,10 +4525,9 @@ snapshots:
       '@tybys/wasm-util': 0.10.3
     optional: true
 
-  '@ncontiero/changelog-github@2.1.4':
+  '@ncontiero/changelog-github@3.0.0':
     dependencies:
       '@changesets/get-github-info': 0.8.0
-      dotenv: 17.4.2
     transitivePeerDependencies:
       - encoding
 
@@ -5369,8 +5364,6 @@ snapshots:
   dir-glob@3.0.1:
     dependencies:
       path-type: 4.0.0
-
-  dotenv@17.4.2: {}
 
   dts-resolver@3.0.0: {}
 
