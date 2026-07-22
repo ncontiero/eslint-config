@@ -3,10 +3,11 @@ import type {
   OptionsFiles,
   OptionsHasTypeScript,
   OptionsOverrides,
+  OptionsTypeScriptParserOptions,
   OptionsTypeScriptWithTypes,
 } from "../types";
 
-import { GLOB_TESTS, GLOB_TS_TESTS } from "../globs";
+import { GLOB_MARKDOWN, GLOB_TESTS, GLOB_TS_TESTS } from "../globs";
 import { interopDefault } from "../utils";
 
 // Hold the reference so we don't redeclare the plugin on each call
@@ -16,17 +17,24 @@ export async function test(
   options: OptionsFiles &
     OptionsOverrides &
     OptionsHasTypeScript &
+    OptionsTypeScriptParserOptions &
     OptionsTypeScriptWithTypes = {},
 ): Promise<FlatConfigItem[]> {
   const {
     files = GLOB_TESTS,
+    filesTypeAware = GLOB_TS_TESTS,
+    ignoresTypeAware = [`${GLOB_MARKDOWN}/**`],
     overrides = {},
     tsconfigPath,
     typescript = false,
   } = options;
 
-  const filesTypeAware = [GLOB_TS_TESTS];
   const isTypeAware = typescript && (!!tsconfigPath || !!options.typeAware);
+
+  const typeAwareRules: FlatConfigItem["rules"] = {
+    "test/unbound-method": "error",
+    "ts/unbound-method": "off",
+  };
 
   const [pluginVitest, pluginNoOnlyTests] = await Promise.all([
     interopDefault(import("@vitest/eslint-plugin")),
@@ -41,11 +49,6 @@ export async function test(
       // extend `test/no-only-tests` rule
       ...pluginNoOnlyTests.rules,
     },
-  };
-
-  const typeAwareRules: FlatConfigItem["rules"] = {
-    "test/unbound-method": "error",
-    "ts/unbound-method": "off",
   };
 
   return [
@@ -87,8 +90,11 @@ export async function test(
       ? [
           {
             files: filesTypeAware,
-            name: "ncontiero/test/rules-type-aware",
-            rules: typeAwareRules,
+            ignores: ignoresTypeAware,
+            name: "ncontiero/test/type-aware-rules",
+            rules: {
+              ...typeAwareRules,
+            },
             settings: {
               vitest: {
                 typecheck: true,
