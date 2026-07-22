@@ -9,7 +9,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  tests:
+    name: Tests - Release
+    uses: ./.github/workflows/tests.yml
+    secrets: inherit
+
   release:
+    needs: tests
     permissions:
       contents: write # to create release (changesets/action)
       pull-requests: write # to create pull request (changesets/action)
