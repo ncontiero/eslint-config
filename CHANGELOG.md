@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 8.4.4
+
+### Patch Changes
+
+- [`0ea6732`](https://github.com/ncontiero/eslint-config/commit/0ea6732f13f2b3f0fc2aa0d86253fe9e87722754) - chore: extend test config with type-aware options and markdown ignores
+
 ## 8.4.3
 
 ### Patch Changes
