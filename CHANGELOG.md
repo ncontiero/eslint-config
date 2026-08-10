@@ -1,5 +1,13 @@
 # @ncontiero/eslint-config
 
+## 8.4.5
+
+### Patch Changes
+
+- [#689](https://github.com/ncontiero/eslint-config/pull/689) [`be25b5a`](https://github.com/ncontiero/eslint-config/commit/be25b5a2aef175d2255ece98433cdda475b09d5d) - chore(deps): update eslint-plugin-unicorn to v73
+
+- [#688](https://github.com/ncontiero/eslint-config/pull/688) [`a71c745`](https://github.com/ncontiero/eslint-config/commit/a71c74532d4c90dae2f885585ea6031bec2f33b3) - chore(deps): update eslint-plugin-command to v4
+
 ## 8.4.4
 
 ### Patch Changes
