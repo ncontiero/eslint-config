@@ -1,5 +1,19 @@
 # @ncontiero/eslint-config
 
+## 8.5.0
+
+### Minor Changes
+
+- [`88bc843`](https://github.com/ncontiero/eslint-config/commit/88bc8433487d971d3851b4d234f4ef340f04c279) - feat: sort `devEngines` and `scripts-info` field
+
+### Patch Changes
+
+- [#695](https://github.com/ncontiero/eslint-config/pull/695) [`ba1dbd0`](https://github.com/ncontiero/eslint-config/commit/ba1dbd0d5fa507df5dc2b58ee11e8675a459894c) - chore(deps): update eslint-plugin-jsdoc to v64
+
+- [`bcb1bd9`](https://github.com/ncontiero/eslint-config/commit/bcb1bd91372dbc7b7123f68515d7b1246249677a) - chore(deps): update eslint-plugin-unicorn to v74
+
+- [`611145d`](https://github.com/ncontiero/eslint-config/commit/611145deccdbcb851caa93ae1dcc8aaaa48ee2e6) - fix: sort `noUncheckedSideEffectImports`
+
 ## 8.4.5
 
 ### Patch Changes
