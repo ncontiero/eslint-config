@@ -176,6 +176,7 @@ export function sortTsconfig(): FlatConfigItem[] {
               "noImplicitThis",
               "noPropertyAccessFromIndexSignature",
               "noUncheckedIndexedAccess",
+              "noUncheckedSideEffectImports",
               "noUnusedLocals",
               "noUnusedParameters",
               "useUnknownInCatchVariables",
