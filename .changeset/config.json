@@ -1,8 +1,16 @@
 {
-  "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
+  "$schema": "https://unpkg.com/@changesets/config@4.0.0/schema.json",
   "changelog": [
     "@ncontiero/changelog-github",
-    { "repo": "ncontiero/eslint-config", "exclude": { "user": true } }
+    {
+      "repo": "ncontiero/eslint-config",
+      "ignoreUsers": [
+        "ncontiero",
+        "renovate[bot]",
+        "dependabot[bot]",
+        "github-actions[bot]"
+      ]
+    }
   ],
   "commit": false,
   "fixed": [],
