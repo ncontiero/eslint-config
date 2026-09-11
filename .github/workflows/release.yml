@@ -115,7 +115,7 @@ jobs:
         run: pnpm install
 
       - name: Build packages
-        run: pnpm build:dkcutter
+        run: pnpm build
 
       - name: Pack packages
         id: pack
