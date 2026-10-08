@@ -48,6 +48,10 @@ export async function yml(
         "yml/no-empty-key": "error",
         "yml/no-empty-sequence-entry": "error",
         "yml/no-irregular-whitespace": "error",
+        "yml/no-multiple-empty-lines": [
+          "error",
+          { max: 1, maxBOF: 0, maxEOF: 0 },
+        ],
         "yml/no-tab-indent": "error",
         "yml/plain-scalar": "error",
         "yml/quotes": ["error", { avoidEscape: false, prefer: quotes }],

@@ -28,6 +28,7 @@ import {
   react,
   regexp,
   sortPackageJson,
+  sortPnpmWorkspace,
   sortTsconfig,
   tailwindcss,
   tanstackQuery,
@@ -243,6 +244,7 @@ export function ncontiero(
         overrides: getOverrides(options, "yaml"),
         style: styleOptions,
       }),
+      sortPnpmWorkspace(),
     );
   }
 
