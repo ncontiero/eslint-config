@@ -1,5 +1,17 @@
 # @ncontiero/eslint-config
 
+## 8.6.0
+
+### Minor Changes
+
+- [`3063ec5`](https://github.com/ncontiero/eslint-config/commit/3063ec53b55e0f4d382dba93bed5f44e90b3a327) - feat: add pnpm workspace sorting and enable `yml/no-multiple-empty-lines` rule
+
+### Patch Changes
+
+- [`eb2a855`](https://github.com/ncontiero/eslint-config/commit/eb2a85510c9555cd608e06510e1f08a9e5486b9b) - chore(deps): update eslint-plugin-unicorn to v77
+
+- [#709](https://github.com/ncontiero/eslint-config/pull/709) [`6b98d4e`](https://github.com/ncontiero/eslint-config/commit/6b98d4eabada251272ae2947c2181d6e6c3d974e) - chore(deps): update eslint-plugin-jsdoc to v65
+
 ## 8.5.0
 
 ### Minor Changes
