@@ -113,7 +113,7 @@
     "node": ">=20.19.0"
   },
   "nano-staged": {
-    "*": "pnpm lint:fix"
+    "*": "eslint --fix"
   },
   "prettier": "@ncontiero/prettier-config"
 }
