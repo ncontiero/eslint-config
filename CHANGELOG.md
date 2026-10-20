@@ -1,5 +1,11 @@
 # @ncontiero/eslint-config
 
+## 8.6.1
+
+### Patch Changes
+
+- [`5aa7a22`](https://github.com/ncontiero/eslint-config/commit/5aa7a22937640c4da1e17baedae6c346e0fafc80) - chore(deps): update eslint-plugin-unicorn to v78
+
 ## 8.6.0
 
 ### Minor Changes
