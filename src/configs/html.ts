@@ -10,10 +10,9 @@ export async function html(options: HTMLOptions): Promise<FlatConfigItem[]> {
     interopDefault(import("@html-eslint/eslint-plugin")),
   ] as const);
 
-  const templateEngineSyntax = options.templateEngineSyntax ?? {
-    "{{": "}}",
-    "{%": "%}",
-  };
+  const templateEngineSyntax =
+    options.templateEngineSyntax ??
+    eslintParserHTML.TEMPLATE_ENGINE_SYNTAX.NUNJUCKS;
 
   return [
     {
