@@ -1,3 +1,4 @@
+import type { ParserOptions as HTMLParserOptions } from "@html-eslint/parser";
 import type { ParserOptions } from "@typescript-eslint/parser";
 import type { Linter } from "eslint";
 import type { FlatGitignoreOptions } from "eslint-config-flat-gitignore";
@@ -117,9 +118,9 @@ export interface HTMLOptions extends OptionsOverrides {
    * This allows the parser to correctly handle template delimiters like `{{...}}` or `{%...%}`.
    *
    * @see https://html-eslint.org/docs/integrating-template-engine
-   * @default { "{{": "}}", "{%": "%}" }
+   * @default TEMPLATE_ENGINE_SYNTAX.NUNJUCKS
    */
-  templateEngineSyntax?: Record<string, string>;
+  templateEngineSyntax?: HTMLParserOptions["templateEngineSyntax"];
 }
 
 export interface OptionsTailwindCSS extends OptionsOverrides {
