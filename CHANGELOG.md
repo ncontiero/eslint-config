@@ -1,5 +1,15 @@
 # @ncontiero/eslint-config
 
+## 8.6.2
+
+### Patch Changes
+
+- [`3f1b75f`](https://github.com/ncontiero/eslint-config/commit/3f1b75f6e2163236e8fc85287ace324ba7bbb3c0) - chore(deps): update eslint-plugin-unicorn to v79
+
+- [`0945e13`](https://github.com/ncontiero/eslint-config/commit/0945e1335dd9b17f5f11aa92c32ed37dd369dcd8) - chore(html): use `TEMPLATE_ENGINE_SYNTAX.NUNJUCKS` instead of hardcoded syntax
+
+- [`513459c`](https://github.com/ncontiero/eslint-config/commit/513459c3a63e61e868ce37fe920b69f1f868ad6b) - refactor(types): use parser options type for HTML `templateEngineSyntax`
+
 ## 8.6.1
 
 ### Patch Changes
